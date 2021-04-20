@@ -1,0 +1,109 @@
+include ../components/preloader/preloader
+include ../components/header/header
+include ../components/_ui/breadcrumbs/breadcrumbs
+include ../components/selection-hero/selection-hero
+include ../components/_ui/heading/heading
+include ../components/_ui/description/description
+include ../components/selection-norms/selection-norms
+include ../components/selection-sleep/selection-sleep
+include ../components/selection-quotation/selection-quotation
+include ../components/selection-video/selection-video
+include ../components/selection-help/selection-help
+include ../components/selection-solutions/selection-solutions
+include ../components/selection-independent/selection-independent
+include ../components/selection-social/selection-social
+include ../components/footer/footer
+include ../components/_ui/popup/popup
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Подбор продуктов по возрасту ребенка
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    +preloader
+    .page-wrapper
+      +header
+      +breadcrumbs([{text: 'baby sleep', href: 'main.html'}, {text: 'сон и развитие ребенка 0–3 месяца'}])
+      +selection-hero
+      section.selection-block
+        .block.container
+          .wrapper
+            +heading('Почему ребенок не спит с&nbsp;рождения до 3 мес?')
+            +description('Структура сна малыша, как и его нервная система, «дозревают» постепенно. Следите за этим процессом c таймлайном BabySleep по неделям.<br><br><a href="#">Обратитесь за помощью</a>, если малыш не высыпается, гуляет по ночам и спит только на руках.')
+            .difficulties__slider(style="margin-bottom: 0;")
+              .difficulties__slide(style="padding-bottom: 70px; width: 1170px;")
+                img(src="img/drag.gif", alt="").difficulties__drag
+                .difficulties__stages.difficulties__stages--top
+                  .difficulties__start(style="bottom: 80px; left: -12px")
+                    img(src="img/difficulties/3.svg", alt="")
+                  .difficulties__note(style="left: -26px; width: 130px") Спит <br>"как младенец"
+                  .difficulties__note(style="left: 153px") Усиление беспокойства
+                  .difficulties__note(style="left: 379px; width: 120px") Увеличивается продолжительность ночного сна
+                  .difficulties__note(style="left: 530px; width: 140px") Тенденция к раннему укладыванию (РУ)
+                  .difficulties__event(style="left: 670px")
+                    img(src="img/difficulties/2.svg", alt="")
+                    p 
+                      span Проспал 6-8 часов подряд!<br>Хочу копи-паст!
+                  .difficulties__hop(style="left: 269px; bottom: 69px")
+                    p <span>1 скачок развития:</span><br>Мир ощущений
+                  .difficulties__hop(style="left: 509px; bottom: 69px")
+                    p <span>2 скачок развития:</span><br>Мир явлений
+                  .difficulties__hop(style="left: 830px; bottom: 69px")
+                    p <span>3 скачок развития:</span><br>Осознание перемен
+                  a(href="#").difficulties__link(style="left: 1050px;") Смотреть период <br>4–6 месяцев
+                .difficulties__timeline.difficulties__timeline--start.difficulties__timeline--endless
+                  .difficulties__timeline-time(style="width: 80px;") 1
+                  .difficulties__timeline-time(style="width: 80px;") 2
+                  .difficulties__timeline-time(style="width: 80px;") 3
+                  .difficulties__timeline-time(style="width: 80px;") 4
+                  .difficulties__timeline-time(style="width: 80px;") 5
+                  .difficulties__timeline-time(style="width: 80px;") 6
+                  .difficulties__timeline-time(style="width: 80px;") 7
+                  .difficulties__timeline-time(style="width: 80px;") 8
+                  .difficulties__timeline-time(style="width: 80px;") 9
+                  .difficulties__timeline-time(style="width: 80px;") 10
+                  .difficulties__timeline-time(style="width: 80px;") 11
+                  .difficulties__timeline-time(style="width: 80px;") 12
+                  .difficulties__timeline-time(style="width: 80px;") 13
+                .difficulties__term
+                  p(style="width: 100%")
+                    span недели
+                .difficulties__stages.difficulties__stages--bottom
+                  .difficulties__note.difficulties__note--bottom(style="left: 153px") Перепутал <br>день и ночь
+                  .difficulties__note.difficulties__note--bottom(style="left: 392px") Пик плача
+            p.selection-block__subheading Затяжные проблемы периода, с которыми помогает консультант
+            p.selection-block__problems Проблема
+            .selection-block__accordeon.js-accordeon
+              .selection-block__accordeon-item
+                .selection-block__accordeon-content.js-accordeon-item
+                  p.selection-block__accordeon-heading.js-accordeon-trigger Истерики перед сном
+                  .selection-block__accordeon-info
+                    .selection-block__accordeon-inner
+                      p.selection-block__accordeon-text Если ваш ребенок родился на 2 недели позже срока, то начинайте отсчет на две недели раньше. Если он родился за 4 недели до срока, начинайте отсчет на 4 недели позже.
+              .selection-block__accordeon-item
+                .selection-block__accordeon-content.js-accordeon-item
+                  p.selection-block__accordeon-heading.js-accordeon-trigger Трудно переложить в кроватку
+                  .selection-block__accordeon-info
+                    .selection-block__accordeon-inner
+                      p.selection-block__accordeon-text Если ваш ребенок родился на 2 недели позже срока, то начинайте отсчет на две недели раньше. Если он родился за 4 недели до срока, начинайте отсчет на 4 недели позже.
+              .selection-block__accordeon-item
+                .selection-block__accordeon-content.js-accordeon-item
+                  p.selection-block__accordeon-heading.js-accordeon-trigger Спит только на руках
+                  .selection-block__accordeon-info
+                    .selection-block__accordeon-inner
+                      p.selection-block__accordeon-text Если ваш ребенок родился на 2 недели позже срока, то начинайте отсчет на две недели раньше. Если он родился за 4 недели до срока, начинайте отсчет на 4 недели позже.
+      +selection-norms
+      +selection-sleep
+      +selection-quotation
+      +selection-video
+      +selection-help
+      +selection-solutions
+      +selection-independent
+      +selection-social
+      +footer
+    +popup('request', 'request-1')
+    +popup('request', 'request-2')
+    +popup('checklist')

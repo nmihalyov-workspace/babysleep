@@ -1,0 +1,126 @@
+.selection-hero
+  padding: 65px 0 80px 0
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+  &__heading
+    margin-bottom: 60px
+    line-height: 1.1
+    font:
+      size: 42px
+      weight: 700
+  &__age
+    margin-bottom: 30px
+    color: $blue
+    line-height: 1.1
+    font:
+      size: 16px
+      weight: 700
+  &__desc
+    margin-bottom: 35px
+    width: 850px
+    line-height: 1.4
+  &__actions
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+  &__link
+    margin-left: 40px
+  &__image
+    width: 280px
+
+.selection-block
+  overflow: hidden
+  .heading__title
+    width: 760px
+  .description
+    width: 600px
+  &__subheading
+    margin-bottom: 20px
+    font:
+      size: 16px
+      weight: 700
+  &__problems
+    opacity: 0.5
+  &__accordeon
+    &-item
+      &:not(:last-child) .js-accordeon-item
+        transition: border-bottom-color .3s ease
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    &-content
+      position: relative
+      &.active
+        .js-accordeon-trigger:after
+          transform: rotate(-90deg)
+    &-heading
+      position: relative
+      padding: 15px 0
+      cursor: pointer
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        top: calc(50% - 6px)
+        width: 7px
+        height: 12px
+        transform: rotate(90deg)
+        transition: transform .3s ease
+        background:
+          image: url('../img/icons/caret.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-info
+      display: none
+      padding: 5px 0 20px
+    &-inner
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+    &-text
+      width: 1070px
+
+@media only screen and (max-width: $mobile)
+  .selection-hero
+    padding: 40px 0 45px
+    &__wrapper
+      flex-flow: column-reverse nowrap
+    &__info
+      width: 100%
+    &__heading
+      margin-bottom: 10px
+      font-size: 32px
+    &__age
+      margin-bottom: 20px
+    &__desc
+      width: 100%
+      margin-bottom: 30px
+    &__actions
+      flex-flow: column nowrap
+      .button
+        max-width: 100%
+        margin-bottom: 20px
+    &__link
+      width: 310px
+      margin: 0 auto
+      text-align: center
+    &__image
+      width: 95px
+      margin-bottom: 10px
+
+  .selection-block
+    .heading__title
+      width: 100%
+    .description
+      width: 100%
+    .difficulties__slider
+      padding-bottom: 50px
+    .difficulties__slide
+      padding: 150px 0 50px !important
+    .difficulties__drag
+      bottom: 40px

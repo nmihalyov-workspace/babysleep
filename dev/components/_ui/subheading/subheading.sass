@@ -1,0 +1,18 @@
+.subheading
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: flex-end
+  margin-bottom: 30px
+  &__title
+    line-height: 1
+    font-size: 29px
+  &__link
+    color: $green
+    text-decoration: none
+
+@media only screen and (max-width: $mobile)
+  .subheading
+    margin-bottom: 20px
+    &__title
+      font-size: 21px

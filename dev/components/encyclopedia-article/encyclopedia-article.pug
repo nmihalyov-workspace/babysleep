@@ -1,0 +1,177 @@
+include ../_ui/button/button
+
+mixin encyclopedia-article(extended)
+  section.encyclopedia-article.container
+    .wrapper
+      h1.encyclopedia-article__heading Почему консультанты по детскому сну не врачи?
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          .encyclopedia-article__about
+            p.encyclopedia-article__about-date 19.06.20
+            .encyclopedia-article__about-chars
+              p.encyclopedia-article__about-views 2647
+              p.encyclopedia-article__about-comments 37
+              p.encyclopedia-article__about-likes 112
+          .encyclopedia-article__image
+            .encyclopedia-article__image-pic(style="background-image: url('img/inhtml/encyclopedia-article.jpg');")
+            .encyclopedia-article__image-like
+            .encyclopedia-article__image-type(style="background-image: url('img/inhtml/calendar-2.svg');")
+          .encyclopedia-article__links
+            a(href="#").encyclopedia-article__link Блог консультанта BabySleep
+            div
+              a(href="#").encyclopedia-article__link 0–3
+              a(href="#").encyclopedia-article__link 3–6
+              a(href="#").encyclopedia-article__link 6–9
+              a(href="#").encyclopedia-article__link 9–18
+              a(href="#").encyclopedia-article__link 1,5–3 года
+              a(href="#").encyclopedia-article__link 3–7 лет
+        .encyclopedia-article__block-sub
+          .encyclopedia-article__author
+            .encyclopedia-article__author-about
+              div
+                p.encyclopedia-article__author-pos Автор статьи
+                a(href="#").encyclopedia-article__block-sub-link.encyclopedia-article__block-sub-link--mobile Татьяна Чхиквишвили
+              .encyclopedia-article__author-image(style="background-image: url('img/inhtml/encyclopedia-article-author.jpg');")
+            a(href="#").encyclopedia-article__block-sub-link Татьяна Чхиквишвили
+            p.encyclopedia-article__author-desc Консультант по детскому сну. <br>Руководитель направления online-программ Центра детского сна и развития «BabySleep»
+            p.encyclopedia-article__author-subdesc Дочки 10 лет и сына 13 лет
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__paragraph В 2015 г. в США провели анализ сайтов консультантов по сну. Выяснилось, что 70% из них не имели какого-либо отношения к медицинской сфере, остальные 30% были в большинстве случаев представлены медицинскими сестрами, психологами, доулами и консультантами по грудному вскармливанию.
+        .encyclopedia-article__block-sub
+            a(href="#", style="background-image: url('img/inhtml/calendar-1.svg');").encyclopedia-article__block-sub-link Календарь кризисов ребенка
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__title Почему врачи не консультируют по детскому сну?
+          p.encyclopedia-article__paragraph Знаете, сколько времени при обучении врачей посвящается вопросам регуляции и нарушений сна? По данным исследования, проведенного в США, Канаде и странах Азиатско-Тихоокеанского региона, в среднем за все время обучения студенты медицинских ВУЗов изучают эту тему всего 2,5 часа. А в 27% медицинских ВУЗов совсем не рассказывают своим студентам про сон. В США и Канаде этой теме посвящено чуть более 3 часов, а в Австралии – чуть больше 6 часов.<br><br>В ординатуре, где врачи получают специальность педиатр, дела обстоят лучше. В среднем детский сон изучается примерно в течение 4,5 часов, хотя в 23% случаев эта тема вообще не включена в программу обучения. В 95% программ обучения сну уделяется менее 10 часов.
+          if (extended)
+            .encyclopedia-article__quote
+              .encyclopedia-article__quote-info
+                p.encyclopedia-article__quote-type Комментарий эксперта
+                .encyclopedia-article__quote-author
+                  .encyclopedia-article__quote-image(style="background-image: url('img/inhtml/specialist-1.jpg');")
+                  div
+                    a(href="#").encyclopedia-article__quote-author-link Ирина Завалко
+                    p.encyclopedia-article__quote-author-pos Врач-невролог сомнолог
+              p.encyclopedia-article__quote-text Официальных данных относительно российских ВУЗов нет. Происходит примерно так: во время обучения в медицинском ВУЗе у студентов проводится лекция, посвященная сну и коме, упоминается о синдроме обструктивного апноэ во сне, говорится о нарушениях сна – бессоннице и повышенной сонливости. В ординатуре нарушениям сна уделяется около 2 часов
+          p.encyclopedia-article__paragraph Официальных данных относительно российских ВУЗов нет. Происходит примерно так: во время обучения в медицинском ВУЗе у студентов проводится лекция, посвященная сну и коме, упоминается о синдроме обструктивного апноэ во сне, говорится о нарушениях сна – бессоннице и повышенной сонливости. В ординатуре нарушениям сна уделяется около 2 часов.<br><br>По статистике США, проблемы со сном встречаются у детей в возрасте от 0 до 3 лет в 20–30% случаев, и большинство из них имеют поведенческую причину. У практикующих педиатров знаний о развитии сна детей и о том, как работать с возникающими нарушениями, чаще всего недостаточно. Так, больше половины педиатров в США считают, что у них недостаточно знаний и навыков, чтобы диагностировать и лечить различные нарушения сна. В России таких исследований, насколько нам известно, не проводилось.
+          if (extended)
+            .encyclopedia-article__card
+              img(src="img/inhtml/research.svg", alt="").encyclopedia-article__card-image
+              p.encyclopedia-article__card-heading Научное исследование
+              p.encyclopedia-article__card-text По статистике США, проблемы со сном встречаются у детей в возрасте от 0 до 3 лет в 20–30% случаев, и большинство из них имеют поведенческую причину. У практикующих педиатров знаний о развитии сна детей и о том, как работать с возникающими нарушениями, чаще всего недостаточно. Так, больше половины педиатров в США считают, что у них недостаточно знаний и навыков, чтобы диагностировать и лечить различные нарушения сна. В России таких исследований, насколько нам известно, не проводилось.
+          .encyclopedia-article__banner(style="background-image: url('img/inhtml/encyclopedia-article-banner.jpg');")
+            .encyclopedia-article__banner-content
+              .encyclopedia-article__banner-content-inner
+                p.encyclopedia-article__banner-heading Марафон. Бесплатно
+                p.encyclopedia-article__banner-desc Участвуй с 12 сентября по 1 октября.<br>Призы подарки условия и тд, будет весело!
+                +button-tertiary('link', 'Регистрация', 'encyclopedia-article__banner-btn', {link: '#'})
+          p.encyclopedia-article__paragraph Известный автор книг о детском сне Харви Карп пишет, что, начав работать педиатром, он понял, что часто не может помочь матерям. В большинстве случаев мамы приходили к нему не с какими-то диагнозами и болезнями, которые лечатся таблетками, а с жалобами на недосып, с депрессией, с беспокойством. Они приходят за помощью, потому что не понимают, как успокоить малыша, как его уложить и как начать высыпаться, как понять, что нужно ребенку. Он был растерян, потому что этому его в институте не учили – не учили тому, что так нужно матерям. Тогда, много лет назад, он стал искать ответы. Теперь его книга изучается будущими консультантами по детскому сну в рамках Курса подготовки BabySleepConsult. <br><br>Среди консультантов по детскому сну есть врачи, которые дополнительно изучали детский сон. Это не удивительно:<br><br>Врачи слышат жалобы мам маленьких детей, видят их состояние и понимают, что им надо помогать.<br><br>Они как мамы и папы сами сталкиваются с проблемами со сном своих детей и понимают, что им не хватает полученных в рамках изучения педиатрии знаний, чтобы решить насущные проблемы первых месяцев.<br><br>Но врачи-практики обычно слишком загружены работой, чтобы иметь возможность дать родителям нужные знания, а главное, поддержку, требующуюся для работы с поведенческими нарушениями сна детей. Поэтому возникла потребность в услугах узкоспециализированных консультантов по детскому сну.
+          p.encyclopedia-article__highlight Врачи не изучали детский сон в институте, но у них есть доступ к научной базе и исследовательский ум, поэтому первые специалисты по детскому сну начинали изучать этот вопрос самостоятельно, систематизируя информацию из научных статей и проводя собственные исследования.
+        .encyclopedia-article__block-sub
+            a(href="#", style="background-image: url('img/inhtml/sleep.png');").encyclopedia-article__block-sub-link Школа сна «Спать всю ночь»
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__title Почему в вопросах сна не всегда может помочь психолог?
+          p.encyclopedia-article__paragraph Профессор Вайсблут, специалист по детскому сну с мировым именем, пишет в своей книге «Здоровый сон – счастливый ребенок»:<br><br>«Существовавшее неправильное понимание «тревожности» и «усыпляющего плача» объясняется неспособностью разделить: 1) важность хорошего сна, когда мы находимся в биологической фазе сна; и 2) важность надежной привязанности, когда мы находимся в биологическом состоянии бодрствования.
+          if (extended)
+            .encyclopedia-article__quote
+              .encyclopedia-article__quote-info
+                p.encyclopedia-article__quote-type Личный опыт
+                .encyclopedia-article__quote-author
+                  .encyclopedia-article__quote-image(style="background-image: url('img/inhtml/specialist-2.jpg');")
+                  div
+                    a(href="#").encyclopedia-article__quote-author-link Елена Мурадова
+                    p.encyclopedia-article__quote-author-pos Мама троих детей
+              p.encyclopedia-article__quote-text «Еще до работы консультантом по сну 12 лет назад я обратилась в неврологу с вопросом «что не так с моим ребенком, ему уже 1.5 года, гв закончено, почему он  все равно просыпается 4-6 раз за ночь. Врач предположил перевозбуждение и рекомендовал попить глицин. Пробуждения стали чуть реже,малыш чуть спокойнее,  но с их отменой проблемы вернулись – так на практике, а не только в теории стало ясно, что медикаменты, травки и тд могут лишь на время «заморозить» проблему со сном, а не решить ее. Врач же, не зная о методах поведенческой коррекции и принципе ассоциаций на сон, сделал все, что мог – прописал успокоительное и ребенку (что не вредит сильно, но и не решает проблему), и маме (что, признаться, иногда действительно полезно, чтобы сбить цикл тревоги  у молодых родитетелей).  Но настоящее облегчение пришло за 3 дня, когда удалось научить сына засыпать без бутылки – он сразу же начал спать всю ночь без пробуждений».
+          p.encyclopedia-article__paragraph Эту неспособность можно понять, потому что большинство детских психологов и психиатров были лишены возможности проводить исследования или получать необходимую подготовку в области преимуществ здорового сна. Они не понимали, что спящий мозг отличается от бодрствующего. Даже сегодня будущие детские врачи получают очень мало знаний по теме сна – в Соединенных Штатах ей отведено всего лишь около пяти часов в трехгодичной учебной программе для педиатров. К сожалению, советы «специалистов», предлагаемые в популярных журналах и книгах, часто отражают этот недостаток знаний».
+          .encyclopedia-article__video(style="background-image: url('img/inhtml/selection-video.jpg')")
+          p.encyclopedia-article__video-disclaimer Полезное видео
+          p.encyclopedia-article__paragraph Тем не менее, нарушения сна могут иметь и психологические причины. В рамках курса подготовки консультантов по детскому сну BabySleepConsult на 3 Модуле программы даются необходимые знания по возрастной и семейной психологии, позволяющие эффективно учитывать их влияние.
+        .encyclopedia-article__block-sub
+            a(href="#", style="background-image: url('img/inhtml/teddy.png');").encyclopedia-article__block-sub-link Что вам нужно знать о сне вашего малыша
+      .encyclopedia-article__block.m-0
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__title Какие бывают помощники для засыпания и в чем их плюсы и минусы?
+          p.encyclopedia-article__subtitle Мобиль
+        .encyclopedia-article__block-sub
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          .encyclopedia-article__paragraph
+            p.encyclopedia-article__paragraph-text Это в первую очередь развивающая игрушка, стимулирующая сначала зрение и слух, а затем верхний хватательный рефлекс. С другой стороны, многие современные мобили оснащены дополнительными опциями (колыбельные, ночники, проекторы), которые облегчают укладывание малыша спать.<br><br>Используя этот гаджет перед сном, старайтесь соблюдать следующие правила: источник музыки или белого шума должен быть на расстоянии больше 1 метра от головы ребенка, а громкость допустима не выше 50 дБ (шум сильного дождя).<br><br>Помните, что время перед сном – для расслабления, а не для игр и развития. Включая ночник или проектор, оцените его яркость и возможность попадания света на лицо малыша. Завершающую часть ритуала укладывания все же проводите в полной темноте.
+            img.encyclopedia-article__paragraph-image(src="img/inhtml/article-1.png", alt="")
+        .encyclopedia-article__block-sub
+          a(href="#", style="background-image: url('img/inhtml/sleep.png');").encyclopedia-article__block-sub-link Школа сна «Спать всю ночь»
+      .encyclopedia-article__line
+      .encyclopedia-article__block.m-0
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__subtitle Автоматическая качалка для коляски
+        .encyclopedia-article__block-sub
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          .encyclopedia-article__paragraph
+            p.encyclopedia-article__paragraph-text Игрушка Дрёма — это плюшевая игрушка с безопасным генератором розового шума. С точки зрения консультантов по сну, это отличный гаджет, помогающий создать на будущее ассоциации на засыпание для малыша (игрушка+звук). <br><br>Можно использовать ее с рождения, соблюдая правила безопасности. Наш консультант протестировала Дрёму и написала для вас <a href="#">подробный отзыв.</a><br><br>Безусловно, игрушка для сна — не волшебная таблетка, а лишь 1 из факторов спокойного сна. Как и любой гаджет не будет «работать», если не соблюдать здоровые привычки по ритму дня малыша.
+            img.encyclopedia-article__paragraph-image(src="img/inhtml/article-2.png", alt="")
+        .encyclopedia-article__block-sub
+          a(href="#", style="background-image: url('img/inhtml/teddy.png');").encyclopedia-article__block-sub-link Что вам нужно знать о сне вашего малыша
+      .encyclopedia-article__line
+      .encyclopedia-article__block.m-0
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__subtitle Электронный шезлонг или люлька-качалка
+        .encyclopedia-article__block-sub
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          .encyclopedia-article__paragraph
+            p.encyclopedia-article__paragraph-text Это гаджет возрастной категории 0+ с возможностью безопасного горизонтального положения для малыша и трансформации для сидячего-лежачего положения. Шезлонги обычно комплектуют с мобилем, ремнями безопасности и музыкальным сопровождением (веселые песни, белый шум или классическая музыка).<br><br>Покупая шезлонг, помните, что первые 3-4 месяца качание поможет успокоить и расслабить малыша, но если он привыкнет в нем спать (например, днем), может возникнуть сложность с перекладыванием его в кроватку.<br><br>Все сны ребенка не стоит организовывать только в шезлонге. Качание – это сильная ассоциация на засыпание, независимо от того, спит ли малыш у вас на ручках, в коляске или в шезлонге. Если малыш будет спать с постоянным покачиванием, его сон может быть не достаточно качественным. Поэтому к моменту засыпания малыша в шезлонге стоит остановить качание.
+            img.encyclopedia-article__paragraph-image(src="img/inhtml/article-3.png", alt="")
+        .encyclopedia-article__block-sub
+      .encyclopedia-article__block
+        .encyclopedia-article__block-main
+          p.encyclopedia-article__title Можно ли обойтись без врача?
+          p.encyclopedia-article__paragraph Если у ребенка есть проблемы со сном, обязательно нужно проконсультироваться как минимум с педиатром и неврологом. Нарушения сна могут быть вызваны медицинскими проблемами, и в этом случае важно обратиться к профильным специалистам. Если же по мнению врачей здоровье ребенка в порядке, и он плохо спит не из-за медицинских проблем – вероятно, дело в поведенческих причинах. Проблему можно решить в индивидуальной работе с консультантом по сну или в групповых программах.
+          if (extended)
+            .encyclopedia-article__card
+              img(src="img/inhtml/practice.svg", alt="").encyclopedia-article__card-image
+              p.encyclopedia-article__card-heading Случай из практики
+              p.encyclopedia-article__card-text Работая с разными семьями, я нахожу причину того, что малыш поздно укладывается на ночной сон. Например, 2-летний ребенок засыпает в 23:00, а просыпается в 11 утра. У него хороший ночной сон, который покрывает норму сна для его возраста. Но помимо этого он еще и спит днем, укладываясь примерно через 6 часов после утреннего пробуждения. Если малыш спит днем пару часов, то и укладывание на ночь естественно сдвигается на все более позднее время.<br><br>Если начать будить малыша утром чуть раньше и укладывать его на дневной сон тоже чуть раньше, сдвинется и вечернее укладывание, и в целом ритмы сна и бодрствования ребенка. Если у мамы есть желание поменять ситуацию и уверенность в том, что нужно утром разбудить раньше, то все сработает. Но если маму все устраивает и особой проблемы для нее и ребенка (смотрим на поведение!) в таком режиме нет, то, вероятнее всего, как показывает наша практика, мама не захочет что-то менять. У нее недостаточно внутренней мотивации. Пока есть возможность подольше поспать утром вместе с малышом, она будет ей пользоваться. Однако в скором времени ситуацию может поменять внешняя мотивация: если малыш пойдет в сад, то ему придется вставать и ложиться спать раньше.<br><br>Есть другая ситуация, когда ритуала укладывания у семьи нет. Мама укладывает малыша. Он через какое-то время вскакивает и снова садится за игрушки, а потом говорит, что «теперь меня будет укладывать папа!» Начинается следующий этап засыпания, который, возможно, растянется еще на час.
+              .encyclopedia-article__card-actions
+                .encyclopedia-article__card-actions-author
+                  .encyclopedia-article__card-actions-author-image(style="background-image: url('img/inhtml/specialist-1.jpg');")
+                  div
+                    a(href="#").encyclopedia-article__card-actions-author-link Елена Мурадова
+                    p.encyclopedia-article__card-actions-author-desc Основатель BabySleep, первый консультант по сну в России и СНГ
+                +button-primary('link', 'Записаться на консультацию', '.encyclopedia-article__card-btn', {link: '#'})
+          p.encyclopedia-article__paragraph Именно коррекцией поведенческих, не связанных со здоровьем, нарушений сна занимаются консультанты по сну.<br><br>Перед началом консультации консультанты по сну BabySleep обязательно узнают у родителей о здоровье ребёнка, наличии особенностей развития, диагнозах и мнении педиатра и невролога. Консультанты по сну не дают медицинских рекомендаций и не отменяют назначения врачей.
+          if (extended)
+            .encyclopedia-article__card
+              img(src="img/inhtml/faq.svg", alt="").encyclopedia-article__card-image
+              p.encyclopedia-article__card-heading Вопрос – ответ
+              p.encyclopedia-article__card-title Скажите, пожалуйста, а как выбрать консультанта по сну?
+              p.encyclopedia-article__card-text Отвечает <a href="#">Елена Мурадова</a>, основатель БС:<br><br>Обратите внимание на образование консультанта – в каком году получен сертификат, сколько пройдено модулей, сверьте номер в реестве (у каждой крупной школы обучения консультантов реестр выпускников находится в открытом доступе, указан год выпуска и номер сертификата). Обратите внимание, что центр, выдавший сертификат, должен сам иметь практический опыт командного консультирования от 5 лет. Если это агрегатор курсов, недавно созданная организация и даже медик, но без многолетнего опыта индивидуального консультирования и проф. Команды практиков именно в области детского сна – едва ли можно рассчитывать на качественую Консультацию. Не стесняйтесь спрашивать, по каким  конкретно методикам работает консультант, скольким семьям он помог лично (не марафоны и вебинары). Ну и, конечно, доверяйте своей интуиции, ищите «своего» консультанта и бегите от любого «категоричного», нетактичного специалиста, общение с которым вызывает у вас чувство вины.
+          p.encyclopedia-article__poll Блок опроса
+          .encyclopedia-article__tags
+            a(href="#").encyclopedia-article__tag #пеленание
+            a(href="#").encyclopedia-article__tag #консультантпосну
+            a(href="#").encyclopedia-article__tag #совместнымсон
+            a(href="#").encyclopedia-article__tag #сонвкроватке
+            a(href="#").encyclopedia-article__tag #соска
+            a(href="#").encyclopedia-article__tag #Вайсблут
+            a(href="#").encyclopedia-article__tag #Сирс
+            a(href="#").encyclopedia-article__tag #белыйшум
+            a(href="#").encyclopedia-article__tag #колики
+            a(href="#").encyclopedia-article__tag #пользасна
+            a(href="#").encyclopedia-article__tag #прогулка
+            a(href="#").encyclopedia-article__tag #соннаулице
+            a(href="#").encyclopedia-article__tag #сонвпутешествии
+            a(href="#").encyclopedia-article__tag #сондвойни
+            a(href="#").encyclopedia-article__tag #игрушкадлясна
+            a(href="#").encyclopedia-article__tag #позадлясна 
+          .encyclopedia-article__socials
+            .encyclopedia-article__socials-share
+              .encyclopedia-article__socials-share-text Поделиться
+              a(href="#", data-social="fb").encyclopedia-article__socials-item
+              a(href="#", data-social="vk").encyclopedia-article__socials-item
+              a(href="#", data-social="ok").encyclopedia-article__socials-item
+              a(href="#", data-social="twitter").encyclopedia-article__socials-item
+            a(href="#").encyclopedia-article__socials-link Копировать ссылку
+        .encyclopedia-article__block-sub

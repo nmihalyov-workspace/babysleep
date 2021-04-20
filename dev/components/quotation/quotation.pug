@@ -1,0 +1,16 @@
+include ../_ui/heading/heading
+include ../_ui/description/description
+include ../_ui/button/button
+
+mixin quotation
+  section.quotation.container
+    .quotation__wrapper.wrapper
+      .quotation__info
+        .quotation__mark
+        +heading('Возвращаем сон и радость <br>в семью!')
+        +description('Традиционно родители малышей терпят недосып годами. Надежда на «перерастёт», «поспим, когда все зубы вылезут», сменяется циклом изнеможения, порой, вины, выгорания и разочарования в родительстве в целом.<br><br>Мягкий подход BabySleep — это улучшение сна без детских слез в одиночестве. С заботой, уважением к чувствам и взглядам родителей. С учетом темперамента, особенностей возраста и потребностей ребенка. Системно и последовательно, слушая себя и малыша.')
+        .quotation__author
+          a.quotation__link(href="#") Елена Мурадова
+          p.quotation__desc Основатель BabySleep, первый консультант по сну в России и СНГ
+        +button-secondary('link', 'Мягкий подход BabySleep', '', {link: '#'})
+      img.quotation__image(src="img/quotation-pic.png", alt="")

@@ -1,0 +1,43 @@
+.about-help-how
+  padding: 90px 0 45px
+  .description
+    width: 870px
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: stretch
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-bottom: 20px
+  &__item
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: 570px
+    margin: 0 15px 25px
+    padding: 15px 20px 20px
+    border-radius: 12px
+    background-color: transparentize($blue, 0.9)
+    &-type
+      margin-bottom: 15px
+      color: $blue
+      font-size: 12px
+    &-heading
+      margin-bottom: 10px
+      line-height: 1.25
+      font:
+        size: 20px
+        weight: 700
+    &-desc
+      margin-bottom: 15px
+      line-height: 1.44
+    &-link
+      margin-top: auto
+
+@media only screen and (max-width: $mobile)
+  .about-help-how
+    padding: 40px 0 35px
+    .description
+      width: 100%

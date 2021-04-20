@@ -1,0 +1,41 @@
+include ../components/preloader/preloader
+include ../components/header/header
+include ../components/hero/hero
+include ../components/difficulties/difficulties
+include ../components/quotation/quotation
+include ../components/_ui/heading/heading
+include ../components/_ui/description/description
+include ../components/_ui/card/card
+include ../components/helpful/helpful
+include ../components/reviews/reviews
+include ../components/footer/footer
+include ../components/_ui/popup/popup
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Главная
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    +preloader
+    .page-wrapper
+      +header
+      +hero
+      +difficulties
+      +quotation
+      section.block.container
+        .wrapper
+          +heading('Как наладить сон ребенка')
+          +description('Мы встречаемся с родителями на программах в онлайн, консультациях по видеосвязи, приезжаем на дом с индивидуальным планом налаживания сна.')
+          .grid-card
+            +card('card-1.jpg', 'Самостоятельно', 'Вебинары по возрасту', 'Научим быстрее успокаивать, перекладывать в кроватку без слез, создадим базу для бесшовного прохождения регресса сна', ['0–6 мес', '6–12 мес', '1–3 года', 'ГВ и сон'], null, '1990 ₽')
+            +card('card-2.jpg', 'Быстрое решение', 'Экспресс-консультации', 'Предложим стратегию-решение по конкретно вашей ситуации', null, null, 'от 3500 ₽')
+            +card('card-3.jpg', 'Индивидуальное решение', 'Решение под ключ — 1 месяц работы над сном с консультантом', '4 недели работы один на один с экспертом по решению любых проблем со сном', null, 'от 12 000 ₽', 'от 10 000 ₽')
+      +helpful
+      +reviews
+      +footer
+    +popup('age')
+    +popup('guide')
+    +popup('search')

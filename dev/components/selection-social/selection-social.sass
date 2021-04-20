@@ -1,0 +1,76 @@
+.selection-social
+  &__form
+    position: relative
+    margin-top: -150px
+    margin-bottom: 35px
+    padding: 35px 40px
+    border-radius: 16px
+    background-color: $blue
+    color: #fff
+    &-type
+      margin-bottom: 15px
+    &-heading
+      margin-bottom: 5px
+      font:
+        size: 29px
+        weight: 300
+    &-desc
+      margin-bottom: 25px
+    &-row
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 10px
+    &-more
+      opacity: 0.6
+      margin: 25px 0
+      padding-left: 15px
+      cursor: pointer
+      transition: opacity .3s ease
+      &--mobile
+        display: none
+      &:hover
+        opacity: 1
+    &-btn
+      color: $blue
+    &-disclaimer
+      opacity: 0.4
+      font-size: 9px
+      a
+        color: #fff
+  &__link
+    margin-bottom: 75px
+    padding-bottom: 35px
+    border-bottom: 1px solid transparentize($black, 0.85)
+    text-align: right
+
+@media only screen and (max-width: $mobile)
+  .selection-social
+    &__form
+      margin-top: -90px
+      padding: 25px 15px 30px
+      &-heading
+        margin-bottom: 10px
+        line-height: 1.167
+        font-size: 24px
+      &-row
+        flex-flow: column nowrap
+        align-items: flex-start
+        .input
+          width: 100%
+          margin-bottom: 10px
+      &-more
+        display: none
+        &--mobile
+          display: block
+          margin: 5px auto 15px
+          padding: 0
+          text-align: center
+      &-btn
+        max-width: 100%
+      &-disclaimer
+        width: 215px
+    &__link
+      margin-bottom: 40px
+      padding-left: 150px

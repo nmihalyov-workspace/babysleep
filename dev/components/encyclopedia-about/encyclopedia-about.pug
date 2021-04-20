@@ -1,0 +1,18 @@
+include ../_ui/button/button
+
+mixin encyclopedia-about
+  section.encyclopedia-about.block.container
+    .encyclopedia-about__wrapper.wrapper
+      .encyclopedia-about__info
+        p.encyclopedia-about__heading Уже 9 лет BabySleep занимается тем, что помогает родителям организовать здоровый и спокойный сон своих детей
+        .encyclopedia-about__author.encyclopedia-about__author--mobile
+          .encyclopedia-about__author-image(style="background-image: url('img/inhtml/encyclopedia-article-author.jpg');")
+          div
+            a(href="#").encyclopedia-about__author-name Елена Мурадова
+            p.encyclopedia-about__author-desc Основатель BabySleep, первый консультант по сну в России и СНГ
+        p.encyclopedia-about__desc Мы работаем по мягким методикам, способствуя  укреплению привязонности матери и ребенка. Все материалы нашей энциклопедии созданы для самостоятельной работы, но если вам не подходит общее решение и вы не высыпаетесь уже более 3-х недель, не терпите! Обратитесь к консультанту по сну!
+        +button-primary('link', 'Подробнее о консультациях', 'encyclopedia-about__btn', {link: '#'})
+      .encyclopedia-about__author
+        .encyclopedia-about__author-image(style="background-image: url('img/inhtml/encyclopedia-article-author.jpg');")
+        a(href="#").encyclopedia-about__author-name Елена Мурадова
+        p.encyclopedia-about__author-desc Основатель BabySleep, первый консультант по сну в России и СНГ

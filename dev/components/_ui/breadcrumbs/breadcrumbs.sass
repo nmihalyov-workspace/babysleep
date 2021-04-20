@@ -1,0 +1,22 @@
+.breadcrumbs
+  margin-top: -20px
+  padding: 40px 0 20px 0
+  background-color: $biege
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+  &__item
+    opacity: 0.5
+    text-decoration: none
+    font-size: 12px
+    &:not(:last-child)
+      &:after
+        content: ' / '
+    &:last-child
+      pointer-events: none
+
+@media only screen and (max-width: $mobile)
+  .breadcrumbs
+    display: none

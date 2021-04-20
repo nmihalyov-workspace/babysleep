@@ -1,0 +1,32 @@
+include ../_ui/heading/heading
+
+mixin interesting
+  section.interesting.container
+    .wrapper
+      +heading('Вам интересно')
+      .interesting__grid
+        a(href="#").interesting__item
+          .interesting__icon(data-icon="leaps")
+          .interesting__info
+            p.interesting__title Скачки <br>развития
+            p.interesting__desc 15 статей
+        a(href="#").interesting__item
+          .interesting__icon(data-icon="month")
+          .interesting__info
+            p.interesting__title Особенности сна <br>по месяцам
+            p.interesting__desc 12 статей
+        a(href="#").interesting__item
+          .interesting__icon(data-icon="memo")
+          .interesting__info
+            p.interesting__title Брошюры и памятки
+            p.interesting__desc 8 статей
+        a(href="#").interesting__item
+          .interesting__icon(data-icon="tables")
+          .interesting__info
+            p.interesting__title Таблицы и нормы <br>сна
+            p.interesting__desc 15 статей
+        a(href="#").interesting__item
+          .interesting__icon(data-icon="safety")
+          .interesting__info
+            p.interesting__title Безопасность <br>сна
+            p.interesting__desc 7 статей

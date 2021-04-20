@@ -1,0 +1,33 @@
+include ../_ui/heading/heading
+include ../_ui/description/description
+include ../_ui/input/input
+include ../_ui/button/button
+
+mixin encyclopedia-info
+  section.encyclopedia-info.container
+    .wrapper
+      +heading('Вы хотите наладить сон ребёнка и ищите информацию?')
+      +description('Выберите возраст ребёнка, и мы подберём все доступные материалы и решения BabySleep')
+      .encyclopedia-info__sleep-grid
+        a(href="#").encyclopedia-info__sleep-item
+          img(src="img/inhtml/age-1.svg", alt="").encyclopedia-info__sleep-image
+        a(href="#").encyclopedia-info__sleep-item
+          img(src="img/inhtml/age-2.svg", alt="").encyclopedia-info__sleep-image
+        a(href="#").encyclopedia-info__sleep-item
+          img(src="img/inhtml/age-3.svg", alt="").encyclopedia-info__sleep-image
+        a(href="#").encyclopedia-info__sleep-item
+          img(src="img/inhtml/age-4.svg", alt="").encyclopedia-info__sleep-image
+        a(href="#").encyclopedia-info__sleep-item
+          img(src="img/inhtml/age-5.svg", alt="").encyclopedia-info__sleep-image
+        a(href="#").encyclopedia-info__sleep-item
+          img(src="img/inhtml/age-6.svg", alt="").encyclopedia-info__sleep-image
+      p.encyclopedia-info__or или
+      form.encyclopedia-info__form(action="")
+        p.encyclopedia-info__form-heading Получите подборку статей на почту для ребёнка вашего возраста
+        p.encyclopedia-info__form-desc Заполните данные и возраст ребенка, чтобы получать только то что вам нужно.
+        .encyclopedia-info__form-row
+          +input('text', 'name', 'Имя', '', true)
+          +input('email', 'email', 'Email', '', true)
+          +input('text', 'date', 'Дата рождения ребенка', '', true)
+          +button-tertiary('submit', 'Подписаться на рассылку', 'encyclopedia-info__form-btn')
+        p.encyclopedia-info__form-disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>

@@ -1,0 +1,18 @@
+mixin card(image, type, title, description, tags, oldPrice, price)
+  .card
+    .card__image(style=`background-image: url('img/inhtml/${image}');`)
+      p.card__image-type= type
+    .card__content
+      .card__info
+        p.card__title= title
+        p.card__description= description
+        if (tags)
+          .card__tags
+            each tag in tags
+              p.card__tag= tag
+      .card__actions
+        .card__price
+          if (oldPrice)
+            p.card__price-old= oldPrice
+          p.card__price-current= price
+        a.card__link(href="#") Подробнее

@@ -1,0 +1,22 @@
+.about-subscribe
+  &__slider
+    width: calc(100% + 60px)
+    margin: 0 0 75px -30px
+    padding: 0 30px 35px 0
+    border-bottom: 1px solid transparentize($black, 0.85)
+  .about__item
+    outline: 0
+    padding: 0 15px
+
+@media only screen and (max-width: $mobile)
+  .about-subscribe
+    &__slider
+      width: 100%
+      margin: 0 auto 30px
+      padding: 0
+      .slick-list
+        overflow: visible !important
+      .slick-slide
+        margin: 0 10px
+      .about__item
+        padding: 0

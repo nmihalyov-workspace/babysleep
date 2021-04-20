@@ -1,0 +1,181 @@
+.consults-steps
+  margin-bottom: 90px
+  padding-bottom: 0
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: flex-start
+  &__content
+    margin-right: 30px
+    margin-bottom: 70px
+  &__desc
+    margin-bottom: 35px
+    &:last-child
+      margin-top: 35px
+      margin-bottom: 0
+    span
+      font-weight: 700
+  &__cards
+    position: relative
+    &:before
+      z-index: 1
+      content: ''
+      position: absolute
+      display: block
+      top: -20px
+      left: 25px
+      width: 2px
+      height: calc(100% + 40px)
+      background-color: transparentize($black, 0.9)
+  &__card
+    z-index: 2
+    position: relative
+    width: 670px
+    margin-bottom: 20px
+    padding: 20px 30px 15px 15px
+    border-radius: 12px
+    background-color: #fff
+    box-shadow: 0px 14px 18px rgba(139, 126, 114, 0.1)
+    &:first-child
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        top: -23px
+        left: 23px
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: #E2DCD6
+    &:last-child
+      &:after
+        position: absolute
+        content: ''
+        display: block
+        bottom: -23px
+        left: 23px
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: #E2DCD6
+    &-num
+      width: 30px
+      height: 30px
+      margin-bottom: 15px
+      border-radius: 50%
+      background-color: $black
+      color: #fff
+      text-align: center
+      line-height: 30px
+      font-weight: 700
+    &-heading
+      margin-bottom: 10px
+      font-weight: 700
+    &-link
+      opacity: 0.5
+      display: inline-block
+      margin-top: 5px
+      line-height: 1.36
+      font-size: 11px
+    &-accordeon
+      display: inline-block
+      margin-top: 10px
+      color: $blue
+    &-content
+      display: none
+      padding-top: 30px
+      &-heading
+        opacity: 0.5
+        margin-bottom: 20px
+        font:
+          size: 16px
+          weight: 700
+      &-list
+        margin: 0
+        padding: 0
+        list-style-position: inside
+        &-item
+          &:not(:last-child)
+            margin-bottom: 10px
+    &-stages
+      margin-left: 35px
+      margin-bottom: -15px
+      padding: 0 0 15px 25px
+      border-left: 2px solid $green
+    &-stage
+      position: relative
+      &:not(:last-child)
+        margin-bottom: 35px
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        top: 0
+        left: -34px
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background-color: $green
+      &-heading
+        margin-bottom: 10px
+        font:
+          size: 16px
+          weight: 700
+      &-subheading
+        opacity: 0.5
+        margin-bottom: 5px
+      &-text
+        margin-bottom: 20px
+        line-height: 1.4
+  &__author
+    top: calc(100vh - 718px)
+    position: sticky
+    margin-top: -235px
+    padding-top: 605px
+    padding-bottom: 32px
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: -330px
+      display: block
+      width: 202px
+      height: 181px
+      background:
+        image: url('../img/consults-bubble.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-image
+      z-index: 1
+      position: absolute
+      width: 312px
+      bottom: 0
+      left: 90px
+    &-info
+      z-index: 2
+      position: relative
+      width: 200px
+      line-height: 1.5
+      font-size: 13px
+      span
+        display: block
+        margin-bottom: 5px
+        text-decoration: underline
+        font:
+          size: 13px
+          weight: 700
+
+@media only screen and (max-width: $mobile)
+  .consults-steps
+    margin-bottom: 40px
+    &__card
+      width: 100%
+      margin-bottom: 15px
+      &-stages
+        margin-left: 15px
+    &__content
+      margin: 0
+    &__author
+      display: none

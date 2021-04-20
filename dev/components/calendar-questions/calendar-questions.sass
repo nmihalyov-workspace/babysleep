@@ -1,0 +1,77 @@
+.calendar-questions
+  &__accordeon
+    &-item
+      &:not(:last-child) .js-accordeon-item
+        transition: border-bottom-color .3s ease
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    &-content
+      position: relative
+      &.active
+        border-bottom-width: 0 !important
+        .js-accordeon-trigger:after
+          transform: rotate(-90deg)
+        &:before
+          opacity: 1
+      &:before
+        opacity: 0
+        content: ''
+        display: block
+        position: absolute
+        left: calc(-50vw + 625px)
+        top: 0
+        width: calc(100vw - 80px)
+        height: 100%
+        border-radius: 15px
+        background-color: transparentize($black, 0.95)
+        transition: all .3s ease
+    &-heading
+      position: relative
+      padding: 34px 0
+      cursor: pointer
+      font-weight: 700
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        top: calc(50% - 6px)
+        width: 7px
+        height: 12px
+        transform: rotate(90deg)
+        transition: transform .3s ease
+        background:
+          image: url('../img/icons/caret.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-info
+      display: none
+      padding: 0 0 30px
+    &-inner
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+    &-text
+      width: 1070px
+
+@media only screen and (max-width: $mobile)
+  .calendar-questions
+    &__accordeon
+      &-content
+        &:before
+          left: calc(-50vw + 50%)
+          width: 100vw
+        &.active
+          .selection-sleep__accordeon-heading
+            opacity: 0.5
+      &-heading
+        padding: 18px 0
+        transition: opacity .3s ease
+        font-size: 16px
+      &-info
+        padding: 0 0 20px
+      &-inner
+        flex-flow: column nowrap
+      &-text
+        width: 100%

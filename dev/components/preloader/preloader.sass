@@ -1,0 +1,20 @@
+@import 'assets/animation'
+
+.preloader
+  z-index: 9999999999
+  position: fixed
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fff
+  transition: opacity .5s ease
+  &__logo
+		svg
+			width: 348px
+			height: 231px
+
+@media only screen and (max-width: $mobile)
+	.preloader__logo
+		transform: scale(0.517)

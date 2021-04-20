@@ -1,0 +1,114 @@
+include ../_ui/input/input
+include ../_ui/button/button
+include ../_ui/article-card/article-card
+
+mixin profile
+  section.profile.container.wrapper
+    .wrapper
+      .profile__heading
+        p.profile__heading-title Личный кабинет
+        a.profile__heading-logout(href="javascript:void(0)") Выйти
+      .profile__screen
+        aside.profile__aside
+          a.profile__aside-link.profile__aside-link--active(href="javascript:void(0)", data-tab="profile") Профиль
+          a.profile__aside-link(href="javascript:void(0)", data-tab="form") Анкета
+          a.profile__aside-link(href="javascript:void(0)", data-tab="orders") Оплаченные заказы
+          a.profile__aside-link(href="javascript:void(0)", data-tab="favorites") Избранное
+          a.profile__aside-link(href="javascript:void(0)", data-tab="consult") Связь с консультантом
+        main.profile__main
+          .profile__content(data-content="profile")
+            p.profile__content-heading Профиль
+            p.profile__subheading.profile__subheading--hide-m Фото профиля
+            label.profile__photo
+              input.profile__photo-input(type="file", accept=".jpg, .jpeg, .png")
+              .profile__photo-pic(style="background-image: url('img/inhtml/profile.png');")
+              p.profile__photo-text Изменить
+            p.profile__subheading Персональные данные
+              form.profile__personal(action="")
+                .profile__personal-row
+                  +input('email', 'email', 'E-mail', 'profile__personal-input')
+                  +input('tel', 'phone', 'Телефон', 'profile__personal-input')
+                label.profile__personal-password
+                  +input('password', 'password', 'Пароль', 'profile__personal-password-input')
+                  a.profile__personal-password-change(href="javascript:void(0)") Изменить пароль
+                .profile__personal-row
+                  +input('name', 'name', 'Имя', 'profile__personal-input')
+                  +input('surname', 'surname', 'Фамилия', 'profile__personal-input')
+              p.profile__saved Изменения сохранены
+            p.profile__subheading Данные ребенка
+            .profile__children
+              .profile__children-row
+                +input('text', 'childrenBirthdate', 'Дата рождения ребенка', 'profile__children-input')
+                +button-quoternary('link', 'Сон ребенка 0-3 месяца', 'profile__children-btn', {link: '#'})
+              a.profile__children-add(href="javascript:void(0)") + добавить ребенка
+          .profile__content(data-content="form")
+            p.profile__content-heading Анкета
+            .profile__form
+              p.profile__form-heading Анкета «Сон ребенка» для подготовки к консультации со&nbsp;специалистом BabySleep
+              p.profile__desc Индивидуальные консультации по детскому сну являются платной услугой. Более подробно с описанием наших пакетов и их стоимости вы можете ознакомиться <a href="#">здесь</a>.
+            p.profile__subheading Выберите возраст ребенка для заполнения анкеты
+            .profile__buttons
+              +button-primary('link', 'младше 6 месяцев', 'profile__btn', {link: '#'})
+              +button-primary('link', 'от 6 месяцев до 3 лет', 'profile__btn', {link: '#'})
+              +button-primary('link', 'старше 3 лет', 'profile__btn', {link: '#'})
+              +button-primary('link', 'нужно наладит сон 2 детей', 'profile__btn', {link: '#'})
+            p.profile__desc Если помощь консультанта нужна сразу по 3–7 детям (да, можно и так) — напишите администратору  на <a href="mailto:ask@baby-sleep.ru">ask@baby-sleep.ru</a> или позвоните по тел: +7 (495) 222 02 44.
+          .profile__content(data-content="orders")
+            p.profile__content-heading Оплаченные заказы
+            .profile__orders
+              .profile__orders-table
+                .profile__orders-head
+                  p.profile__orders-cell Заказ
+                  p.profile__orders-cell Дата
+                  p.profile__orders-cell Сумма, &#8381;
+                .profile__orders-row
+                  p.profile__orders-cell Решение под ключ — 1 месяц работы над сном с консультантом
+                  p.profile__orders-cell 2 сентября 2020
+                  p.profile__orders-cell 10 000<span> &#8381;</span>
+                .profile__orders-row
+                  p.profile__orders-cell Экспресс-консультация 
+                  p.profile__orders-cell 12 августа 2020
+                  p.profile__orders-cell 3500<span> &#8381;</span>
+              .profile__orders-materials
+                p.profile__orders-materials-heading Материалы по возрастам
+                .difficulties__age-grid
+                  a(href="#").difficulties__age-item
+                    img(src="img/inhtml/age-1.svg", alt="").difficulties__age-image
+                  a(href="#").difficulties__age-item
+                    img(src="img/inhtml/age-2.svg", alt="").difficulties__age-image
+                  a(href="#").difficulties__age-item
+                    img(src="img/inhtml/age-3.svg", alt="").difficulties__age-image
+                  a(href="#").difficulties__age-item
+                    img(src="img/inhtml/age-4.svg", alt="").difficulties__age-image
+                  a(href="#").difficulties__age-item
+                    img(src="img/inhtml/age-5.svg", alt="").difficulties__age-image
+                  a(href="#").difficulties__age-item
+                    img(src="img/inhtml/age-6.svg", alt="").difficulties__age-image
+          .profile__content(data-content="favorites")
+            p.profile__content-heading Избранное
+            .profile__favorites
+              +article-card('article-1.jpg', 'Безопасность сна', 'Безопасность детского сна: пояснения к рекомендациям американской академии педиатрии', 'Ежегодно в США более 3,5 тысяч детей неожиданно умирают во сне. Часто это связано с синдромом внезапной детской смерти (СВДС) или случайной смертью от удушья...', '19.06.20', '2647', '37', '112', ['0-3', '3-6', '6-9'], true)
+              +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112', ['0-3', '3-6', '6-9', '9-18', '1,5-3 года', '3-7 лет'], true)
+          .profile__content(data-content="consult")
+            p.profile__content-heading Связь с консультантом
+            .profile__consult
+              .profile__consult-main
+                p.profile__consult-heading Связь с консультантом доступна в рамках индивидуальной работы
+                +button-primary('link', 'Консультации', 'js-profile-consult', {link: 'javascript:void(0)'})
+              form.profile__consult-main.profile__consult-main--form(action="")
+                p.profile__consult-heading Ваш консультант
+                .profile__consult-consultant
+                  .profile__consult-consultant-image(style="background-image: url('img/elena.png');")
+                  .profile__consult-consultant-info
+                    a.profile__consult-consultant-name(href="#") Елена Мурадова
+                    p.profile__consult-consultant-contact +7 951 000 00 00
+                    p.profile__consult-consultant-contact elena@bs.ru
+                p.profile__consult-heading Связаться с консультантом
+                +input('text', 'title', 'Тема письма', 'profile__personal-input', true)
+                +input('text', 'comment', 'Вопрос или комментарий', 'profile__personal-input', true)
+                +button-primary('submit', 'Отправить', 'profile__consult-submit')
+              p.profile__consult-heading Нужна ли вам консультация или другая услуга — спросите прямо сейчас
+              p.profile__consult-desc За 10 лет практики  наши консультанты помогли наладить сон более 14000 семей, используя бережные методики и индивидуальный подход. И у вас получится!<br><br>Вы в надежных руках!
+              .profile__consult-buttons
+                +button-primary('link', 'Спросить в Whats App', '', {link: '#'})
+                +button-primary('link', 'Спросить в Instagram', 'profile__inst', {link: '#'})

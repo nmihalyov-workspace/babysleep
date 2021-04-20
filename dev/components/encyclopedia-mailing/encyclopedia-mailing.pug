@@ -1,0 +1,29 @@
+include ../_ui/input/input
+include ../_ui/button/button
+include ../_ui/subheading/subheading
+include ../_ui/article-card/article-card
+
+mixin encyclopedia-mailing
+  section.encyclopedia-mailing.block.container
+    .wrapper
+      form.encyclopedia-mailing__form(action="")
+        p.encyclopedia-mailing__form-heading Подпишитесь на рассылку, чтобы не пропускать полезные статьи про сон малыша
+        p.encyclopedia-mailing__form-desc Заполните данные и возраст ребенка, чтобы получать только то что вам нужно.
+        .encyclopedia-mailing__form-row
+          +input('text', 'name', 'Имя', '', true)
+          +input('email', 'email', 'Email', '', true)
+          +input('text', 'date', 'Дата рождения ребенка', '', true)
+          +button-tertiary('submit', 'Подписаться на рассылку', 'encyclopedia-mailing__form-btn')
+        p.encyclopedia-mailing__form-disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>
+      +subheading('Другие статьи', 'Смотреть все')
+      .encyclopedia-mailing__articles
+        +article-card('article-1.jpg', 'Безопасность сна', 'Безопасность детского сна: пояснения к рекомендациям американской академии педиатрии', 'Ежегодно в США более 3,5 тысяч детей неожиданно умирают во сне. Часто это связано с синдромом внезапной детской смерти (СВДС) или случайной смертью от удушья...', '19.06.20', '2647', '37', '112')
+        +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112')
+        +article-card('article-3.jpg', 'Нормы сна и бодрствования для детей', 'Что значит «ребенок плохо спит»?', 'Новое исследование Института здоровья и благосостояния Финляндии и Университета Турку показывает, что у младенцев часто бывают проблемы со сном, которые обычно проходят...', '19.06.20', '2647', '37', '112')
+      .reviews__subscribe
+        p.reviews__subscribe-heading Подписывайтесь!
+        p.reviews__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+        .reviews__subscribe-socials
+          a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+          a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+          a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")

@@ -1,0 +1,212 @@
+.consults-types
+  margin-bottom: 90px
+  &__card
+    overflow: hidden
+    border-radius: 16px
+    background-color: #fff
+    box-shadow: 0px 14px 18px rgba(139, 126, 114, 0.1)
+    &:not(:last-child)
+      margin-bottom: 30px
+    &-main
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: stretch
+      height: 320px
+    &-preview
+      position: relative
+      width: 570px
+      height: 320px
+      &-image
+        z-index: 1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background:
+          size: cover
+          position: center
+          repeat: no-repeat
+      &-text
+        z-index: 2
+        position: relative
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: flex-end
+        height: 100%
+        padding: 25px
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.69%, rgba(0, 0, 0, 0.1) 100%)
+        color: #fff
+    &-info
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-between
+      align-items: stretch
+      width: 600px
+      padding: 35px 30px 20px
+      &-heading
+        margin-bottom: 10px
+        line-height: 1.25
+        font:
+          size: 24px
+          weight: 700
+      &-desc
+        padding-right: 30px
+        line-height: 1.67
+      &-price
+        margin-top: 20px
+        &-amount
+          margin-bottom: 10px
+          line-height: 1.14
+          font:
+            size: 21px
+            weight: 700
+        &-disclaimer
+          opacity: 0.5
+          line-height: 1.09
+          font-size: 11px
+      &-more
+        position: relative
+        display: block
+        text-decoration: none
+        &--active
+          &:after
+            transform: rotate(-90deg) !important
+        &:after
+          content: ''
+          position: absolute
+          display: block
+          right: 2px
+          top: 3px
+          width: 7px
+          height: 12px
+          transform: rotate(90deg)
+          transition: transform .3s ease
+          background:
+            image: url('../img/icons/caret.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+    &-inner
+      display: none
+      padding: 35px 30px 40px 25px
+      &-content
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: flex-start
+      &-desc
+        width: 540px
+        p
+          margin-bottom: 20px
+        a
+          display: inline-block
+          margin-top: 30px
+          color: $blue
+      &-form
+        width: 540px
+        &-table
+          display: flex
+          flex-flow: row wrap
+          justify-content: space-between
+          align-items: center
+          margin-bottom: 20px
+      &-heading
+        margin-bottom: 15px
+        line-height: 1.3125
+        font:
+          size: 16px
+          weight: 700
+      &-input
+        width: 265px
+        margin-bottom: 10px
+        border-color: transparentize($black, 0.85)
+        color: $black
+        &::placeholder
+          color: $black
+        &::-webkit-input-placeholder
+          color: $black
+        &::-moz-placeholder
+          color: $black
+        &:-ms-input-placeholder
+          color: $black
+        &:-moz-placeholder
+          color: $black
+      .select2
+        margin-bottom: 10px
+      &-format
+        margin-bottom: 40px
+      &-radio
+        margin-bottom: 10px
+      &-prices
+        margin-bottom: 35px
+        padding-top: 35px
+        border-top: 1px solid transparentize($black, 0.85)
+        &-sub
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          align-items: center
+          margin-bottom: 5px
+          &-key
+            opacity: 0.5
+        &-total
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          align-items: center
+          margin-top: 10px
+          &-value
+            font:
+              size: 21px
+              weight: 700
+
+@media only screen and (max-width: $mobile)
+  .consults-types
+    &__card
+      border-radius: 12px
+      &:not(:last-child)
+        margin-bottom: 15px
+      &-main
+        height: auto
+        flex-flow: column nowrap
+      &-preview
+        width: 100%
+        height: 195px
+        &-text
+          padding: 12px 15px
+          font-size: 11px
+      &-info
+        width: 100%
+        padding: 20px 15px
+        &-heading
+          margin-bottom: 10px
+          line-height: 1.3125
+          font-size: 16px
+        &-desc
+          margin-bottom: 20px
+          line-height: 1.4
+          font-size: 15px
+        &-price
+          margin: 0 0 20px 0
+      &-inner
+        padding: 0 15px 15px 15px
+        &-content
+          flex-flow: column nowrap
+        &-desc
+          width: 100%
+          margin-bottom: 20px
+          a
+            margin-top: 0
+        &-form
+          width: 100%
+          .button
+            max-width: 100%
+        &-input
+          width: 100%
+        &-prices-sub-value,
+        &-prices-total-value
+          flex-shrink: 0
+          padding-left: 10px

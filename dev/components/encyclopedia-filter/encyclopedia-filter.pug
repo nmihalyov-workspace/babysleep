@@ -1,0 +1,28 @@
+include ../_ui/button/button
+
+mixin encyclopedia-filter
+  section.encyclopedia-filter.container
+    .wrapper
+      .encyclopedia-filter__block
+        .encyclopedia-filter__head
+          p.encyclopedia-filter__head-title Выберите тему
+          .encyclopedia-filter__head-themes
+            p.encyclopedia-filter__head-themes-text Выбрано тем
+            p.encyclopedia-filter__head-themes-count 0
+            .encyclopedia-filter__head-themes-arrow →
+        .encyclopedia-filter__inner
+          a(href="#").encyclopedia-filter__show Показать все статьи (176)
+          .encyclopedia-filter__grid
+            p.encyclopedia-filter__item Внешние факторы, влияющие на сон ребенка (17)
+            p.encyclopedia-filter__item Дневной сон ребенка (6)
+            p.encyclopedia-filter__item Методики улучшения сна ребенка (3)
+            p.encyclopedia-filter__item Нормы сна и бодрствования для детей (2)
+            p.encyclopedia-filter__item Пеленание новорождённых (6)
+            p.encyclopedia-filter__item Почему ребёнок не спит (8)
+            p.encyclopedia-filter__item Признаки усталости у <br>малышей (2)
+            p.encyclopedia-filter__item Работа консультанта по сну (1)
+            p.encyclopedia-filter__item Режим ребенка (11)
+            p.encyclopedia-filter__item Совместный сон с малышом (2)
+            p.encyclopedia-filter__item Сон ребенка и грудное вскармливание (4)
+            p.encyclopedia-filter__item Привязанность — наш помощник (2)
+          +button-primary('link', 'Применить фильтр', 'encyclopedia-filter__btn', {link: '#'})

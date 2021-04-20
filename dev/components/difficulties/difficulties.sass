@@ -1,0 +1,834 @@
+// .difficulties
+//   margin-bottom: -50px
+//   &__slider
+//     position: relative
+//     white-space: nowrap
+//     overflow: auto
+//     width: 100vw
+//     margin: 0 calc(-50vw + 585px) 140px calc(-50vw + 585px)
+//     padding: 0 calc(50vw - 585px) 50px calc(50vw - 585px)
+//   &__slide
+//     display: inline-block
+//     padding: 190px 0 110px
+//     white-space: normal
+//   &__timeline
+//     display: flex
+//     flex-flow: row nowrap
+//     justify-content: flex-start
+//     align-items: flex-end
+//     border-bottom: 1px solid $black
+//     text-align: center
+//     font-size: 12px
+//     &--start
+//       position: relative
+//       &:before
+//         content: ''
+//         display: block
+//         position: absolute
+//         bottom: -3px
+//         left: -2px
+//         width: 4px
+//         height: 4px
+//         border-radius: 50%
+//         background-color: $black
+//     &--end
+//       position: relative
+//       &:after
+//         content: ''
+//         display: block
+//         position: absolute
+//         bottom: -3px
+//         right: -2px
+//         width: 4px
+//         height: 4px
+//         border-radius: 50%
+//         background-color: $black
+//   &__term
+//     z-index: 2
+//     position: relative
+//     display: flex
+//     flex-flow: row nowra
+//     justify-content: flex-start
+//     align-items: center
+//     height: 15px
+//     font-size: 12px
+//     &-gap
+//       position: relative
+//       &:before
+//         content: ''
+//         display: block
+//         position: absolute
+//         top: -2px
+//         left: -4px
+//         width: 4px
+//         height: 2px
+//         background-color: $biege
+//     p
+//       flex-grow: 1
+//       flex-shrink: 0
+//       span
+//         opacity: 0.5
+//         position: sticky
+//         left: 0
+//         padding-right: 10px
+//   &__stages
+//     z-index: 1
+//     position: relative
+//     margin-top: -15px
+//   &__handwriting
+//     position: absolute
+//   &__start
+//     position: absolute
+//     bottom: 40px
+//     &:after
+//       opacity: 0.2
+//       content: ''
+//       display: block
+//       position: absolute
+//       left: 50%
+//       bottom: -55px
+//       width: 1px
+//       height: 48px
+//       background-image: linear-gradient(180deg, #313131 0%, rgba(49, 49, 49, 0) 64.58%)
+//   &__event
+//     position: absolute
+//     bottom: 14px
+//     padding: 6px 10px
+//     border-radius: 9px
+//     background-color: #EBE3DB
+//     &:after
+//       content: ''
+//       display: block
+//       position: absolute
+//       left: 50%
+//       bottom: -28px
+//       width: 1px
+//       height: 28px
+//       background-image: linear-gradient(180deg, #313131 -71.43%, rgba(49, 49, 49, 0) 39.29%)
+//     img
+//       position: absolute
+//       top: 6px
+//       left: 50%
+//       transform: translate(-50%, -100%)
+//     p
+//       text-align: center
+//       font-size: 12px
+//   &__hop
+//     z-index: 3
+//     position: absolute
+//     bottom: 14px
+//     width: 180px
+//     padding: 6px 10px
+//     border-radius: 9px
+//     background-color: #fff
+//     &:after
+//       content: ''
+//       display: block
+//       position: absolute
+//       left: 50%
+//       bottom: -28px
+//       width: 1px
+//       height: 28px
+//       background-image: linear-gradient(180deg, #03BFD7 0%, rgba(3, 191, 215, 0) 64.58%)
+//     &:before
+//       position: absolute
+//       content: ''
+//       display: block
+//       top: 6px
+//       left: 50%
+//       width: 25px
+//       height: 25px
+//       transform: translate(-50%, -100%)
+//       background:
+//         image: url('../img/logo-small.svg')
+//         size: contain
+//         position: center
+//         repeat: no-repeat
+//     p
+//       text-align: center
+//       font-size: 12px
+//       span
+//         font-weight: 700
+//   &__note
+//     position: absolute
+//     bottom: 14px
+//     width: 95px
+//     text-align: center
+//     text-decoration: underline
+//     text-decoration-skip-ink: none
+//     font-size: 12px
+//     &:after
+//       content: ''
+//       display: block
+//       position: absolute
+//       left: 50%
+//       bottom: -30px
+//       width: 1px
+//       height: 28px
+//       background-image: linear-gradient(180deg, #313131 -71.43%, rgba(49, 49, 49, 0) 39.29%)
+//     &--bottom
+//       top: 14px
+//       &:after
+//         top: -30px
+//         background-image: linear-gradient(0deg, #313131 -71.43%, rgba(49, 49, 49, 0) 39.29%)
+//   &__stage
+//     position: absolute
+//     top: 10px
+//     width: 280px
+//     text-decoration: underline
+//     text-decoration-skip-ink: none
+//     font-size: 12px
+//     p
+//       z-index: 2
+//       position: relative
+//       display: flex
+//       flex-flow: column nowrap
+//       justify-content: flex-end
+//       align-items: flex-start
+//       height: 50px
+//       border-radius: 0 0 0 9px
+//       padding: 6px 8px
+//       border-bottom: 1px solid transparentize(#313131, 0.8)
+//       border-left: 1px solid transparentize(#313131, 0.8)
+//     &--top
+//       top: auto
+//       bottom: 0
+//       p
+//         border-radius: 9px 0 0 0
+//         border-bottom: none !important
+//         border-top: 1px solid transparentize(#313131, 0.8)
+//         justify-content: flex-start
+//       &.difficulties__stage--big p
+//         border-radius: 9px 9px 0 0
+//         border-right: 1px solid transparentize(#313131, 0.8)
+//     &--full
+//       p
+//         border-right: 1px solid transparentize(#313131, 0.8)
+//         border-radius: 0 0 9px 9px
+//     &--big
+//       width: 410px
+//       p
+//         height: 100px
+//   &__card
+//     overflow: hidden
+//     border-radius: 12px
+//     background:
+//       size: cover
+//       position: center
+//       repeat: no-repeat
+//     &-content
+//       padding: 25px 40px 40px 40px
+//       background-image: linear-gradient(37.55deg, rgba(0, 0, 0, 0.4) 34.26%, rgba(0, 0, 0, 0) 69.93%)
+//       color: #fff
+//     &-datetime
+//       margin-bottom: 20px
+//     &-desc
+//       margin-bottom: 5px
+//     &-title
+//       margin-bottom: 25px
+//       line-height: 38px
+//       font:
+//         size: 35px
+//         weight: 700
+//   &__age
+//     padding: 75px 0 30px
+//     &-grid
+//       display: flex
+//       flex-flow: row nowrap
+//       justify-content: space-around
+//       align-items: center
+
+// @media only screen and (max-width: $mobile)
+//   .difficulties
+//     margin-bottom: 40px
+//     &__slider
+//       margin: 0 calc(-50vw + 170px) 0 calc(-50vw + 170px)
+//       padding: 0 calc(50vw - 170px) 50px calc(50vw - 150px)
+//       -ms-overflow-style: none
+//       scrollbar-width: none
+//       &::-webkit-scrollbar
+//         display: none
+//       &:after
+//         content: ''
+//         display: block
+//         position: absolute
+//         bottom: 15px
+//         left: calc(50vw - 170px)
+//         width: 30px
+//         height: 30px
+//         background:
+//           image: url('../img/icons/cursor.svg')
+//           size: contain
+//           position: center
+//           repeat: no-repeat
+//     &__slide
+//       display: inline-block
+//       padding: 120px 0 130px
+//     &__stage
+//       span
+//         position: sticky
+//         left: 0
+//     &__card
+//       width: 100%
+//       height: 290px
+//       background-image: url('../img/inhtml/difficulties-mobile.jpg') !important
+//       &-content
+//         padding: 20px 15px 0 15px
+//         .button
+//           max-width: calc(100% + 30px)
+//           width: calc(100% + 30px)
+//           margin-left: -15px
+//           border-radius: 0 0 12px 12px
+//           background-color: $green
+//           transition: background-color .3s ease
+//           color: #fff
+//           box-shadow: 0px 8px 16px -1px rgba(85, 162, 59, 0.25)
+//           &:hover
+//             background-color: darken($green, 5)
+//             box-shadow: 0px 8px 20px -1px rgba(85, 162, 59, 0.4)
+//           &:active
+//             transition: none
+//             background-color: darken($green, 7)
+//             box-shadow: 0px 8px 16px -1px rgba(85, 162, 59, 0.25)
+//       &-datetime
+//         margin-bottom: 85px
+//       &-desc
+//         margin-bottom: 0
+//       &-title
+//         width: 260px
+//         line-height: 26px
+//         font-size: 22px
+//     &__age
+//       margin-bottom: 20px
+//       &--desktop
+//         display: none
+//       &--mobile
+//         display: block
+//       &-buttons
+//         display: flex
+//         flex-flow: row nowrap
+//         justify-content: space-between
+//         align-items: center
+//       &-btn
+//         width: 56px
+//         height: 20px
+//         font-size: 12px
+//         line-height: 20px
+//       &-terms
+//         margin-top: 5px
+//         display: flex
+//         flex-flow: row nowrap
+//         justify-content: flex-start
+//         align-items: center
+//       &-term
+//         padding-top: 8px
+//         border-top: 1px solid transparentize(#313131, 0.9)
+//         color: transparentize(#313131, 0.6)
+//         &:first-child
+//           width: 230px
+//           margin-right: 3px
+//         &:last-child
+//           width: 113px
+//     &__age
+//       margin-bottom: 0
+//       padding: 40px 0 0 0
+//       border: none
+//       &-grid
+//         flex-flow: row wrap
+//         justify-content: space-between
+//       &-item
+//         margin-bottom: 20px
+//       &-image
+//         width: 95px
+.difficulties
+  overflow: hidden
+  margin-bottom: -50px
+  &__link
+    position: absolute
+    bottom: 0
+    color: $blue
+    line-height: 1.17
+    font-size: 12px
+  &__slider
+    margin-bottom: 140px
+    &-arrow
+      z-index: 3
+      top: 0
+      &.slider__arrow
+        &--prev
+          left: 0
+          p
+            right: -15px
+            transform: translate(100%, -50%)
+        &--next
+          right: 0
+          p
+            left: -15px
+            transform: translate(-100%, -50%)
+      p
+        position: absolute
+        top: 50%
+        white-space: nowrap
+    .slick-list
+      overflow: visible !important
+    .slick-slide
+      outline: 0 !important
+  &__slide
+    padding: 190px 0 220px
+  &__timeline
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: flex-end
+    border-bottom: 1px solid $black
+    text-align: center
+    font-size: 12px
+    &--endless
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        bottom: -1px
+        left: 100%
+        width: 9999999px
+        height: 1px
+        background-color: $black
+    &-time
+      &--start
+        position: relative
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          bottom: -2px
+          left: -2px
+          width: 4px
+          height: 4px
+          border-radius: 50%
+          background-color: $black
+    &--start
+      position: relative
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        bottom: -3px
+        left: -2px
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: $black
+    &--end
+      position: relative
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -3px
+        right: -2px
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: $black
+  &__term
+    z-index: 2
+    position: relative
+    display: flex
+    flex-flow: row nowra
+    justify-content: flex-start
+    align-items: center
+    height: 15px
+    font-size: 12px
+    &-gap
+      position: relative
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        bottom: 13px
+        left: -2px
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: $black
+      // &:before
+      //   content: ''
+      //   display: block
+      //   position: absolute
+      //   top: -2px
+      //   left: -4px
+      //   width: 4px
+      //   height: 2px
+      //   background-color: $biege
+    p
+      flex-shrink: 0
+      span
+        opacity: 0.5
+  &__stages
+    z-index: 1
+    position: relative
+    margin-top: -15px
+  &__handwriting
+    position: absolute
+  &__start
+    position: absolute
+    bottom: 40px
+    &:after
+      opacity: 0.2
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      bottom: -55px
+      width: 1px
+      height: 48px
+      background-image: linear-gradient(180deg, #313131 0%, rgba(49, 49, 49, 0) 64.58%)
+  &__event
+    position: absolute
+    bottom: 5px
+    padding: 6px 10px
+    border-radius: 9px
+    // background-color: #EBE3DB
+    // &:after
+    //   content: ''
+    //   display: block
+    //   position: absolute
+    //   left: 50%
+    //   bottom: -28px
+    //   width: 1px
+    //   height: 28px
+    //   background-image: linear-gradient(180deg, #313131 -71.43%, rgba(49, 49, 49, 0) 39.29%)
+    img
+      position: absolute
+      top: 6px
+      left: 50%
+      transform: translate(-50%, -100%)
+    p
+      opacity: 0.4
+      text-align: center
+      font:
+        size: 12px
+        style: italic
+  &__hop
+    z-index: 3
+    position: absolute
+    bottom: 14px
+    width: 180px
+    padding: 6px 10px
+    border-radius: 9px
+    background-color: #fff
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      bottom: -28px
+      width: 1px
+      height: 28px
+      background-image: linear-gradient(180deg, #03BFD7 0%, rgba(3, 191, 215, 0) 64.58%)
+    &:before
+      position: absolute
+      content: ''
+      display: block
+      top: 6px
+      left: 50%
+      width: 25px
+      height: 25px
+      transform: translate(-50%, -100%)
+      background:
+        image: url('../img/logo-small.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    p
+      text-align: center
+      font-size: 12px
+      span
+        font-weight: 700
+  &__note
+    position: absolute
+    bottom: 14px
+    width: 95px
+    text-align: center
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    font-size: 12px
+    &--up
+      bottom: 50px
+      &:after
+        bottom: -80px !important
+        height: 75px !important
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      bottom: -30px
+      width: 1px
+      height: 28px
+      background-image: linear-gradient(180deg, #313131 -71.43%, rgba(49, 49, 49, 0) 39.29%)
+    &--bottom
+      top: 14px
+      &:after
+        top: -30px
+        background-image: linear-gradient(0deg, #313131 -71.43%, rgba(49, 49, 49, 0) 39.29%)
+  &__stage
+    position: absolute
+    top: 10px
+    width: 180px
+    padding-top: 20px
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    font-size: 12px
+    &:before
+      position: absolute
+      content: ''
+      display: block
+      top: 0
+      left: 0
+      width: 1px
+      height: 20px
+      background-image: linear-gradient(0deg, transparentize(#313131, 0.8) 0%, transparent 100%)
+    &:after
+      position: absolute
+      content: ''
+      display: block
+      bottom: 0
+      right: -100px
+      width: 100px
+      height: 1px
+      background-image: linear-gradient(90deg, transparentize(#313131, 0.8) 0%, transparent 100%)
+    p
+      z-index: 2
+      position: relative
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-end
+      align-items: flex-start
+      height: 30px
+      border-radius: 0 0 0 9px
+      padding: 6px 8px
+      border-bottom: 1px solid transparentize(#313131, 0.8)
+      border-left: 1px solid transparentize(#313131, 0.8)
+      // background-color: $biege
+    // &:before
+    //   z-index: 1
+    //   content: ''
+    //   position: absolute
+    //   display: block
+    //   bottom: -1px
+    //   left: -1px
+    //   width: calc(100% + 2px)
+    //   height: 100%
+    //   border-radius: 0 0 0 9px
+    //   background-image: radial-gradient(ellipse farthest-corner at bottom left, transparentize(#313131, 0.8) 0%, transparent 70%)
+    &--top
+      top: auto
+      bottom: 0
+      // &:before
+      //   bottom: auto
+      //   top: -1px
+      //   border-radius: 9px 0 0 0
+      //   background-image: radial-gradient(ellipse farthest-corner at top left, transparentize(#313131, 0.8) 0%, transparent 70%)
+      p
+        border-radius: 9px 0 0 0
+        border-bottom: none !important
+        border-top: 1px solid transparentize(#313131, 0.8)
+        justify-content: flex-start
+      &.difficulties__stage--full p
+        border-radius: 9px 9px 0 0
+        border-right: 1px solid transparentize(#313131, 0.8)
+    &--full
+      // &:before
+      //   border-radius: 0 0 9px 9px
+      //   background-image: linear-gradient(0, transparentize(#313131, 0.8) 0%, transparent 100%)
+      &:after
+        display: none
+      p
+        border-right: 1px solid transparentize(#313131, 0.8)
+        border-radius: 0 0 9px 9px
+        &:before
+          position: absolute
+          content: ''
+          display: block
+          top: -20px
+          right: -1px
+          width: 1px
+          height: 20px
+          background-image: linear-gradient(0deg, transparentize(#313131, 0.8) 0%, transparent 100%)
+    &--big
+      width: 310px
+      p
+        height: 100px
+  // &__age
+  //   display: flex
+  //   flex-flow: row nowrap
+  //   justify-content: space-between
+  //   align-items: center
+  //   margin-bottom: 80px
+  //   &--mobile
+  //     display: none
+  //   &-btn
+  //     display: flex
+  //     justify-content: center
+  //     align-items: center
+  //     width: 170px
+  //     height: 50px
+  //     border-radius: 6px
+  //     border: 1px solid transparentize($black, 0.9)
+  //     text-align: center
+  //     text-decoration: none
+  &__card
+    overflow: hidden
+    border-radius: 12px
+    background:
+      size: cover
+      position: center
+      repeat: no-repeat
+    &-content
+      padding: 25px 40px 40px 40px
+      background-image: linear-gradient(37.55deg, rgba(0, 0, 0, 0.4) 34.26%, rgba(0, 0, 0, 0) 69.93%)
+      color: #fff
+    &-datetime
+      margin-bottom: 20px
+    &-desc
+      margin-bottom: 5px
+    &-title
+      margin-bottom: 25px
+      line-height: 38px
+      font:
+        size: 35px
+        weight: 700
+  &__age
+    padding: 75px 0 30px
+    &-grid
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-around
+      align-items: center
+  &__drag
+    display: none !important
+
+@media only screen and (max-width: $mobile)
+  .difficulties
+    overflow: visible
+    margin-bottom: 40px
+    &__drag
+      position: absolute
+      bottom: 190px
+      display: block
+      width: 30px
+      height: 30px
+    &__slider
+      position: relative
+      white-space: nowrap
+      overflow: auto
+      width: 100vw
+      margin: 0 calc(-50vw + 170px) 0 calc(-50vw + 170px)
+      padding: 0 calc(50vw - 170px) 150px calc(50vw - 170px)
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+      &:not(.difficulties--scrolled)
+        animation: slider 1.12s ease-out infinite
+    &__slide
+      white-space: normal
+      display: inline-block
+      width: 1170px
+      padding: 110px 0 160px !important
+      vertical-align: middle
+      &:last-child
+        width: auto
+    &__timeline
+      &--endless
+        &:after
+          display: none
+    &__stage
+      span
+        position: sticky
+        left: 0
+    &__term
+      span
+        position: sticky
+        left: 0
+        padding-right: 10px
+    &__card
+      width: 100%
+      height: 290px
+      background-image: url('../img/inhtml/difficulties-mobile.jpg') !important
+      &-content
+        padding: 20px 15px 0 15px
+        .button
+          max-width: calc(100% + 30px)
+          width: calc(100% + 30px)
+          margin-left: -15px
+          border-radius: 0 0 12px 12px
+          background-color: $green
+          transition: background-color .3s ease
+          color: #fff
+          box-shadow: 0px 8px 16px -1px rgba(85, 162, 59, 0.25)
+          &:hover
+            background-color: darken($green, 5)
+            box-shadow: 0px 8px 20px -1px rgba(85, 162, 59, 0.4)
+          &:active
+            transition: none
+            background-color: darken($green, 7)
+            box-shadow: 0px 8px 16px -1px rgba(85, 162, 59, 0.25)
+      &-datetime
+        margin-bottom: 85px
+      &-desc
+        margin-bottom: 0
+      &-title
+        width: 260px
+        line-height: 26px
+        font-size: 22px
+    // &__age
+    //   margin-bottom: 20px
+    //   &--desktop
+    //     display: none
+    //   &--mobile
+    //     display: block
+    //   &-buttons
+    //     display: flex
+    //     flex-flow: row nowrap
+    //     justify-content: space-between
+    //     align-items: center
+    //   &-btn
+    //     width: 56px
+    //     height: 20px
+    //     font-size: 12px
+    //     line-height: 20px
+    //   &-terms
+    //     margin-top: 5px
+    //     display: flex
+    //     flex-flow: row nowrap
+    //     justify-content: flex-start
+    //     align-items: center
+    //   &-term
+    //     padding-top: 8px
+    //     border-top: 1px solid transparentize(#313131, 0.9)
+    //     color: transparentize(#313131, 0.6)
+    //     &:first-child
+    //       width: 230px
+    //       margin-right: 3px
+    //     &:last-child
+    //       width: 113px
+    &__age
+      margin-bottom: 0
+      padding: 40px 0 0 0
+      border: none
+      &-grid
+        flex-flow: row wrap
+        justify-content: space-between
+      &-item
+        margin-bottom: 20px
+      &-image
+        width: 95px
+  
+@keyframes slider
+  0%,
+  100%
+    transform: translateX(0)
+  50%
+    transform: translateX(-10px)

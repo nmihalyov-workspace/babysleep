@@ -1,0 +1,218 @@
+*
+  box-sizing: border-box
+  
+body
+  width: 100%
+  color: $black
+  line-height: 1.33
+  font:
+    family: 'Suisse Intl', Helvetica, sans-serif
+    size: 15px
+    weight: 400
+
+a
+  color: $black
+
+p
+  margin: 0
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+// .page-wrapper
+//   overflow: hidden
+
+ul,
+ol
+  margin: 0
+  padding: 0
+  li
+    display: block
+    margin-bottom: 10px
+    line-height: 1.33
+
+ul
+  li
+    position: relative
+    text-indent: 30px
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      top: 1px
+      left: 0
+      width: 18px
+      height: 18px
+      background:
+        image: url('../img/icons/list-item-point.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+
+ol
+  counter-reset: item
+  li:before
+    margin-right: 2px
+    content: counter(item) ". "
+    counter-increment: item
+    color: $blue
+    font-weight: 500
+
+.container
+  width: 100%
+  .wrapper
+    max-width: 1200px
+    width: 100%
+    margin: 0 auto
+    padding: 0 15px
+
+.block
+  z-index: 2
+  position: relative
+  min-width: 1280px
+  width: calc(100% - 80px)
+  margin: 0 auto
+  padding: 70px 0
+  background-color: $biege
+  border-radius: 16px
+
+.grid-card
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+  width: calc(100% + 30px)
+  margin-left: -15px
+
+.slider
+  position: relative
+  &__arrow
+    position: absolute
+    top: calc(50% - 20px)
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid transparentize($black, 0.9)
+    transition: border .3s ease
+    cursor: pointer
+    &:hover
+      border: 1px solid $black
+    &:before
+      content: ''
+      position: absolute
+      top: calc(50% - 5px)
+      left: calc(50% - 2px)
+      display: block
+      width: 6px
+      height: 10px
+      background:
+        image: url('../img/icons/caret.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &--next
+      right: -80px
+    &--prev
+      left: -80px
+      &:before
+        left: calc(50% - 4px)
+        transform: rotate(180deg)
+
+.select2
+  display: block
+  &-container
+    &--open
+      .select2-selection__arrow
+        transform: rotate(-90deg)
+  &-selection
+    outline: 0 !important
+    height: 50px !important
+    padding: 16px 15px 18px
+    border-radius: 8px !important
+    border: 1px solid transparentize($black, 0.85) !important
+    &__rendered
+      padding: 0 !important
+      line-height: 1.07 !important
+      color: $black !important
+      font-size: 15px
+    &__arrow
+      top: calc(50% - 6px) !important 
+      right: 20px !important
+      width: 7px !important
+      height: 12px !important
+      transform: rotate(90deg)
+      transition: transform .3s ease
+      background:
+        image: url('../img/icons/caret.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+      b
+        display: none
+
+.bubble
+  z-index: 9
+  position: absolute
+  width: 240px
+  padding: 15px 20px 5px
+  background-color: $blue
+  border-radius: 12px
+  color: #ffffff
+  text-align: center
+  line-height: 1.5
+  font-size: 12px
+  &:before
+    content: ''
+    position: absolute
+    top: -11px
+    left: 50%
+    display: block
+    width: 23px
+    height: 23px
+    transform: translateX(-50%)
+    background:
+      image: url('../img/icons/bubble-blue.svg')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__text
+    margin-bottom: 10px
+  &__close
+    color: #fff
+
+@media only screen and (max-width: 1330px)
+  .slider
+    &__arrow
+      &--prev
+        left: -45px
+      &--next
+        right: -45px
+
+@media only screen and (max-width: $mobile)
+  body
+    font-size: 15px
+
+  ul
+    z-index: 2
+    position: relative
+    li
+      text-indent: 0
+      padding-left: 30px
+
+  .page-wrapper
+    overflow: hidden
+
+  .container
+    .wrapper
+      max-width: 375px
+      padding: 0 15px
+
+  .block
+    min-width: 320px
+    max-width: 375px
+    width: 100%
+    padding: 40px 0
+
+  .grid-card
+    width: 100%
+    margin: 0

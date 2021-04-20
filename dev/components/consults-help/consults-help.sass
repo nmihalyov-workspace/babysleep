@@ -1,0 +1,72 @@
+.consults-help
+  margin-bottom: 100px
+  &__player
+    position: relative
+    height: 658px
+    margin-bottom: 25px
+    border-radius: 16px
+    cursor: pointer
+    background:
+      position: center
+      size: cover
+      repeat: no-repeat
+    &:after
+      position: absolute
+      content: ''
+      display: block
+      top: calc(50% - 115px)
+      left: calc(50% - 115px)
+      width: 230px
+      height: 230px
+      background:
+        image: url('../img/icons/play.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__disclaimer
+    margin-bottom: 80px
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 20px
+  &__item
+    width: 270px
+    &-head
+      margin-bottom: 10px
+      font:
+        size: 16px
+        weight: 800
+    &-text
+      line-height: 1.4
+  &__btn
+    max-width: 370px
+  &__instruction
+    opacity: 0.5
+    width: 370px
+    margin-top: 10px
+    text-align: center
+    font-size: 11px
+
+@media only screen and (max-width: $mobile)
+  .consults-help
+    margin-bottom: 50px
+    &__player
+      height: 194px
+      margin-bottom: 10px
+      border-radius: 8px
+      &:after
+        top: calc(50% - 42px)
+        left: calc(50% - 42px)
+        width: 84px
+        height: 84px
+    &__disclaimer
+      margin-bottom: 30px
+    &__grid
+      flex-flow: column nowrap
+    &__item
+      width: 100%
+      margin-bottom: 25px
+    &__instruction
+      width: 100%

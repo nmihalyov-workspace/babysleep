@@ -1,0 +1,75 @@
+.selection-independent
+  padding: 90px 0 120px
+  .heading__title
+    width: 100%
+  .helpful__articles
+    margin-bottom: 55px
+    padding-bottom: 60px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  &__service
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: stretch
+    width: calc(100% + 50px)
+    margin-left: -25px
+    &-item
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      width: calc(33.333333333% - 50px)
+      margin: 0 25px 40px 25px
+    &-img
+      height: 65px
+      margin-bottom: 10px
+    &-heading
+      margin-bottom: 20px
+      white-space: nowrap
+      font:
+        size: 20px
+        weight: 700
+    &-text
+      margin-bottom: 20px
+    &-tags
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-top: auto
+      width: 100%
+    &-tag
+      display: flex
+      flex-flow: row wrap
+      justify-content: center
+      align-items: center
+      width: 103px
+      height: 30px
+      border: 1px solid transparentize($black, 0.9)
+      border-radius: 6px
+      font-size: 12px
+
+@media only screen and (max-width: $mobile)
+  .selection-independent
+    padding: 60px 0 80px
+    .helpful__articles
+      margin-bottom: 40px
+      padding-bottom: 0
+      border-bottom: none
+    &__service
+      flex-flow: column nowrap
+      width: 100%
+      margin: 0
+      &-item
+        width: 100%
+        margin: 0 0 40px
+      &-img
+        width: 95px
+        height: 95px
+      &-heading
+        margin-bottom: 10px
+        font-size: 16px
+      &-text
+        margin-bottom: 15px
+      &-tag
+        width: 32.5%

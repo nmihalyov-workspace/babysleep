@@ -1,0 +1,18 @@
+mixin article-card(image, type, heading, description, date, views, comments, likes, tags, favorite)
+  a.article-card(href="#")
+    .article-card__image
+      if (favorite)
+        .article-card__favorite
+      if (tags)
+        .article-card__image-tags
+          -for(let i = 0; i < tags.length; i++)
+            span.article-card__image-tag= tags[i]
+      .article-card__image-pic(style=`background-image: url('img/inhtml/${image}');`)
+    p.article-card__type= type
+    p.article-card__heading= heading
+    p.article-card__description= description
+    .article-card__metrics
+      p.article-card__date= date
+      p.article-card__views= views
+      p.article-card__comments= comments
+      p.article-card__likes= likes

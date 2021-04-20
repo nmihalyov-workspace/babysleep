@@ -1,0 +1,38 @@
+.consults-hero
+  padding: 65px 0 80px
+  &__heading
+    width: 850px
+    margin-bottom: 70px
+    line-height: 1.1
+    font:
+      size: 42px
+      weight: 700
+  &__desc
+    width: 620px
+    margin-bottom: 35px
+  &__actions
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+  &__link
+    margin-left: 40px
+
+@media only screen and (max-width: $mobile)
+  .consults-hero
+    padding: 40px 0 45px
+    &__heading
+      width: 100%
+      margin-bottom: 20px
+      font-size: 32px
+    &__desc
+      width: 100%
+      margin-bottom: 30px
+    &__actions
+      flex-flow: column nowrap
+      .button
+        max-width: 100%
+    &__link
+      display: block
+      margin: 20px 0 0 0
+      text-align: center

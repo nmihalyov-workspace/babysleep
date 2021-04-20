@@ -1,0 +1,119 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+include ../_ui/input/input
+include ../_ui/radio/radio
+
+mixin consults-types
+  section.consults-types.block.container
+    .wrapper
+      +heading('Выберите тип консультации')
+      .consults-types__card
+        .consults-types__card-main
+          .consults-types__card-preview
+            p.consults-types__card-preview-text Индивидуальное решение
+            .consults-types__card-preview-image(style="background-image: url('img/inhtml/consults-types-1.jpg');")
+          .consults-types__card-info
+            .consults-types__card-info-top
+              p.consults-types__card-info-heading Решение под ключ — 1 месяц работы над сном с консультантом
+              p.consults-types__card-info-desc 4 недели работы один на один с экспертом по решению любых проблем со сном
+            .consults-types__card-info-price
+              p.consults-types__card-info-price-amount от 10 900 рублей*
+              p.consults-types__card-info-price-disclaimer *стоимость зависит от категории консультанта
+            a(href="javascript:void(0)", data-show="Подробнее", data-hide="Скрыть описание").consults-types__card-info-more Подробнее
+        .consults-types__card-inner
+          .consults-types__card-inner-content
+            .consults-types__card-inner-desc
+              p Мы создали для вас 1 тариф, чтобы вы не переживали о длительности звонков или количестве сообщений, которые потребуются для решения проблем со сном именно в вашей ситуации. 
+              p За 9+ лет практики мы отшлифовали в каждом возрасте свою систему сопровождения до результата: обычно это 2-4 видео-встречи, 2-3 дня поддержки на этапе корректировки режима, 10 дней ежедневного сопровождения на этапе методики и несколько поддерживающих писем.
+              a(href="#") Кому подойдёт
+            form(action="").consults-types__card-inner-form
+              p.consults-types__card-inner-heading Заявка на консультацию
+              .consults-types__card-inner-form-table
+                +input('text', 'name', 'Ваше имя', 'consults-types__card-inner-input', true)
+                +input('text', 'surname', 'Ваша фамилия', 'consults-types__card-inner-input', true)
+                +input('tel', 'tel', 'Телефон', 'consults-types__card-inner-input', true)
+                +input('email', 'email', 'Email', 'consults-types__card-inner-input', true)
+              p.consults-types__card-inner-heading Выберите формат консультации
+              .consults-types__card-inner-format
+                +radio('format', 'Онлайн', 'online', 'consults-types__card-inner-radio', true)
+                select(name="consultant", data-placeholder="Выберите консультанта").consults-types__card-inner-select.js-select
+                  option
+                  option(value="1") Lorem ipsum
+                  option(value="2") Lorem ipsum
+                  option(value="3") Lorem ipsum
+                  option(value="4") Lorem ipsum
+                select(name="known", data-placeholder="Откуда узнали о нас?").consults-types__card-inner-select.js-select
+                  option
+                  option(value="1") Lorem ipsum
+                  option(value="2") Lorem ipsum
+                  option(value="3") Lorem ipsum
+                  option(value="4") Lorem ipsum
+                +radio('format', 'Встреча в БК <span>+2000 ₽</span>', 'bk', 'consults-types__card-inner-radio', false)
+                +radio('format', 'Выезд на дом <span>+5000 ₽</span>', 'home', 'consults-types__card-inner-radio', false)
+              .consults-types__card-inner-prices
+                p.consults-types__card-inner-heading Пакет «Решение под ключ», 1 месяц сопровождения
+                .consults-types__card-inner-prices-sub
+                  p.consults-types__card-inner-prices-sub-key Онлайн формат
+                  p.consults-types__card-inner-prices-sub-value 10 900 ₽
+                .consults-types__card-inner-prices-sub
+                  p.consults-types__card-inner-prices-sub-key Старший консультант Елена Мурадова
+                  p.consults-types__card-inner-prices-sub-value +10 000 ₽
+                .consults-types__card-inner-prices-total
+                  p.consults-types__card-inner-prices-total-key Стоимость итого
+                  p.consults-types__card-inner-prices-total-value 20 900 ₽
+              +button-primary('submit', 'Отправить заявку', '')
+      .consults-types__card
+        .consults-types__card-main
+          .consults-types__card-preview
+            p.consults-types__card-preview-text Индивидуальное решение
+            .consults-types__card-preview-image(style="background-image: url('img/inhtml/consults-types-2.jpg');")
+          .consults-types__card-info
+            .consults-types__card-info-top
+              p.consults-types__card-info-heading Решение под ключ — 1 месяц работы над сном с консультантом
+              p.consults-types__card-info-desc 4 недели работы один на один с экспертом по решению любых проблем со сном
+            .consults-types__card-info-price
+              p.consults-types__card-info-price-amount от 10 900 рублей*
+              p.consults-types__card-info-price-disclaimer *стоимость зависит от категории консультанта
+            a(href="javascript:void(0)", data-show="Подробнее", data-hide="Скрыть описание").consults-types__card-info-more Подробнее
+        .consults-types__card-inner
+          .consults-types__card-inner-content
+            .consults-types__card-inner-desc
+              p Мы создали для вас 1 тариф, чтобы вы не переживали о длительности звонков или количестве сообщений, которые потребуются для решения проблем со сном именно в вашей ситуации. 
+              p За 9+ лет практики мы отшлифовали в каждом возрасте свою систему сопровождения до результата: обычно это 2-4 видео-встречи, 2-3 дня поддержки на этапе корректировки режима, 10 дней ежедневного сопровождения на этапе методики и несколько поддерживающих писем.
+              a(href="#") Кому подойдёт
+            form(action="").consults-types__card-inner-form
+              p.consults-types__card-inner-heading Заявка на консультацию
+              .consults-types__card-inner-form-table
+                +input('text', 'name', 'Ваше имя', 'consults-types__card-inner-input', true)
+                +input('text', 'surname', 'Ваша фамилия', 'consults-types__card-inner-input', true)
+                +input('tel', 'tel', 'Телефон', 'consults-types__card-inner-input', true)
+                +input('email', 'email', 'Email', 'consults-types__card-inner-input', true)
+              p.consults-types__card-inner-heading Выберите формат консультации
+              .consults-types__card-inner-format
+                +radio('format', 'Онлайн', 'online', 'consults-types__card-inner-radio', true)
+                select(name="consultant", data-placeholder="Выберите консультанта").consults-types__card-inner-select.js-select
+                  option
+                  option(value="1") Lorem ipsum
+                  option(value="2") Lorem ipsum
+                  option(value="3") Lorem ipsum
+                  option(value="4") Lorem ipsum
+                select(name="known", data-placeholder="Откуда узнали о нас?").consults-types__card-inner-select.js-select
+                  option
+                  option(value="1") Lorem ipsum
+                  option(value="2") Lorem ipsum
+                  option(value="3") Lorem ipsum
+                  option(value="4") Lorem ipsum
+                +radio('format', 'Встреча в БК <span>+2000 ₽</span>', 'bk', 'consults-types__card-inner-radio', false)
+                +radio('format', 'Выезд на дом <span>+5000 ₽</span>', 'home', 'consults-types__card-inner-radio', false)
+              .consults-types__card-inner-prices
+                p.consults-types__card-inner-heading Пакет «Решение под ключ», 1 месяц сопровождения
+                .consults-types__card-inner-prices-sub
+                  p.consults-types__card-inner-prices-sub-key Онлайн формат
+                  p.consults-types__card-inner-prices-sub-value 10 900 ₽
+                .consults-types__card-inner-prices-sub
+                  p.consults-types__card-inner-prices-sub-key Старший консультант Елена Мурадова
+                  p.consults-types__card-inner-prices-sub-value +10 000 ₽
+                .consults-types__card-inner-prices-total
+                  p.consults-types__card-inner-prices-total-key Стоимость итого
+                  p.consults-types__card-inner-prices-total-value 20 900 ₽
+              +button-primary('submit', 'Отправить заявку', '')

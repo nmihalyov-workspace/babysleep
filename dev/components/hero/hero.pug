@@ -1,0 +1,10 @@
+include ../_ui/button/button
+
+mixin hero
+  section.hero.container(style="background-image: url('img/inhtml/hero.jpg');")
+    .wrapper
+      .hero__content
+        h1.hero__heading Консультанты по сну ребенка
+        p.hero__descriptor 9 лет помогаем детям высыпаться, меньше плакать и спать по ночам, чтобы у родителей оставалось время на заботу о себе, отношения и самореализацию
+        +button-primary('popup', 'Начать высыпаться', 'hero__btn', {popup: 'age'})
+        a.hero__link(href="#") Как работают консультанты по сну

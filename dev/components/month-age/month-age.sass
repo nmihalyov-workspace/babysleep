@@ -1,0 +1,152 @@
+.month-age
+  &__heading
+    width: 770px
+    margin: 0 auto 10px
+    text-align: center
+    font:
+      size: 20px
+      weight: 700
+  &__desc
+    width: 720px
+    margin: 0 auto 40px
+    text-align: center
+  &__range
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    &-min,
+    &-max
+      width: 70px
+      text-align: center
+    &-inner
+      width: 970px
+      height: 20px
+      border-radius: 20px
+      background-color: $blue
+    .irs
+      width: 990px
+      height: 20px
+      margin: 0 0 0 -10px
+      &-min,
+      &-max
+        display: none
+      &-line
+        top: 5px
+        height: 20px
+        background-color: transparent
+      &-bar
+        top: 5px
+        height: 20px
+        border-radius: 20px
+        background-color: transparent
+      &-single
+        display: none
+      &-grid
+        bottom: -35px
+        &-pol
+          display: none
+        &-text
+          visibility: visible !important
+          color: transparentize($black, 0.5)
+          line-height: 1.18
+          font-size: 11px
+          &:nth-child(2),
+          &:last-child
+            display: none
+          &:before
+            z-index: 2
+            content: ''
+            display: block
+            position: absolute
+            top: -31px
+            left: calc(50%)
+            height: 20px
+            width: 1px
+            background-color: #fff
+      &-handle
+        position: relative
+        top: -30px
+        width: 41px
+        height: 41px
+        border-radius: 50%
+        cursor: pointer
+        background:
+          image: url('../img/icons/handle.svg')
+          size: 40px
+          position: center
+          repeat: no-repeat
+        &:after
+          z-index: 1
+          content: ''
+          position: absolute
+          display: block
+          top: 1px
+          left: 1px
+          width: 39px
+          height: 39px
+          border-radius: 50%
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15)
+        i
+          display: none !important
+  &__selected
+    margin-top: 90px
+    text-align: center
+    font:
+      size: 20px
+      weight: 700
+  &__result
+    margin-top: 42px
+    background-color: $biege
+    &-content
+      position: relative
+      display: none
+      padding: 55px 0
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        top: -35px
+        left: calc(50% - 35px)
+        width: 70px
+        height: 70px
+        background:
+          image: url('../img/icons/bubble.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-desc
+      margin-bottom: 25px
+      line-height: 1.4
+
+@media only screen and (max-width: $mobile)
+  .month-age
+    &__heading
+      width: 100%
+      text-align: left
+    &__desc
+      width: 100%
+      text-align: left
+    &__range
+      position: relative
+      &-min,
+      &-max
+        opacity: 0.4
+        position: absolute
+        bottom: -30px
+      &-min
+        left: 0
+      &-max
+        right: 0
+      &-inner
+        width: 100%
+      .irs
+        width: calc(100% + 20px)
+        margin-left: -10px
+        &-grid
+          display: none
+    &__selected
+      margin-top: 40px
+    &__result-content
+      .button
+        max-width: 100%

@@ -1,0 +1,28 @@
+include ../components/preloader/preloader
+include ../components/header/header
+include ../components/_ui/breadcrumbs/breadcrumbs
+include ../components/encyclopedia-article/encyclopedia-article
+include ../components/encyclopedia-about/encyclopedia-about
+include ../components/encyclopedia-comments/encyclopedia-comments
+include ../components/encyclopedia-mailing/encyclopedia-mailing
+include ../components/footer/footer
+include ../components/_ui/popup/popup
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Почему консультанты по детскому сну не врачи?
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    +preloader
+    .page-wrapper
+      +header
+      +breadcrumbs([{text: 'baby sleep', href: 'main.html'}, {text: 'энциклопедия сна', href: 'encyclopedia.html'}, {text: 'статьи', href: 'encyclopedia.html'}, {text: 'почему консультанты по детскому сну не врачи'}])
+      +encyclopedia-article
+      +encyclopedia-about
+      +encyclopedia-comments
+      +encyclopedia-mailing
+      +footer
+    +popup('auth')

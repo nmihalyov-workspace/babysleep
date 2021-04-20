@@ -1,0 +1,22 @@
+include ../components/preloader/preloader
+include ../components/header/header
+include ../components/_ui/breadcrumbs/breadcrumbs
+include ../components/about-team/about-team
+include ../components/about-subscribe/about-subscribe
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Команда консультантов BabySleep
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    +preloader
+    .page-wrapper
+      +header
+      +breadcrumbs([{text: 'baby sleep', href: 'main.html'}, {text: 'о нас', href: 'about.html'}, {text: 'команда'}])
+      +about-team
+      +about-subscribe
+      +footer

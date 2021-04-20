@@ -1,0 +1,31 @@
+mixin encyclopedia-recommendations
+  section.encyclopedia-recommendations.block.container
+    .wrapper
+      .encyclopedia-recommendations__cta
+        img(src="img/inhtml/encyclopedia-recommendations.png", alt="").encyclopedia-recommendations__image
+        p.encyclopedia-recommendations__heading Вам не подходят общие рекомендации?
+        p.encyclopedia-recommendations__desc Если вы не высыпаетесь уже больше 2-х недель, не терпите, обратитесь за помощью в консультанту
+        +button-tertiary('link', 'Смотреть подробнее', 'encyclopedia-recommendations__btn', {link: '#'})
+      .encyclopedia-recommendations__partners.js-partners-slider
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/doc.svg", alt="")
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/mail.svg", alt="")
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/moscow24.svg", alt="")
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/mediametrics.svg", alt="")
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/kindadvices.svg", alt="")
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/rbk.svg", alt="")
+        .encyclopedia-recommendations__partners-slide
+          img.encyclopedia-recommendations__partners-item(src="img/partners/mediametrics.svg", alt="")
+      p.encyclopedia-recommendations__disclaimer *СМИ и партнеры
+      .encyclopedia-recommendations__subscribe
+        p.encyclopedia-recommendations__subscribe-heading Подписывайтесь!
+        p.encyclopedia-recommendations__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+        .encyclopedia-recommendations__subscribe-socials
+          a.encyclopedia-recommendations__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+          a.encyclopedia-recommendations__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+          a.encyclopedia-recommendations__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")

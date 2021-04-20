@@ -1,0 +1,9 @@
+include ../_ui/button/button
+
+mixin feedback-hero
+  section.feedback-hero.container
+    .feedback-hero__wrapper.wrapper
+      .feedback-hero__info
+        p.feedback-hero__heading Отзывы
+        p.feedback-hero__desc Дорогие родители, спасибо за то, что нашли время оставить отзыв! Нам важна любая оценка, комментарий или замечание. Положительные отзывы высыпающихся семей – это главный результат нашей работы. Критические – повод стать еще лучше и эффективнее.
+      +button-primary('link', 'Оставить отзыв', 'feedback-hero__btn', {link: '#'})

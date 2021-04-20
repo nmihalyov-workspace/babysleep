@@ -1,0 +1,140 @@
+.encyclopedia-recommendations
+  margin-top: 135px
+  &__cta
+    position: relative
+    margin-top: -120px
+    margin-bottom: 35px
+    padding: 50px 65px
+    border-radius: 16px
+    background-color: $blue
+    box-shadow: 0px 14px 18px rgba(139, 126, 114, 0.1)
+    color: #fff
+  &__image
+    position: absolute
+    bottom: 0
+    right: 95px
+  &__heading
+    margin-bottom: 5px
+    line-height: 38px
+    font:
+      size: 32px
+      weight: 700
+  &__desc
+    width: 490px
+    margin-bottom: 25px
+  &__btn
+    color: $blue
+  &__partners
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 25px
+    &-slide
+      display: flex !important
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      height: 32px
+    &-item
+      max-width: 100%
+      max-height: 100%
+  &__disclaimer
+    opacity: 0.4
+    margin-bottom: 25px
+    text-align: right
+    font-size: 12px
+  &__subscribe
+    text-align: center
+    &-heading
+      line-height: 21px
+      font:
+        size: 16px
+        weight: 700
+    &-text
+      margin-bottom: 25px
+    &-socials
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+    &-social
+      position: relative
+      width: 40px
+      height: 40px
+      margin: 0 5px
+      background-color: $black
+      border-radius: 50%
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background:
+          position: center
+          size: contain
+          repeat: no-repeat
+      &[data-social="inst"]:before
+        top: calc(50% - 10px)
+        left: calc(50% - 10px)
+        width: 19px
+        height: 19px
+        background-image: url('../img/icons/inst.svg')
+      &[data-social="vk"]:before
+        top: calc(50% - 4px)
+        left: calc(50% - 9px)
+        width: 17px
+        height: 9px
+        background-image: url('../img/icons/vk.svg')
+      &[data-social="telegram"]:before
+        top: calc(50% - 10px)
+        left: calc(50% - 11px)
+        width: 20px
+        height: 18px
+        background-image: url('../img/icons/telegram.svg')
+
+@media only screen and (max-width: $mobile)
+  .encyclopedia-recommendations
+    margin-top: 135px
+    &__cta
+      overflow: hidden
+      margin-top: -135px
+      padding: 25px 15px 280px
+    &__image
+      bottom: -190px
+      right: calc(50% - 120px)
+    &__heading
+      width: 100%
+      margin-bottom: 10px
+      line-height: 1.167
+      font-size: 24px
+    &__desc
+      width: 100%
+    &__btn
+      max-width: 100%
+    &__partners
+      // position: relative
+      // white-space: nowrap
+      // overflow: auto
+      width: 100vw
+      margin: 0 calc(-50vw + 50%) 20px
+      // padding: 0 calc(50vw - 50%) 20px calc(50vw - 50%)
+      // -ms-overflow-style: none
+      // scrollbar-width: none
+      // &::-webkit-scrollbar
+      //   display: none
+      &-slide
+        padding: 0 20px
+      &-item
+        min-width: 90px
+      .slider__arrow
+        display: none
+    &__disclaimer
+      padding-bottom: 45px
+      border-bottom: 1px solid transparentize($black, 0.9)
+    &__subscribe
+      &-text
+        width: 270px
+        margin-left: auto
+        margin-right: auto

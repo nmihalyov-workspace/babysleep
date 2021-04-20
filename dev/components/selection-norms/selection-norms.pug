@@ -1,0 +1,31 @@
+include ../_ui/subheading/subheading
+
+mixin selection-norms
+  section.selection-norms.container
+    .wrapper
+      .selection-norms__wrapper
+        +subheading('Возрастные нормы сна')
+        .selection-norms__table
+          .selection-norms__table-wrapper
+            .selection-norms__table-head
+              p.selection-norms__table-cell Возраст
+              p.selection-norms__table-cell Время бодрствования*<br><span>между дневными снами</span>
+              p.selection-norms__table-cell Сон в сутки*
+            .selection-norms__table-row
+              p.selection-norms__table-cell 0–4 недели
+              p.selection-norms__table-cell 50–60 минут
+              p.selection-norms__table-cell 16 – 19 часов
+            .selection-norms__table-row
+              p.selection-norms__table-cell 1 месяц
+              p.selection-norms__table-cell 1 час – 1 час 15 минут
+              p.selection-norms__table-cell 15 – 17 часов
+            .selection-norms__table-row
+              p.selection-norms__table-cell 2 месяца
+              p.selection-norms__table-cell 1 час 15 минут – 1 час 20 минут
+              p.selection-norms__table-cell 15 – 17 часов
+            .selection-norms__table-row
+              p.selection-norms__table-cell 3 месяца
+              p.selection-norms__table-cell 1 час 20 минут – 1 час 35 минут
+              p.selection-norms__table-cell 14 – 16 часов
+        p.selection-norms__disclaimer *все дети разные, доверяйте своей интуиции, ориентируйтесь на поведение малыша и его сигналы. <a href="#">Откуда берутся нормы сна?</a>
+        a(href="#").selection-norms__link Скачать таблицу

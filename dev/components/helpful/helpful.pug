@@ -1,0 +1,34 @@
+include ../_ui/heading/heading
+include ../_ui/description/description
+include ../_ui/subheading/subheading
+include ../_ui/article-card/article-card
+include ../_ui/button/button
+
+mixin helpful
+  section.helpful.container
+    .wrapper
+      +heading('Полезные статьи и сервисы')
+      +description('Более 1 млн родителей ежегодно находят ответы и решают проблемы со сном самостоятельно благодаря нашим бесплатным материалам')
+      +subheading('Календари сна и развития')
+      .helpful__services.slider.js-helpful-services-slider
+        .helpful__services-item
+          img(src="img/inhtml/calendar-1.svg", alt="").helpful__services-image
+          a.helpful__services-link(href="#") Скачки роста и кризисы развития
+        .helpful__services-item
+          img(src="img/inhtml/calendar-2.svg", alt="").helpful__services-image
+          a.helpful__services-link(href="#") Сон ребенка месяц за месяцем
+        .helpful__services-item
+          img(src="img/inhtml/calendar-3.svg", alt="").helpful__services-image
+          a.helpful__services-link(href="#") Игры с ребенком месяц за месяцем
+        .helpful__services-item
+          img(src="img/inhtml/calendar-4.svg", alt="").helpful__services-image
+          a.helpful__services-link(href="#") Сон и развитие по возрастам
+        .helpful__services-item
+          img(src="img/inhtml/calendar-2.svg", alt="").helpful__services-image
+          a.helpful__services-link(href="#") Сон ребенка месяц за месяцем
+      +subheading('Популярные статьи', 'Смотреть все')
+      .helpful__articles.js-helpful-articles-slider
+        +article-card('article-1.jpg', 'Безопасность сна', 'Безопасность детского сна: пояснения к рекомендациям американской академии педиатрии', 'Ежегодно в США более 3,5 тысяч детей неожиданно умирают во сне. Часто это связано с синдромом внезапной детской смерти (СВДС) или случайной смертью от удушья...', '19.06.20', '2647', '37', '112')
+        +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112')
+        +article-card('article-3.jpg', 'Нормы сна и бодрствования для детей', 'Что значит «ребенок плохо спит»?', 'Новое исследование Института здоровья и благосостояния Финляндии и Университета Турку показывает, что у младенцев часто бывают проблемы со сном, которые обычно проходят...', '19.06.20', '2647', '37', '112')
+        +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112')

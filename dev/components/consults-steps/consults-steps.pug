@@ -1,0 +1,62 @@
+include ../_ui/heading/heading
+
+mixin consults-steps
+  section.consults-steps.block.container
+    .consults-steps__wrapper.wrapper
+      .consults-steps__content
+        +heading('4 шага до сна')
+        p.consults-steps__desc
+          span Точка А <br>
+          |Ребёнок плохо спит, часто просыпается
+        .consults-steps__cards
+          .consults-steps__card
+            p.consults-steps__card-num 1
+            p.consults-steps__card-heading Подаёте заявку на консультацию
+            p.consults-steps__card-text Мы пришлем анкету вам на почту или <a href="#">заполните анкету онлайн</a> прямо сейчас.
+            a(href="#").consults-steps__card-link Нужна помощь в заполнении анкеты? Поможем!
+          .consults-steps__card
+            p.consults-steps__card-num 2
+            p.consults-steps__card-heading 15-минутная встреча-знакомство
+            p.consults-steps__card-text Это бесплатно: мы не хотим, чтобы вы покупали кота в мешке
+            a(href="javascript:void(0)", data-show="Показать описание", data-hide="Скрыть описание").consults-steps__card-accordeon Показать описание
+            .consults-steps__card-content
+              p.consults-steps__card-content-heading Почему это  бесплатно? 
+              ul.consults-steps__card-content-list
+                li.consults-steps__card-content-list-item Не делаем проблемы там, где ее нет. Не «зарабатываем» на беспокойстве. Если все в рамках возраста и нужно просто подождать – так и скажем.
+                li.consults-steps__card-content-list-item Корректируем ожидания. Мама хочет 2 в месяца сон всю ночь по быстрой методике, а мы знаем, что это вредно для ребенка, и можем отказать в работе или предложить более реалистичные цели в этом возрасте.
+                li.consults-steps__card-content-list-item Оцениваем состояние мамы. Если замечаем депрессию, эмоциональное выгорание – то сначала порекомендуем «маску на себя».
+                li.consults-steps__card-content-list-item Рассказываем, как мы работаем. Без иллюзий. Все-таки родителям придется приложить усилия, выделить время, быть последовательными. Есть мотивация и силы? Начинаем, все получится!
+          .consults-steps__card
+            p.consults-steps__card-num 3
+            p.consults-steps__card-heading Совершаете оплату
+            p.consults-steps__card-text Из любой точки мира удобным вам способом
+          .consults-steps__card
+            p.consults-steps__card-num 4
+            p.consults-steps__card-heading Начинаете работу с персональным консультантом
+            p.consults-steps__card-text Вы в надежных руках! <br>Работаете системно и последовательно, радуетесь первым успехам!
+            a(href="javascript:void(0)", data-show="Показать этапы работы", data-hide="Скрыть этапы работы").consults-steps__card-accordeon Показать этапы работы
+            .consults-steps__card-content
+              .consults-steps__card-stages
+                .consults-steps__card-stage
+                  p.consults-steps__card-stage-heading Этап «Реалистичные цели»
+                  p.consults-steps__card-stage-text На бесплатной ознакомительной встрече с консультантом или в начале основной консультации этапа «Ритм дня» вы обсуждаете ваши мечты и цели. Консультант говорит, что реально сделать со сном в этом возрасте, какими методами, учитывает ваши убеждения, мотивацию, состояние, обстановку в семье
+                  p.consults-steps__card-stage-subheading Результат этапа
+                  p.consults-steps__card-stage-text Это позволяет понять, что конкретно нужно делать, поставить реалистичные, достижимые цели — найти баланс между потребностями и возможностями ребенка и желаниями, комфортом родителей.
+                .consults-steps__card-stage
+                  p.consults-steps__card-stage-heading Этап «Ритм дня».
+                  p.consults-steps__card-stage-text Вас ждет основная консультация - 60-90 минутная встреча с консультантом по видеосвязи или беседа у вас дома. По результатам встречи у вас на руках будет пошаговый ИНДИВИДУАЛЬНЫЙ план действий. Далее в течение 7-10 дней этапа вы работаете по плану, консультант корректирует ситуацию и отвечает на вопросы (в письме или мессенджере) в среднем каждые 3 дня.
+                  p.consults-steps__card-stage-subheading Результат этапа
+                  p.consults-steps__card-stage-text Уходит недосып у ребенка, появляется подходящий по возрасту и потребностям предсказуемый ритм дня, малыш засыпает быстрее и вовремя. Ребенок узнает другие способы засыпания, кроме привычных ассоциаций – укачивания, кормления, присутствия мамы и др. На 50%-60% уходят проблемы со сном, такие как: истерики и слезы перед сном, долгое и позднее укладывание, короткие дневные сны, бодрствования среди ночи и др.
+                .consults-steps__card-stage
+                  p.consults-steps__card-stage-heading Этап «Методика»
+                  p.consults-steps__card-stage-text На основной встрече по методике вы обсудите с консультантом дальнейшую стратегию с учетом возраста ребенка, его отклика на изменения, вводимые на предыдущем этапе, темперамента, желаний родителей. Вы получите руководство к действию по уходу от сильных привычек засыпания. Чаще всего мы предложим вам метод постепенных изменений Фейдинг или метод BabySleep, благодаря которому вы поможете ребенку научиться засыпать самостоятельно — без качания, кормления, фитбола, сна только на руках и др.
+                  p.consults-steps__card-stage-subheading Результат этапа
+                  p.consults-steps__card-stage-text У ребенка предсказуемый ритм сна, он засыпает сам без слез или по желанию мамы, ест ночью по возрасту
+        p.consults-steps__desc
+          span Точка Б <br>
+          |Ваш ребенок спит, и вы тоже
+      .consults-steps__author
+        img(src="img/inhtml/consults-steps.png", alt="").consults-steps__author-image
+        p.consults-steps__author-info
+          span Елена Мурадова <br>
+          |Основатель BabySleep, первый консультант по сну в России и СНГ

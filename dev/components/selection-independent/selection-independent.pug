@@ -1,0 +1,48 @@
+include ../_ui/heading/heading
+include ../_ui/subheading/subheading
+include ../_ui/article-card/article-card
+
+mixin selection-independent
+  section.selection-independent.container
+    .wrapper
+      +heading('Для самостоятельного изучения сна в 0–3 месяца')
+      +subheading('Статьи', 'Смотреть все')
+      .helpful__articles.js-helpful-articles-slider
+        +article-card('article-1.jpg', 'Безопасность сна', 'Безопасность детского сна: пояснения к рекомендациям американской академии педиатрии', 'Ежегодно в США более 3,5 тысяч детей неожиданно умирают во сне. Часто это связано с синдромом внезапной детской смерти (СВДС) или случайной смертью от удушья...', '19.06.20', '2647', '37', '112')
+        +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112')
+        +article-card('article-3.jpg', 'Нормы сна и бодрствования для детей', 'Что значит «ребенок плохо спит»?', 'Новое исследование Института здоровья и благосостояния Финляндии и Университета Турку показывает, что у младенцев часто бывают проблемы со сном, которые обычно проходят...', '19.06.20', '2647', '37', '112')
+        +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112')
+      +subheading('Календари и сервисы')
+      .selection-independent__service
+        .selection-independent__service-item
+          img(src="img/inhtml/calendar-1.svg", alt="").selection-independent__service-img
+          p.selection-independent__service-heading Скачки роста и кризисы развития
+          p.selection-independent__service-text Вас ждёт 3 скачка на 4, 8 и 12 неделе. Сон в это время ухудшается, но это естественный этап развития. Используйте календарь, чтобы рассчитать и пройти эти периоды бережно ко всем членам семьи.
+          .selection-independent__service-tags
+            p.selection-independent__service-tag 4 недели
+            p.selection-independent__service-tag 8 недель
+            p.selection-independent__service-tag 12 недель
+        .selection-independent__service-item
+          img(src="img/inhtml/calendar-2.svg", alt="").selection-independent__service-img
+          p.selection-independent__service-heading Сон ребенка месяц за месяцем
+          p.selection-independent__service-text Ребёнок спит в среднем 16,5 часов и увеличивает время бодрсвования между дневными снами. Отход в ночь пока поздний — около 22-23. На что обратить внимание и как уложить спать малыша в этот период, читайте в сервисе
+          .selection-independent__service-tags
+            p.selection-independent__service-tag 1 месяц
+            p.selection-independent__service-tag 2 месяц
+            p.selection-independent__service-tag 3 месяц
+        .selection-independent__service-item
+          img(src="img/inhtml/calendar-3.svg", alt="").selection-independent__service-img
+          p.selection-independent__service-heading Игры с ребенком месяц за месяцем
+          p.selection-independent__service-text Ребёнок спит в среднем 16,5 часов и увеличивает время бодрсвования между дневными снами. Отход в ночь пока поздний — около 22-23. На что обратить внимание и как уложить спать малыша в этот период, читайте в сервисе
+          .selection-independent__service-tags
+            p.selection-independent__service-tag 1 месяц
+            p.selection-independent__service-tag 2 месяц
+            p.selection-independent__service-tag 3 месяц
+        .selection-independent__service-item
+          img(src="img/inhtml/calendar-4.svg", alt="").selection-independent__service-img
+          p.selection-independent__service-heading Сон ребенка месяц за месяцем
+          p.selection-independent__service-text Ребёнок спит в среднем 16,5 часов и увеличивает время бодрсвования между дневными снами. Отход в ночь пока поздний — около 22-23. На что обратить внимание и как уложить спать малыша в этот период, читайте в сервисе
+          .selection-independent__service-tags
+            p.selection-independent__service-tag 1 месяц
+            p.selection-independent__service-tag 2 месяц
+            p.selection-independent__service-tag 3 месяц

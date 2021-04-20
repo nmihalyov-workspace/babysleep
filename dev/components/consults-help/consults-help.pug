@@ -1,0 +1,24 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin consults-help
+  section.consults-help.container
+    .wrapper
+      .consults-help__player(style="background-image: url('img/inhtml/selection-video.jpg')")
+      p.consults-help__disclaimer Полезное видео
+      +heading('Как помогают консультанты BabySleep')
+      .consults-help__grid
+        .consults-help__item
+          p.consults-help__item-head 01.
+          p.consults-help__item-text Мы проанализируем паттерны сна вашего ребенка на основе заполненного вами дневника и выявим причины плохого сна
+        .consults-help__item
+          p.consults-help__item-head 02.
+          p.consults-help__item-text Подробно разбирем вашу ситуацию по видеосвязи или с выездом на дом
+        .consults-help__item
+          p.consults-help__item-head 03.
+          p.consults-help__item-text Составим индивидуальный пошаговый план по обретению привычек здорового и спокойного сна
+        .consults-help__item
+          p.consults-help__item-head 04.
+          p.consults-help__item-text При покупке консультации с сопровождением — поддержим на всех этапах в любом удобном мессенджере, проведем вас «за руку» по плану до комфортного результата и улучшения ситуации
+      +button-primary('link', 'Оставить заявку на консультацию', 'consults-help__btn', {link: '#'})
+      p.consults-help__instruction Пришлем инструкцию и анкету на почту

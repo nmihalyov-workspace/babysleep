@@ -1,0 +1,236 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+include ../_ui/input/input
+
+mixin consults-specialists
+  section.consults-specialists.container
+    .wrapper
+      +heading('ТОПовые консультанты')
+      .consults-specialists__slider.js-specialists-slider
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-1.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Анна Сухих
+                p.consults-specialists__pos Психолог
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Челябинске
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-2.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Полина Маркелова
+                p.consults-specialists__pos Руководитель отдела
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Москве
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-3.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Екатерина Бондарева
+                p.consults-specialists__pos Сомнолог
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Екатерина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Самаре
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-2.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Полина Маркелова
+                p.consults-specialists__pos Руководитель отдела
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Москве
+      +heading('Старшие консультанты')
+      .consults-specialists__slider.js-specialists-slider
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-1.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Анна Сухих
+                p.consults-specialists__pos Психолог
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Челябинске
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-2.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Полина Маркелова
+                p.consults-specialists__pos Руководитель отдела
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Москве
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-3.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Екатерина Бондарева
+                p.consults-specialists__pos Сомнолог
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Екатерина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Самаре
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-2.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Полина Маркелова
+                p.consults-specialists__pos Руководитель отдела
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Москве
+      +heading('Простые консультанты')
+      .consults-specialists__slider.js-specialists-slider
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-1.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Анна Сухих
+                p.consults-specialists__pos Психолог
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Челябинске
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-2.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Полина Маркелова
+                p.consults-specialists__pos Руководитель отдела
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Москве
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-3.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Екатерина Бондарева
+                p.consults-specialists__pos Сомнолог
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Екатерина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Самаре
+        .consults-specialists__slide
+          .consults-specialists__slide-inner
+            .consults-specialists__head
+              .consults-specialists__pic
+                img(src="img/inhtml/specialist-2.jpg", alt="").consults-specialists__pic-img
+                p.consults-specialists__num 300+
+              .consults-specialists__about
+                p.consults-specialists__name Полина Маркелова
+                p.consults-specialists__pos Руководитель отдела
+            p.consults-specialists__desc
+              span Дети: 
+              | две дочки и сын
+            p.consults-specialists__desc
+              span Проф. опыт: 
+              | Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep.
+            +button-primary('link', 'Записаться на консультацию', 'consults-specialists__btn', {link: '#'})
+            p.consults-specialists__loc 
+              span Возможна личная встреча в Москве
+      +heading('Запишитесь на бесплатную 15-минутную встречу-знакомство с консультантом')
+      form(action="").consults-specialists__form
+        +input('text', 'name', 'Имя', 'consults-specialists__input', true)
+        +input('tel', 'tel', 'Телефон', 'consults-specialists__input', true)
+        +input('text', 'problem', 'Коротко о проблеме...', 'consults-specialists__input', true)
+        +button-primary('popup', 'Записаться', '', {popup: 'request-3'})
+      p.consults-specialists__disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>

@@ -1,0 +1,91 @@
+mixin header
+  header.header
+    .header-top.container
+      .wrapper
+        .header-top__slider.js-header-slider
+          .header-top__slide
+            p.header-top__slide-content Есть проблема со сном? Не терпите! <a href="#" target="_blank" rel="nofollow noopener">Напишите нам в WhatsApp</a>
+          .header-top__slide
+            p.header-top__slide-content Есть проблема со сном? Не терпите! <a href="#" target="_blank" rel="nofollow noopener">Напишите нам в WhatsApp</a>
+          .header-top__slide
+            p.header-top__slide-content Есть проблема со сном? Не терпите! <a href="#" target="_blank" rel="nofollow noopener">Напишите нам в WhatsApp</a>
+    .header__mobile.container
+      .header__mobile-wrapper.wrapper
+        img.header-middle__logo-image(src="img/logo.svg", alt="babysleep")
+        .header-middle__info
+          a.header-middle__info-action.js-open-popup(href="javascript:void(0)", data-popup="search", data-icon="search")
+          a.header-middle__info-action(href="#", data-icon="burger")
+    .header-middle.container
+      .header-middle__wrapper.wrapper
+        .header-middle__logo
+          img.header-middle__logo-image(src="img/logo.svg", alt="babysleep")
+          .header-middle__logo-text Центр детского сна и развития №1 в России
+        .header-middle__info
+          a.header-middle__info-action.js-open-popup(href="javascript:void(0)", data-popup="search", data-icon="search")
+          a.header-middle__info-action(href="#", data-icon="profile")
+          .header-middle__info-contacts
+            p.header-middle__info-tel +7 495 222 02 44
+            p.header-middle__info-workhours Будни с 10:00 до 20:00
+    .header-bottom.container
+      .header-bottom__wrapper.wrapper
+        nav.header-bottom__nav
+          a.header-bottom__nav-link(href="#", data-menu="about") О нас
+          a.header-bottom__nav-link(href="#", data-menu="encyclopedia") Энциклопедия сна
+          a.header-bottom__nav-link(href="#", data-menu="consults") Консультации
+          a.header-bottom__nav-link(href="#", data-menu="programs") Онлайн-программы
+          a.header-bottom__nav-link(href="#", data-menu="feedback") Отзывы
+          a.header-bottom__nav-link(href="#", data-menu="events") Мероприятия
+        a.header-bottom__nav-link(href="#", data-menu="training") Обучение консультантов
+        each val in ["about", "encyclopedia", "consults", "programs", "feedback", "events", "training"]
+          .header-bottom__menu(data-menu=val)
+            .header-bottom__menu-col
+              a.header-bottom__menu-link(href="#") Как и кому помогают консультанты по сну
+              a.header-bottom__menu-link(href="#") Мягкий метод BabySleep
+              a.header-bottom__menu-link(href="#") Команда консультантов BabySleep
+              a.header-bottom__menu-link(href="#") Почему Baby Sleep
+              a.header-bottom__menu-link(href="#") Наша история
+              a.header-bottom__menu-link(href="#") Направления работы центра BabySleep
+            .header-bottom__menu-col
+              a.header-bottom__menu-link(href="#") Обучение консультантов по сну
+              a.header-bottom__menu-link(href="#") Миссия и ценности
+              a.header-bottom__menu-link(href="#") Партнерство с брендами
+              a.header-bottom__menu-link(href="#") Пресса о BabySleep
+              a.header-bottom__menu-link(href="#") Поддержать проект
+              a.header-bottom__menu-link(href="#") Контакты
+        .header-bottom__age
+          .header-bottom__age-text 0-7 лет
+    .header__menu
+      .header__menu-links
+        a.header__menu-link(href="#") Вход
+        a.header__menu-link(href="#") Регистрация
+      p.header__menu-heading Выберите возраст ребенка и посмотрите подходящие вам материалы
+      +button-primary('link', 'Выбрать возраст', 'header__menu-btn', {link: '#'})
+      each val in ["О нас", "Энциклопедия сна", "Консультации", "Онлайн-программы", "Отзывы", "Мероприятия"]
+        .header__menu-map
+          p.header__menu-map-heading= val
+          a.header__menu-map-link(href="#") Как и кому помогают консультанты по сну
+          a.header__menu-map-link(href="#") Мягкий метод BabySleep
+          a.header__menu-map-link(href="#") Команда консультантов BabySleep
+          a.header__menu-map-link(href="#") Почему Baby Sleep
+          a.header__menu-map-link(href="#") Наша история
+          a.header__menu-map-link(href="#") Направления работы центра BabySleep
+          a.header__menu-map-link(href="#") Обучение консультантов по сну
+          a.header__menu-map-link(href="#") Миссия и ценности
+          a.header__menu-map-link(href="#") Партнерство с брендами
+          a.header__menu-map-link(href="#") Пресса о BabySleep
+          a.header__menu-map-link(href="#") Поддержать проект
+          a.header__menu-map-link(href="#") Контакты
+      a.header__menu-training(href="#")
+        span.header__menu-training-head Обучение консультантов
+        span.header__menu-training-sub Перейти на сайт
+      .footer__info
+        p.footer__tel +7 495 222 02 44
+        p.footer__workhours Каждый день с 8:00 до 22:00
+        p.footer__email ask@baby-sleep.ru
+        +button-secondary('link', 'Записаться на консультацию', 'footer__btn', {link: '#'})
+        .footer__socials
+          a.footer__social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+          a.footer__social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+          a.footer__social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")
+      .footer__copyright
+        p.footer__copyright-text &copy;2011 – 2020 baby-sleep.ru<br>Сайт Центра детского сна и развития «BabySleep»<br>Автор и руководитель проекта — <a href="#" target="_blank" rel="nofollow noopener">Елена Мурадова</a>

@@ -1,0 +1,391 @@
+//- include ../_ui/heading/heading
+//- include ../_ui/description/description
+//- include ../_ui/button/button
+
+//- mixin difficulties
+//-   section.difficulties.block.container
+//-     .wrapper
+//-       +heading('Частые сложности со сном у детей в возрасте от 0 до 7 лет')
+//-       +description('с которыми помогают справиться наши консультанты')
+//-       .difficulties__slider
+//-         .difficulties__slide(data-prev="", data-next="3-9 мес")
+//-           .difficulties__stages.difficulties__stages--top
+//-             .difficulties__start(style="left: -12px")
+//-               img(src="img/difficulties/3.svg", alt="")
+//-             .difficulties__event(style="left: 40px")
+//-               img(src="img/difficulties/1.svg", alt="")
+//-               p 
+//-                 span Спит <br>как младенец
+//-             .difficulties__note(style="left: 162px") Перепутал <br>день и ночь
+//-             .difficulties__note(style="left: 282px") Пик плача
+//-             .difficulties__event(style="left: 420px")
+//-               img(src="img/difficulties/2.svg", alt="")
+//-               p 
+//-                 span Проспал 6-8 часов подряд!<br>Хочу копи-паст!
+//-             .difficulties__stage.difficulties__stage--top.difficulties__stage--full.difficulties__stage--big(style="left: 820px") 
+//-               p 
+//-                 span Всё сломалось! <br>Просыпается ночью каждый час
+//-             .difficulties__note(style="left: 840px; z-index: 2") Разлюбил позу <br>«колыбельки»
+//-             .difficulties__event(style="left: 1311px")
+//-               img(src="img/difficulties/1.svg", alt="")
+//-               p 
+//-                 span Lorem, <br>ipsum dolor
+//-             .difficulties__note(style="left: 1657px") Lorem <br>ipsum dolor sit
+//-             .difficulties__stage.difficulties__stage--top.difficulties__stage--full.difficulties__stage--big(style="left: 1546px") 
+//-               p 
+//-                 span Lorem ipsum <br>dolor sit amet
+//-             .difficulties__note(style="left: 2047px; z-index: 2") Lorem, ipsum dolor
+//-           .difficulties__timeline.difficulties__timeline--start
+//-             .difficulties__timeline-time(style="width: 60px;") 1
+//-             .difficulties__timeline-time(style="width: 60px;") 2
+//-             .difficulties__timeline-time(style="width: 60px;") 3
+//-             .difficulties__timeline-time(style="width: 60px;") 4
+//-             .difficulties__timeline-time(style="width: 60px;") 5
+//-             .difficulties__timeline-time(style="width: 60px;") 6
+//-             .difficulties__timeline-time(style="width: 60px;") 7
+//-             .difficulties__timeline-time(style="width: 60px;") 8
+//-             .difficulties__timeline-time(style="width: 60px;") 9
+//-             .difficulties__timeline-time(style="width: 60px;") 10
+//-             .difficulties__timeline-time(style="width: 60px;") 11
+//-             .difficulties__timeline-time(style="width: 60px;") 12
+//-             .difficulties__timeline-time(style="width: 60px;") 13
+//-             .difficulties__timeline-time(style="width: 370px;") 4
+//-             .difficulties__timeline-time(style="width: 370px;") 5
+//-             .difficulties__timeline-time(style="width: 370px;") 6
+//-             .difficulties__timeline-time(style="width: 370px;") 7
+//-           .difficulties__term
+//-             p(style="max-width: 818px")
+//-               span недели
+//-             p.difficulties__term-gap
+//-               span месяцы
+//-           .difficulties__stages.difficulties__stages--bottom
+//-             .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="left: 150px; width: 360px; z-index: 3")
+//-               p
+//-                 span Истерики перед сном
+//-             .difficulties__stage.difficulties__stage--bottom.difficulties__stage--big(style="left: 400px") 
+//-               p 
+//-                 span Трудно переложить в кроватку
+//-             .difficulties__stage.difficulties__stage--bottom(style="left: 515px; z-index: 3;")
+//-               p 
+//-                 span Спит только на руках
+//-             .difficulties__stage.difficulties__stage--bottom.difficulties__stage--big(style="left: 905px") 
+//-               p 
+//-                 span Невозможно переложить,<br>Не засыпает без груди или бутылочки
+//-             .difficulties__stage.difficulties__stage--bottom(style="left: 966px; z-index: 2;") 
+//-               p 
+//-                 span Теряет соску и просыпается
+//-             img.difficulties__handwriting(src="img/difficulties/4.svg", alt="", style="top: 65px; left: 108px;")
+//-             .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="left: 1355px; width: 370px")
+//-               p 
+//-                 span Lorem ipsum dolor sit amet
+//-             .difficulties__stage.difficulties__stage--bottom(style="left: 1729px; z-index: 3;")
+//-               p 
+//-                 span Lorem ipsum dolor sit
+//-             .difficulties__stage.difficulties__stage--bottom(style="left: 2076px; z-index: 2;") 
+//-               p 
+//-                 span Lorem ipsum dolor sit
+//-       .difficulties__card(style="background-image: url('img/inhtml/webinar.jpg');")
+//-         .difficulties__card-content
+//-           p.difficulties__card-datetime 21 августа<br>в 19:00
+//-           p.difficulties__card-desc Бесплатный вебинар
+//-           p.difficulties__card-title Скачки и кризисы развития
+//-           +button-tertiary('link', 'Зарегистрироваться', '', {link: '#'})
+//-       .difficulties__age
+//-         +subheading('Сон по возрастам')
+//-         .difficulties__age-grid
+//-           a(href="#").difficulties__age-item
+//-             img(src="img/inhtml/age-1.svg", alt="").difficulties__age-image
+//-           a(href="#").difficulties__age-item
+//-             img(src="img/inhtml/age-2.svg", alt="").difficulties__age-image
+//-           a(href="#").difficulties__age-item
+//-             img(src="img/inhtml/age-3.svg", alt="").difficulties__age-image
+//-           a(href="#").difficulties__age-item
+//-             img(src="img/inhtml/age-4.svg", alt="").difficulties__age-image
+//-           a(href="#").difficulties__age-item
+//-             img(src="img/inhtml/age-5.svg", alt="").difficulties__age-image
+//-           a(href="#").difficulties__age-item
+//-             img(src="img/inhtml/age-6.svg", alt="").difficulties__age-image
+include ../_ui/heading/heading
+include ../_ui/description/description
+include ../_ui/button/button
+
+mixin difficulties
+  section.difficulties
+    .block.container
+      .wrapper
+        +heading('Частые сложности со сном у детей в возрасте от 0 до 7 лет')
+        +description('с которыми помогают справиться наши консультанты')
+        .bubble(style="top: 570px; left: 430px;", data-top="410px", data-left="70px")
+          p.bubble__text Кликай на проблему, чтобы узнать больше
+          a(href="#").bubble__close Понятно
+        .difficulties__slider.js-difficulties
+          .difficulties__slide(data-prev="", data-next="5-8 мес")
+            img(src="img/drag.gif", alt="").difficulties__drag
+            .difficulties__stages.difficulties__stages--top
+              .difficulties__start(style="left: -12px")
+                img(src="img/difficulties/3.svg", alt="")
+              //- .difficulties__event(style="left: 40px")
+              //-   img(src="img/difficulties/1.svg", alt="")
+              //-   p 
+              //-     span Спит <br>как младенец
+              .difficulties__note(style="left: 42px") Перепутал <br>день и ночь
+              .difficulties__note(style="left: 282px") Пик плача
+              .difficulties__event(style="left: 420px")
+                img(src="img/difficulties/2.svg", alt="")
+                p 
+                  span Проспал 6-8 часов подряд!<br>Хочу копи-паст!
+              .difficulties__note.difficulties__note--up(style="width: 120px; left: 810px; z-index: 2") Всё сломалось! <br>Просыпается ночью каждый час
+              .difficulties__note(style="left: 920px; z-index: 2") Разлюбил позу <br>«колыбельки»
+            .difficulties__timeline.difficulties__timeline--start
+              .difficulties__timeline-time(style="width: 60px;") 1
+              .difficulties__timeline-time(style="width: 60px;") 2
+              .difficulties__timeline-time(style="width: 60px;") 3
+              .difficulties__timeline-time(style="width: 60px;") 4
+              .difficulties__timeline-time(style="width: 60px;") 5
+              .difficulties__timeline-time(style="width: 60px;") 6
+              .difficulties__timeline-time(style="width: 60px;") 7
+              .difficulties__timeline-time(style="width: 60px;") 8
+              .difficulties__timeline-time(style="width: 60px;") 9
+              .difficulties__timeline-time(style="width: 60px;") 10
+              .difficulties__timeline-time(style="width: 60px;") 11
+              .difficulties__timeline-time(style="width: 60px;") 12
+              .difficulties__timeline-time(style="width: 60px;") 13
+              .difficulties__timeline-time(style="width: 390px; padding-left: 80px;") 4
+            .difficulties__term
+              p(style="width: 818px")
+                span недели
+              p.difficulties__term-gap(style="width: 3040px") 
+                span месяцы
+            .difficulties__stages.difficulties__stages--bottom
+              .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="left: 120px; width: 420px; z-index: 3")
+                p
+                  span Истерики перед сном
+              .difficulties__stage.difficulties__stage--bottom.difficulties__stage--big(style="left: 420px") 
+                p 
+                  span Трудно переложить в кроватку
+              .difficulties__stage.difficulties__stage--bottom(style="left: 545px; z-index: 3;")
+                p 
+                  span Спит только на руках
+              .difficulties__stage(style="width: 840px; left: 905px") 
+                p 
+                  span Невозможно переложить
+              .difficulties__stage(style="width: 840px; top: 54px; left: 905px") 
+                p 
+                  span НЕ засыпает без груди или бутылочки
+              .difficulties__stage.difficulties__stage--bottom(style="width: 720px; top: 105px; left: 1015px; z-index: 2;") 
+                p 
+                  span Теряет соску и просыпается
+              //- img.difficulties__handwriting(src="img/difficulties/4.svg", alt="", style="top: 65px; left: 108px;")
+          .difficulties__slide(data-prev="0-4 мес", data-next="8-13 мес")
+            .difficulties__stages.difficulties__stages--top
+              .difficulties__note.difficulties__note--up(style="left: -5px; z-index: 2") Выпутывается <br>из пелёнки и будит себя
+              .difficulties__note(style="width: 120px; left: -120px; z-index: 2") Переворачивается во сне и просыпается
+              .difficulties__note.difficulties__note--up(style="left: 280px; width: 110px; z-index: 2") По 1,5 часа ночью не уложить!
+              .difficulties__note.difficulties__note--up(style="left: 470px; width: 110px; z-index: 2") Мобиль мешает уснуть
+              .difficulties__event(style="left: 345px")
+                img(src="img/difficulties/5.svg", alt="")
+                p 
+                  span Я выспалась! Что это было? <br>Как повторить?
+              .difficulties__note(style="width: 100px; left: 560px; z-index: 2") Перестал спать в коляске
+              .difficulties__note.difficulties__note--up(style="left: 665px; width: 110px; z-index: 2") В 5:30 он <br>уже выспался! <br>А я-то нет!
+              .difficulties__note(style="width: 120px; left: 745px; z-index: 2") Прикорм ввели, а лучше спать не стал
+              .difficulties__note.difficulties__note--up(style="left: 850px; width: 110px; z-index: 2") Днем не ест, <br>зато ночью каждые 2 часа
+              .difficulties__note(style="width: 120px; left: 945px; z-index: 2") Не могу выйти из комнаты, в туалет
+            .difficulties__timeline
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 380px;") 5
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 380px;") 6
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 380px;") 7
+            .difficulties__term
+            .difficulties__stages.difficulties__stages--bottom
+              .difficulties__stage(style="width: 670px; top: 155px; left: -95px") 
+                p 
+                  span Отказывается спать в своей кроватке
+              .difficulties__stage.difficulties__stage--bottom(style="width: 480px; top: 205px; left: 95px; z-index: 2;") 
+                p 
+                  span Днём спит по 20-40 минут 
+              .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="left: 760px; width: 1170px; z-index: 3")
+                p
+                  span Непрерывно лезут зубы
+              .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="top: 60px; left: 760px; width: 1170px; z-index: 3")
+                p
+                  span За ночь просыпается 5-15 раз: то покачать, то покормить
+              .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="top: 110px; left: 760px; width: 1170px; z-index: 3")
+                p
+                  span Не засыпает без груди/бутылочки
+              .difficulties__stage.difficulties__stage--bottom.difficulties__stage--full(style="top: 160px; left: 760px; width: 1170px; z-index: 3")
+                p
+                  span С 4 утра спим только на подсосе
+          .difficulties__slide(data-prev="5-8 мес", data-next="14 мес - 2,5 года")
+            .difficulties__stages.difficulties__stages--top
+              .difficulties__event(style="left: 65px")
+                img(src="img/difficulties/6.svg", alt="")
+                p 
+                  span В тот день спина не <br>болела. Но это не точно
+              .difficulties__note.difficulties__note--up(style="left: 165px; width: 150px; z-index: 2") Просыпается и <br>садится/ползает/встает <br>в кроватке
+              .difficulties__note(style="width: 120px; left: 270px; z-index: 2") Удары о бортики кроватки
+              .difficulties__note.difficulties__note--up(style="left: 355px; width: 150px; z-index: 2") Ночью просыпается <br>и проверяет, где мама
+              .difficulties__note(style="width: 120px; left: 750px; z-index: 2") Просыпается ночью и кричит и плачет
+              .difficulties__note(style="width: 120px; left: 950px; z-index: 2") Просыпается ночью и зовет
+              .difficulties__note.difficulties__note--up(style="left: 1034px; width: 150px; z-index: 2") Теперь не хочет, чтобы укладывал папа
+            .difficulties__timeline
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 380px;") 8
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 380px;") 9
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 100px;") 10
+              .difficulties__timeline-time(style="width: 100px;") 11
+              .difficulties__timeline-time(style="width: 100px;") 12
+              .difficulties__timeline-time(style="width: 100px;") 13
+            .difficulties__term
+            .difficulties__stages.difficulties__stages--bottom
+              .difficulties__stage.difficulties__stage--full(style="width: 1040px; left: 763px") 
+                p 
+                  span НЕ засыпает без груди или бутылочки
+              .difficulties__stage(style="width: 120px; top: 60px; left: 763px") 
+                p 
+                  span Всё ещё не спит <br>без укачиваний
+              .difficulties__stage(style="width: 710px; top: 60px; left: 970px") 
+                p 
+                  span По 2 часа невозможно уложить в ночь!
+              .difficulties__stage.difficulties__stage--full(style="width: 100px; top: 110px; left: 970px") 
+                p 
+                  span(style="font-size: 11px") Врач сказал убрать ночные кормления
+              .difficulties__stage.difficulties__stage--full(style="width: 285px; top: 110px; left: 1073px") 
+                p 
+                  span Это вечные зубы!
+          .difficulties__slide(data-prev="8-13 мес", data-next="3-6 лет")
+            .difficulties__stages.difficulties__stages--top
+              .difficulties__event(style="left: -25px")
+                img(src="img/difficulties/7.svg", alt="")
+                p 
+                  span Cмогла сходить в душ <br>ОДНА. Кайф!
+              .difficulties__note.difficulties__note--up(style="left: 70px; width: 150px; z-index: 2") Всё ещё не перешли <br>на 1 дневной сон
+              .difficulties__note(style="width: 120px; left: 180px; z-index: 2") Хочу завершить ГВ, но как?
+              .difficulties__note(style="width: 120px; left: 370px; z-index: 2") Как переселить в отдельную комнату?
+              .difficulties__note(style="width: 140px; left: 660px; z-index: 2") Не уложить <br>на дневной сон, а до ночи не тянет
+              .difficulties__note(style="width: 140px; left: 920px; z-index: 2") Боится монстров <br>под кроватью, засыпая держит за руку, <br>теребит волосы
+              .difficulties__note(style="width: 110px; left: 1075px; z-index: 2") Укладывается <br>с кем угодно, <br>только не с мамой
+            .difficulties__timeline
+              .difficulties__timeline-time(style="width: 100px;") 14
+              .difficulties__timeline-time(style="width: 100px;") 15
+              .difficulties__timeline-time(style="width: 100px;") 16
+              .difficulties__timeline-time(style="width: 100px;") 17
+              .difficulties__timeline-time(style="width: 275px;") 1,5
+              .difficulties__timeline-time(style="width: 275px;") 2
+              .difficulties__timeline-time(style="width: 275px;") 2,5
+            .difficulties__term
+              p.difficulties__term-gap(style="left: 355px; width: 2818px") 
+                span годы
+            .difficulties__stages.difficulties__stages--bottom
+              .difficulties__stage.difficulties__stage--full(style="width: 810px; left: 635px") 
+                p 
+                  span Схожу с ума! Как уложить погодок?
+              .difficulties__stage(style="width: 660px; top: 60px; left: 635px") 
+                p 
+                  span Как отучить от соски?
+              .difficulties__stage(style="width: 400px; top: 110px; left: 515px") 
+                p 
+                  span Пора завершать ГВ, но не представляю, как?
+              .difficulties__stage.difficulties__stage--full(style="width: 145px; top: 110px; left: 1040px") 
+                p 
+                  span У нас нет режима, <br>а скоро в сад
+              .difficulties__stage.difficulties__stage--full(style="width: 150px; top: 110px; left: 1188px") 
+                p 
+                  span Невозможно уложить!<br>Что, опять?
+              .difficulties__stage(style="width: 660px; top: 160px; left: 635px") 
+                p 
+                  span Поесть-попить-пописать-сказку-песенку и так по кругу целый час до сна!
+          .difficulties__slide(data-prev="14 мес - 2,5 года", data-next="6-8 лет")
+            .difficulties__stages.difficulties__stages--top
+              .difficulties__event(style="left: 820px")
+                img(src="img/difficulties/8.svg", alt="")
+                p 
+                  span Люблю наши вечерние <br>"секретики" на ушко
+              .difficulties__note(style="width: 110px; left: 50px; z-index: 2") Ночью 5 раз бутылка, а днем не ест
+              .difficulties__note(style="width: 145px; left: 170px; z-index: 2") Так как всё-таки переселить в отдельную комнату?
+              .difficulties__note(style="width: 70px; left: 330px; z-index: 2") В саду спит, <br>а дома нет
+              .difficulties__note(style="width: 100px; left: 430px; z-index: 2") Младший будит <br>старшего
+              .difficulties__note(style="width: 120px; left: 560px; z-index: 2") Как перейти на ночь <br>без подгузника?
+              .difficulties__note.difficulties__note--up(style="left: 700px; width: 115px; z-index: 2") Как же сделать так, <br>чтобы спал днем?
+              .difficulties__note.difficulties__note--up(style="left: 980px; width: 115px; z-index: 2") Двоих не уложить! <br>Друг другу мешают
+            .difficulties__timeline
+              .difficulties__timeline-time(style="width: 275px;") 3
+              .difficulties__timeline-time.difficulties__timeline-time--start(style="width: 275px;") 3
+              .difficulties__timeline-time(style="width: 275px;") 4
+              .difficulties__timeline-time(style="width: 275px;") 5
+            .difficulties__term
+            .difficulties__stages.difficulties__stages--bottom
+              .difficulties__stage.difficulties__stage--full(style="width: 1150px; left: 278px") 
+                p 
+                  span Каждую ночь приходит в родительскую кровать
+              .difficulties__stage(style="width: 200px; top: 60px; left: 278px") 
+                p 
+                  span В саду днем спит, <br>а дома потом до 12 ночи "тусит"
+              .difficulties__stage.difficulties__stage--full(style="width: 575px; top: 60px; left: 535px") 
+                p 
+                  span Боится темноты
+              .difficulties__stage(style="width: 810px; top: 110px; left: 278px") 
+                p 
+                  span НЕ спит днем в саду, всем мешает
+              .difficulties__stage(style="width: 810px; top: 160px; left: 278px") 
+                p 
+                  span Засыпает в 11-12 ночи с истерикой
+              .difficulties__stage(style="width: 810px; top: 210px; left: 278px") 
+                p 
+                  span От мультиков становится возбужденным, как успокоить?
+          .difficulties__slide(data-prev="3-6 лет")
+            .difficulties__stages.difficulties__stages--top
+              .difficulties__event(style="left: 325px")
+                img(src="img/difficulties/8.svg", alt="")
+                p 
+                  span На линейке вспомнила все <br>7 лет, счастлива!
+              .difficulties__note(style="width: 120px; left: 77px; z-index: 2") График развивашек <br>мешает сну
+            .difficulties__timeline.difficulties__timeline--endless
+              .difficulties__timeline-time(style="width: 275px;") 6
+              .difficulties__timeline-time(style="width: 275px;") 7
+            .difficulties__term
+            .difficulties__stages.difficulties__stages--bottom
+              .difficulties__stage.difficulties__stage--full(style="width: 310px; left: 260px") 
+                p 
+                  span Устает в школе, как наладить режим?
+              .difficulties__stage.difficulties__stage--full(style="top: 60px; width: 628px; left: -57px") 
+                p 
+                  span Устает в школе, как наладить режим?
+        //- +description('вся информация по возрасту')
+        //- .difficulties__age.difficulties__age--desktop
+        //-   a.difficulties__age-btn(href="#") 0–3 месяца
+        //-   a.difficulties__age-btn(href="#") 3–6 месяца
+        //-   a.difficulties__age-btn(href="#") 6–9 месяца
+        //-   a.difficulties__age-btn(href="#") 9–18 месяца
+        //-   a.difficulties__age-btn(href="#") 1,5–3 года
+        //-   a.difficulties__age-btn(href="#") 3–7 лет
+        //- .difficulties__age.difficulties__age--mobile
+        //-   .difficulties__age-buttons
+        //-     a.difficulties__age-btn(href="#") 0–3
+        //-     a.difficulties__age-btn(href="#") 3–6
+        //-     a.difficulties__age-btn(href="#") 6–9
+        //-     a.difficulties__age-btn(href="#") 9–18
+        //-     a.difficulties__age-btn(href="#") 1,5–3
+        //-     a.difficulties__age-btn(href="#") 3–7
+        //-   .difficulties__age-terms
+        //-     .difficulties__age-term Месяцы
+        //-     .difficulties__age-term Годы
+        .difficulties__card(style="background-image: url('img/inhtml/webinar.jpg');")
+          .difficulties__card-content
+            p.difficulties__card-datetime 21 августа<br>в 19:00
+            p.difficulties__card-desc Бесплатный вебинар
+            p.difficulties__card-title Скачки и кризисы развития
+            +button-tertiary('link', 'Зарегистрироваться', '', {link: '#'})
+        .difficulties__age
+          +subheading('Сон по возрастам')
+          .difficulties__age-grid
+            a(href="#").difficulties__age-item
+              img(src="img/inhtml/age-1.svg", alt="").difficulties__age-image
+            a(href="#").difficulties__age-item
+              img(src="img/inhtml/age-2.svg", alt="").difficulties__age-image
+            a(href="#").difficulties__age-item
+              img(src="img/inhtml/age-3.svg", alt="").difficulties__age-image
+            a(href="#").difficulties__age-item
+              img(src="img/inhtml/age-4.svg", alt="").difficulties__age-image
+            a(href="#").difficulties__age-item
+              img(src="img/inhtml/age-5.svg", alt="").difficulties__age-image
+            a(href="#").difficulties__age-item
+              img(src="img/inhtml/age-6.svg", alt="").difficulties__age-image

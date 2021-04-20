@@ -1,0 +1,10 @@
+include ../_ui/button/button
+
+mixin consults-hero
+  section.consults-hero.container
+    .wrapper
+      h1.consults-hero__heading Консультации BabySleep — <br>это персональная работа с экспертом по улучшению сна вашего ребенка
+      .consults-hero__desc С 2011 года помогаем не высыпающимся родителям организовать сон ребенка: спать всю ночь без слез, протестов, укачиваний и кормлений.
+      .consults-hero__actions
+        +button-primary('link', 'Записаться в 1 клик', '', {link: '#'})
+        a(href="#").consults-hero__link Выбор консультанта

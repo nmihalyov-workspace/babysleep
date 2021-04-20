@@ -1,0 +1,41 @@
+.why-hero
+  padding: 65px 0 40px
+  &__heading
+    margin-bottom: 55px
+    font:
+      size: 42px
+      weight: 700
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: calc(100% + 30px)
+    margin-left: -15px
+  &__item
+    width: 370px
+    margin: 0 15px 20px
+    &-heading
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-end
+      align-items: flex-start
+      height: 50px
+      margin-bottom: 10px
+      line-height: 1.25
+      font:
+        size: 20px
+        weight: 700
+    &-desc
+      line-height: 1.44
+
+@media only screen and (max-width: $mobile)
+  .why-hero
+    padding: 40px 0 15px
+    &__heading
+      margin-bottom: 55px
+      font-size: 32px
+    &__item
+      margin-bottom: 45px
+      &-heading
+        height: auto

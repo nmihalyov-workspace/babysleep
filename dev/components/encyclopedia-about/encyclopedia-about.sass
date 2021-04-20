@@ -1,0 +1,68 @@
+.encyclopedia-about
+  margin-bottom: 75px
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+  &__info
+    width: 770px
+  &__heading
+    margin-bottom: 15px
+    line-height: 1.27
+    font:
+      size: 30px
+      weight: 700
+  &__desc
+    margin-bottom: 40px
+  &__author
+    width: 290px
+    &--mobile
+      display: none
+    &-image
+      width: 230px
+      height: 230px
+      margin: 0 auto 20px auto
+      border-radius: 50%
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+    &-name
+      display: block
+      width: 100%
+      margin-bottom: 5px
+      text-align: center
+      font:
+        size: 16px
+        weight: 700
+    &-desc
+      text-align: center
+      line-height: 1.5
+      font-size: 12px
+
+@media only screen and (max-width: $mobile)
+  .encyclopedia-about
+    margin-bottom: 35px
+    &__author
+      display: none
+      &--mobile
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: center
+        margin-bottom: 20px
+      &-image
+        flex-shrink: 0
+        width: 66px
+        height: 66px
+        margin-right: 15px
+        margin-bottom: 0
+      &-name
+        text-align: left
+      &-desc
+        text-align: left
+    &__desc
+      margin-bottom: 20px
+    &__btn
+      max-width: 100%

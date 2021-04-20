@@ -1,0 +1,30 @@
+include ../_ui/heading/heading
+include ../_ui/description/description
+
+mixin selection-quotation
+  section.selection-quotation.container
+    .selection-quotation__wrapper.wrapper
+      .selection-quotation__info
+        .selection-quotation__mark
+        +heading('Приоритеты периода в 0–3 месяца')
+        +description('Первые 3 месяца — переворот вашего привычного уклада жизни. Время остывшего чая, 24/7 вовлеченности в уход за малышом, усталости. <br><br>Время первых улыбок, неповторимого младенческого запаха, переосмысления жизненных приоритетов.')
+        .selection-quotation__block
+          p.selection-quotation__block-title Да, это нормально:
+          ul.selection-quotation__block-list
+            li.selection-quotation__block-list-item Иногда малыш буквально висит на груди
+            li.selection-quotation__block-list-item Не получается выдерживать 3 часа между кормлениями
+            li.selection-quotation__block-list-item Малыш иногда вздрагивает во сне или будит себя ручками
+        .selection-quotation__block
+          p.selection-quotation__block-title Важно для мамы:
+          p.selection-quotation__block-text Научиться успокаивать малыша и понимать его сигналы, отдыхать всегда, когда спит малыш, просить помощь близких, беречь себя от выгорания и истощения на фоне недосыпа, принять, что вы не все можете контролировать
+        .selection-quotation__block
+          p.selection-quotation__block-title Важно для малыша:
+          ul.selection-quotation__block-list
+            li.selection-quotation__block-list-item Избегать переутомления — перегуливая, малыши быстро устают и много плачут
+            li.selection-quotation__block-list-item Понять разницу между днем и ночью
+            li.selection-quotation__block-list-item Высыпаться, чтобы расти и развиваться
+            li.selection-quotation__block-list-item Быть в безопасности
+        .selection-quotation__author
+          a.selection-quotation__link(href="#") Елена Мурадова
+          p.selection-quotation__desc Основатель BabySleep, первый консультант по сну в России и СНГ
+      img.selection-quotation__image(src="img/quotation-pic-2.png", alt="")

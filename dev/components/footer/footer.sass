@@ -1,0 +1,171 @@
+.footer
+  padding: 70px 0 45px 0
+  &__logo
+    opacity: 0.6
+    filter: grayscale(1)
+    margin-bottom: 25px
+    font-size: 12px
+    &-image
+      margin-right: 5px
+  &__main
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 45px
+  &__info
+    width: 270px
+  &__workhours
+    opacity: 0.5
+    margin-bottom: 20px
+    font-size: 13px
+  &__email
+    margin-bottom: 25px
+  &__btn
+    margin-bottom: 35px
+  &__socials
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+  &__social
+    position: relative
+    width: 40px
+    height: 40px
+    margin-right: 10px
+    background-color: $blue
+    border-radius: 50%
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      background:
+        position: center
+        size: contain
+        repeat: no-repeat
+    &[data-social="inst"]:before
+      top: calc(50% - 10px)
+      left: calc(50% - 10px)
+      width: 19px
+      height: 19px
+      background-image: url('../img/icons/inst.svg')
+    &[data-social="vk"]:before
+      top: calc(50% - 4px)
+      left: calc(50% - 9px)
+      width: 17px
+      height: 9px
+      background-image: url('../img/icons/vk.svg')
+    &[data-social="telegram"]:before
+      top: calc(50% - 10px)
+      left: calc(50% - 11px)
+      width: 20px
+      height: 18px
+      background-image: url('../img/icons/telegram.svg')
+  &__map
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 765px
+    &-item
+      &:first-child
+        width: 125px
+      &:nth-child(2)
+        width: 230px
+      &:last-child
+        width: 270px
+    &-heading
+      opacity: 0.5
+      margin-bottom: 15px
+    &-link
+      display: block
+      text-decoration: none
+      &:not(:last-child)
+        margin-bottom: 15px
+  &__nav
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 45px
+    padding: 25px 0
+    border-top: 1px solid transparentize($black, 0.9)
+    border-bottom: 1px solid transparentize($black, 0.9)
+    &-link
+      width: 25%
+      text-align: center
+      text-decoration: none
+  &__copyright
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 40px
+    &-text
+      font-size: 12px
+  &__desc
+    opacity: 0.4
+    font-size: 12px
+
+@media only screen and (max-width: $mobile)
+  .footer
+    padding: 35px 0
+    &__logo
+      font-size: 10px
+      &-image
+        width: 140px
+    &__main
+      flex-flow: column nowrap
+    &__info
+      width: 100%
+    &__btn
+      max-width: 100%
+    &__socials
+      display: none
+    &__map
+      width: 100%
+      flex-flow: column nowrap
+      &-item
+        width: 100% !important
+      &-heading
+        position: relative
+        opacity: 1
+        width: 100%
+        padding: 18px 0
+        margin: 0
+        border-bottom: 1px solid transparentize(#313131, 0.9)
+        &--active
+          &:after
+            transform: rotate(-90deg) !important
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          top: calc(50% - 4px)
+          right: 0
+          width: 4px
+          height: 8px
+          transform: rotate(90deg)
+          transition: transform .3s ease
+          background:
+            image: url('../img/icons/caret.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+      &-link
+        display: none
+        opacity: 0.5
+        margin: 0 !important
+        padding: 10px 0
+        &:last-child
+          border-bottom: 1px solid transparentize(#313131, 0.9)
+    &__nav
+      display: none
+    &__copyright
+      opacity: 0.4
+      flex-flow: column nowrap
+      margin-bottom: 10px
+      &-text
+        margin-bottom: 10px

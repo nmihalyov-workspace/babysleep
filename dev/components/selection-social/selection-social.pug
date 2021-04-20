@@ -1,0 +1,27 @@
+include ../_ui/input/input
+include ../_ui/button/button
+
+mixin selection-social(type)
+  section.selection-social.block.container
+    .wrapper
+      form.selection-social__form(action="")
+        p.selection-social__form-heading Получите подборку статей на почту для ребёнка вашего возраста
+        p.selection-social__form-desc Заполните данные и возраст ребенка, чтобы получать только то что вам нужно.
+        .selection-social__form-row.js-form-row
+          +input('text', 'name', 'Имя', '', true)
+          +input('email', 'email', 'Email', '', true)
+          +input('text', 'date', 'Дата рождения ребенка', '', true)
+          p.selection-social__form-more.selection-social__form-more--mobile.js-child-more + ещё ребёнок
+          +button-tertiary('popup', 'Подписаться на рассылку', 'selection-social__form-btn', {popup: 'request-2'})
+        p.selection-social__form-more.js-child-more + ещё ребёнок
+        p.selection-social__form-disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>
+      if (type != 'encyclopedia-calendars')
+        .selection-social__link
+          a(href="#") Изучить особенности сна в 3–6 месяцев →
+      .reviews__subscribe
+        p.reviews__subscribe-heading Подписывайтесь!
+        p.reviews__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+        .reviews__subscribe-socials
+          a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+          a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+          a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")

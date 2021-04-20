@@ -1,0 +1,52 @@
+.selection-help
+  padding: 60px 0
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+  &__image
+    width: 230px
+    height: 230px
+    margin-right: 75px
+    border-radius: 50%
+  &__heading
+    margin-bottom: 20px
+    line-height: 1.17
+    font:
+      size: 24px
+      weight: 700
+  &__text
+    margin-bottom: 20px
+    line-height: 1.4
+  &__img
+    display: none
+  &__name
+    margin-bottom: 5px
+    text-decoration: underline
+  &__desc
+    width: 275px
+    line-height: 1.5
+    font-size: 12px
+
+@media only screen and (max-width: $mobile)
+  .selection-help
+    padding: 45px 0 60px
+    &__image
+      display: none
+    &__heading
+      margin-bottom: 15px
+      padding-right: 70px
+    &__text
+      margin-bottom: 25px
+    &__author
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+    &__img
+      display: block
+      width: 66px
+      height: 66px
+      margin-right: 15px
+      border-radius: 50%

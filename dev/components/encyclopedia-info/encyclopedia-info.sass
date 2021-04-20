@@ -1,0 +1,79 @@
+.encyclopedia-info
+  margin-bottom: 90px
+  .heading__title
+    width: 100%
+    text-align: center
+  .description
+    width: 100%
+    margin-bottom: 35px
+    text-align: center
+  &__sleep
+    &-grid
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-around
+      align-items: center
+  &__or
+    padding: 35px 0 45px
+    text-align: center
+  &__form
+    position: relative
+    padding: 35px 40px
+    border-radius: 16px
+    background-color: $blue
+    color: #fff
+    &-type
+      margin-bottom: 15px
+    &-heading
+      margin-bottom: 5px
+      font:
+        size: 29px
+        weight: 300
+    &-desc
+      margin-bottom: 25px
+    &-row
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 10px
+    &-btn
+      color: $blue
+    &-disclaimer
+      opacity: 0.4
+      font-size: 9px
+      a
+        color: #fff
+
+@media only screen and (max-width: $mobile)
+  .encyclopedia-info
+    margin-bottom: 45px
+    &__sleep
+      &-grid
+        flex-flow: row wrap
+        justify-content: space-between
+      &-item
+        margin-bottom: 20px
+      &-image
+        width: 95px
+    &__or
+      padding: 5px 0 35px
+    &__form
+      padding: 25px 15px 30px
+      &-heading
+        margin-bottom: 10px
+        line-height: 1.167
+        font-size: 24px
+      &-row
+        flex-flow: column nowrap
+        align-items: flex-start
+        .input
+          width: 100%
+          margin-bottom: 10px
+      &-btn
+        max-width: 100%
+      &-disclaimer
+        width: 215px
+    &__link
+      margin-bottom: 40px
+      padding-left: 150px

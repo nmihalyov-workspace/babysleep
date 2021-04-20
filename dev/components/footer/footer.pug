@@ -1,0 +1,50 @@
+include ../_ui/button/button
+
+mixin footer
+  footer.footer.container
+    .wrapper
+      .footer__logo
+        img.footer__logo-image(src="img/logo.svg", alt="babysleep")
+        sup TM
+      .footer__main
+        .footer__info
+          p.footer__tel +7 495 222 02 44
+          p.footer__workhours Каждый день с 8:00 до 22:00
+          p.footer__email ask@baby-sleep.ru
+          +button-secondary('link', 'Записаться на консультацию', 'footer__btn', {link: '#'})
+          .footer__socials
+            a.footer__social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+            a.footer__social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+            a.footer__social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")
+        .footer__map
+          .footer__map-item
+            p.footer__map-heading BabySleep
+            a.footer__map-link(href="#") Решения
+            a.footer__map-link(href="#") Сервисы
+            a.footer__map-link(href="#") Вопросы-ответы
+            a.footer__map-link(href="#") Отзывы
+            a.footer__map-link(href="#") Контакты
+            a.footer__map-link(href="#") О нас
+          .footer__map-item
+            p.footer__map-heading Продукты
+            a.footer__map-link(href="#") Видеокурсы
+            a.footer__map-link(href="#") СПИ-руководства
+            a.footer__map-link(href="#") Школа сна
+            a.footer__map-link(href="#") Индивидуальные консультации
+            a.footer__map-link(href="#") Подарочный сертификат
+          .footer__map-item
+            p.footer__map-heading Энциклопедия
+            a.footer__map-link(href="#") Видеокурсы
+            a.footer__map-link(href="#") СПИ-руководства
+            a.footer__map-link(href="#") Школа сна
+            a.footer__map-link(href="#") Индивидуальные консультации
+            a.footer__map-link(href="#") Подарочный сертификат
+      nav.footer__nav
+        a.footer__nav-link(href="#") Конфиденциальность
+        a.footer__nav-link(href="#") Сотрудничество
+        a.footer__nav-link(href="#") Использование материалов
+        a.footer__nav-link(href="#") Оферта
+      .footer__copyright
+        p.footer__copyright-text &copy;2011 – 2020 baby-sleep.ru<br>Сайт Центра детского сна и развития «BabySleep»<br>Автор и руководитель проекта — <a href="#" target="_blank" rel="nofollow noopener">Елена Мурадова</a>
+        p.footer__copyright-text <a href="#" target="_blank" rel="nofollow noopener">Дизайн – студия Арбуз</a>
+      p.footer__desc 1-й в России информационный портал о сне ребенка: режим дня, ритуал перед сном, как уложить ребенка спать без слез, как научить засыпать самостоятельно, совместный сон с ребенком, как приучить ребенка спать в кроватке, что делать, если ребенок плохо спит, нарушение сна у детей, скачки развития, безопасный, здоровый сон, работа консультантов по сну и многое другое.<br><br>Публикации и рекомендации консультантов по сну Центра детского сна и развития «BabySleep» носят исключительно информационный характер, не являются медицинскими, не заменяют предписаний вашего лечащего врача и могут быть не применимы к детям, у которых имеются проблемы со здоровьем или развитием. Если у вашего ребенка наблюдаются вторичные инсомнии – проблемы сна, отражающие наличие каких-либо заболеваний, чаще неврологических, обязательно обратитесь к врачу!

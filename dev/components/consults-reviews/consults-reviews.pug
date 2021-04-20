@@ -1,0 +1,85 @@
+include ../_ui/heading/heading
+include ../_ui/input/input
+include ../_ui/button/button
+
+mixin consults-reviews
+  section.consults-reviews.block.container
+    .wrapper
+      +heading('500+ отзывов', 'Смотреть все')
+      .consults-reviews__slider.slider.js-reviews-slider
+        .consults-reviews__slide
+          .consults-reviews__slide-content
+            .consults-reviews__slide-image.consults-reviews__slide-image--video(style="background-image: url('img/inhtml/reviews-1.jpg');")
+              .consults-reviews__slide-image-play
+            .consults-reviews__slide-info
+              .consults-reviews__slide-avatar(style="background-image: url('img/inhtml/avatar-1.jpg');")
+              .consults-reviews__slide-desc
+                p.consults-reviews__slide-name Наталья Подольская, Москва
+                p.consults-reviews__slide-pos мама Тёмы
+            a.consults-reviews__slide-type(href="#") Индивидуальное решение под ключ
+            p.consults-reviews__slide-title Проблема
+            p.consults-reviews__slide-text В 6-8 месяцев засыпает только с долгим укачиванием в люльке, 8-12 пробуждений за ночь.
+            p.consults-reviews__slide-title Результат
+            p.consults-reviews__slide-text Самостоятельное засыпание без укачиваний и слез в кроватке, 1-3  кормления (ГВ).
+          a.consults-reviews__slide-link(href="#") Смотреть видеоотзыв
+        .consults-reviews__slide
+          .consults-reviews__slide-content
+            .consults-reviews__slide-image(style="background-image: url('img/inhtml/reviews-2.jpg');")
+            .consults-reviews__slide-info
+              .consults-reviews__slide-avatar(style="background-image: url('img/inhtml/avatar-2.jpg');")
+              .consults-reviews__slide-desc
+                p.consults-reviews__slide-name Юлия Смольная, Санкт-Петербург
+                p.consults-reviews__slide-pos мама Лены и Макара
+            a.consults-reviews__slide-type(href="#") Экспресс консультация
+            p.consults-reviews__slide-title Проблема
+            p.consults-reviews__slide-text Погодки 2 и 4 года изматывающе долго (1-2 часа) засыпают на ночь, мама устала.
+            p.consults-reviews__slide-title Результат
+            p.consults-reviews__slide-text Засыпание за 15 минут, ощущение контакта и единения с детьми у мамы.
+          a.consults-reviews__slide-link(href="#") Смотреть отзыв
+        .consults-reviews__slide
+          .consults-reviews__slide-content
+            .consults-reviews__slide-image(style="background-image: url('img/inhtml/reviews-3.jpg');")
+            .consults-reviews__slide-info
+              .consults-reviews__slide-avatar(style="background-image: url('img/inhtml/avatar-3.jpg');")
+              .consults-reviews__slide-desc
+                p.consults-reviews__slide-name Настя и Женя Кузнецовы, Челябинск
+                p.consults-reviews__slide-pos родители Есении и Федора
+            a.consults-reviews__slide-type(href="#") Индивидуальное решение под ключ
+            p.consults-reviews__slide-title Проблема
+            p.consults-reviews__slide-text Погодки 2 и 4 года изматывающе долго (1-2 часа) засыпают на ночь, мама устала.
+            p.consults-reviews__slide-title Результат
+            p.consults-reviews__slide-text Сон всю ночь без пробуждений и без кормлений.
+          a.consults-reviews__slide-link(href="#") Смотреть отзыв
+        .consults-reviews__slide
+          .consults-reviews__slide-content
+            .consults-reviews__slide-image(style="background-image: url('img/inhtml/reviews-2.jpg');")
+            .consults-reviews__slide-info
+              .consults-reviews__slide-avatar(style="background-image: url('img/inhtml/avatar-2.jpg');")
+              .consults-reviews__slide-desc
+                p.consults-reviews__slide-name Юлия Смольная, Санкт-Петербург
+                p.consults-reviews__slide-pos мама Лены и Макара
+            a.consults-reviews__slide-type(href="#") Экспресс консультация
+            p.consults-reviews__slide-title Проблема
+            p.consults-reviews__slide-text Погодки 2 и 4 года изматывающе долго (1-2 часа) засыпают на ночь, мама устала.
+            p.consults-reviews__slide-title Результат
+            p.consults-reviews__slide-text Засыпание за 15 минут, ощущение контакта и единения с детьми у мамы.
+          a.consults-reviews__slide-link(href="#") Смотреть отзыв
+      .consults-reviews__more
+        +heading('Узнайте больше о нашей работе')
+        .consults-reviews__more-grid
+          .consults-reviews__more-col
+            a(href="#").consults-reviews__more-link Методики
+            a(href="#").consults-reviews__more-link Команда консультантов
+          .consults-reviews__more-col
+            a(href="#").consults-reviews__more-link Этический кодекс
+            a(href="#").consults-reviews__more-link Гарантии
+          .consults-reviews__more-col
+            a(href="#").consults-reviews__more-link Договор оферты
+            a(href="#").consults-reviews__more-link Что такое подведенческие инсомнии
+      .consults-reviews__subscribe
+        p.consults-reviews__subscribe-heading Подписывайтесь!
+        p.consults-reviews__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+        .consults-reviews__subscribe-socials
+          a.consults-reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+          a.consults-reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+          a.consults-reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")

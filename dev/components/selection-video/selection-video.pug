@@ -1,0 +1,25 @@
+include ../_ui/input/input
+include ../_ui/button/button
+
+mixin selection-video
+  section.selection-video.block.container
+    .wrapper
+      .selection-video__list
+        .selection-video__list-content
+          p.selection-video__list-title Чек-лист «Безопасный сон в 0-3 месяца»
+          a(href="javascript:void(0)", data-popup="checklist").selection-video__list-link.js-open-popup Получить чек-лист
+        img.selection-video__list-image(src="img/book.png", alt="")
+      form.selection-video__form(action="")
+        img.selection-video__form-image(src="img/book.png", alt="")
+        p.selection-video__form-type Бесплатный чек-лист
+        p.selection-video__form-heading «Безопасный сон в 0-3 месяца»
+        p.selection-video__form-desc Заполните данные и мы пришлём чек-лист на почту
+        .selection-video__form-row
+          +input('text', 'name', 'Имя', '', true)
+          +input('email', 'email', 'Email', '', true)
+          +input('text', 'dateOfBirth', 'Дата рождения ребёнка', '', true)
+        .selection-video__form-row
+          +button-tertiary('popup', 'Получить чек-лист', 'selection-video__form-btn', {popup: 'request-1'})
+          p.selection-video__form-disclaimer.selection-video__form-disclaimer--small Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>
+      .selection-video__player(style="background-image: url('img/inhtml/selection-video.jpg')")
+      p.selection-video__disclaimer Полезное видео

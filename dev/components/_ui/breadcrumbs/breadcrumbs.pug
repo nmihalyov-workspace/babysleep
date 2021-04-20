@@ -1,0 +1,5 @@
+mixin breadcrumbs(arr)
+  section.breadcrumbs.container
+    .breadcrumbs__wrapper.wrapper
+      -for(let i = 0; i < arr.length; i++)
+        a(href=`${arr[i].href || "#"}`).breadcrumbs__item= arr[i].text

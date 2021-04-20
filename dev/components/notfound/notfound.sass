@@ -1,0 +1,45 @@
+.notfound
+  &__heading
+    padding: 100px 0 110px
+    line-height: 1.1
+    text-align: center
+    font:
+      size: 42px
+      weight: 600
+  &__suggest
+    margin-bottom: 110px
+    line-height: 1.15
+    font:
+      size: 32px
+      weight: 600
+  .grid-card
+    position: relative
+    margin-top: -150px
+    margin-bottom: 75px
+    padding-bottom: 45px
+    &:after
+      position: absolute
+      content: ''
+      left: 15px
+      bottom: 0
+      width: 1170px
+      height: 1px
+      background-color: transparentize(#313131, .85)
+
+@media only screen and (max-width: $mobile)
+  .notfound
+    &__heading
+      padding: 90px 0
+      font-size: 24px
+    &__suggest
+      margin-bottom: 75px
+      font:
+        size: 24px
+        weight: 400
+    .grid-card
+      margin-top: -90px
+      margin-bottom: 40px
+      padding-bottom: 35px
+      &:after
+        left: 0
+        width: 100%

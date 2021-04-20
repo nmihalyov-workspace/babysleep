@@ -1,0 +1,8 @@
+-const tabs = ['Статьи', 'Календари сна и развития', 'Таблицы и инфографики', 'Вопрос-ответ', 'Опыт родителей', 'Видео'];
+
+mixin encyclopedia-tabs(current)
+  section.encyclopedia-tabs.container
+    .wrapper
+      .encyclopedia-tabs__grid(data-current=current)
+        -for(let i = 0; i < tabs.length; i++)
+          a(href="#", class=`${i === current ? 'encyclopedia-tabs__item--active' : ''}`).encyclopedia-tabs__item!= tabs[i]

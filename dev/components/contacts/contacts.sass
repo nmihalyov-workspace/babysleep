@@ -1,0 +1,187 @@
+.contacts
+	position: relative
+	&__heading
+		margin: 65px 0 70px
+		line-height: 1.1
+		font:
+			size: 42px
+			weight: 700
+	&__grid
+		display: flex
+		margin-bottom: 85px
+	&__item
+		margin-right: 30px
+		&-value
+			margin-bottom: 5px
+			line-height: 1.16
+			font:
+				size: 20px
+				weight: 600
+		&-desc
+			opacity: 0.5
+			margin-bottom: 25px
+			line-height: 1.2
+			font-size: 15px
+		&-mail
+			display: none
+		.button
+			width: 270px
+	&__socials
+		display: none
+	&__social
+		&-heading
+			margin-bottom: 25px
+			line-height: 1.12
+			font:
+				size: 32px
+				weight: 600
+		&-grid
+			display: flex
+		&-item
+			margin-right: 30px
+			.button
+				width: 270px
+		&-label
+			margin-bottom: 10px
+			line-height: 1.4
+			font-size: 15px
+	&__feedback
+		width: 570px
+		padding: 70px 0 100px
+		.quotation__info
+			display: none
+		&-heading
+			margin-bottom: 25px
+			line-height: 1.2
+			font:
+				size: 32px
+				weight: 600
+		&-desc
+			margin-bottom: 35px
+			line-height: 1.4
+			font-size: 15px
+		&-row
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.input
+				width: 280px
+		&-disclaimer
+			opacity: 0.5
+			width: 270px
+			line-height: 1.44
+			font-size: 9px
+		.encyclopedia-comments__form-textarea
+			height: 150px
+			margin-bottom: 10px
+	&__author
+		z-index: 3
+		position: absolute
+		top: 0
+		bottom: 0
+		right: calc(50% - 600px)
+		width: 450px
+		&-inner
+			position: sticky
+			top: calc(100vh - 650px)
+			margin-top: -235px
+			padding-top: 537px
+			padding-bottom: 32px
+		&-image
+			z-index: 1
+			position: absolute
+			width: 312px
+			bottom: 0
+			left: 90px
+		&-info
+			z-index: 2
+			position: relative
+			width: 200px
+			line-height: 1.5
+			font-size: 13px
+			span
+				display: block
+				margin-bottom: 5px
+				text-decoration: underline
+				font:
+					size: 13px
+					weight: 700
+
+@media only screen and (max-width: $mobile)
+	.contacts
+		&__heading
+			margin: 40px 0 30px
+			font-size: 32px
+		&__grid
+			display: block
+			margin-bottom: 20px
+		&__item
+			margin-right: 0
+			&:last-child
+				display: none
+			&-mail
+				display: block
+				margin-bottom: 20px
+				font-size: 15px
+			.button
+				width: 100%
+		&__socials
+			display: block
+			margin-bottom: 40px
+			&-heading
+				margin-bottom: 15px
+				font-size: 15px
+			&-grid
+				display: flex
+			&-item
+				margin-right: 10px
+				width: 40px
+				height: 40px
+				background:
+					size: contain
+					position: center
+					repeat: no-repeat
+				&[data-icon="inst"]
+					background-image: url('../img/icons/inst-blue.svg')
+				&[data-icon="vk"]
+					background-image: url('../img/icons/vk-blue.svg')
+				&[data-icon="telegram"]
+					background-image: url('../img/icons/telegram-blue.svg')
+		&__social
+			&-heading
+				margin-bottom: 20px
+				font-size: 21px
+			&-grid
+				display: block
+			&-item
+				margin-right: 0
+				&:not(:last-child)
+					margin-bottom: 20px
+				.button
+					width: 100%
+		&__feedback
+			width: 100%
+			padding: 35px 0 40px
+			.quotation__info
+				display: block
+				.quotation__mark
+					top: -5px
+					right: 0
+				.quotation__desc
+					margin-bottom: 25px
+			&-heading
+				margin-bottom: 10px
+				font-size: 21px
+			&-desc
+				z-index: 3
+				position: relative
+				margin-bottom: 25px
+			&-row
+				display: block
+				.input
+					width: 100%
+				.button
+					width: 100%
+					margin-bottom: 10px
+		&__author
+			display: none

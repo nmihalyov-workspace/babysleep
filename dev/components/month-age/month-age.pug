@@ -1,0 +1,20 @@
+include ../_ui/button/button
+
+mixin month-age
+  section.month-age
+    .container
+      .wrapper
+        p.month-age__heading Выберите возраст вашего малыша
+        p.month-age__desc и прочитайте полезную информацию об особенностях сна и развития в этот период
+        .month-age__range
+          p.month-age__range-min 0
+          .month-age__range-inner
+            input(type="text", name="age", value="4", data-min="0", data-max="19", data-value='["0","1<br>месяц","2<br>месяца","3<br>месяца","4<br>месяца","5<br>месяцев","6<br>месяцев","7<br>месяцев","8<br>месяцев","9<br>месяцев","10<br>месяцев","11<br>месяцев","1<br>год","13-15<br>месяцев","16-18<br>месяцев","1,5-2<br>года","2-2,5<br>года","2,5-3<br>года","3-6<br>лет","7-12<br>лет"]').js-range
+          p.month-age__range-max 7-12 лет
+        p.month-age__selected 4 месяца
+    .month-age__result.container
+      .wrapper
+        -for(let i = 0; i < 20; i++)
+          .month-age__result-content(data-content=i, style=`${i === 4 && "display: block"}`)
+            p.month-age__result-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+            +button-primary('link', 'Читать статью', '', {link: '#'})

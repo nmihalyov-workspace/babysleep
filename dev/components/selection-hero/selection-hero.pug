@@ -1,0 +1,13 @@
+include ../_ui/button/button
+
+mixin selection-hero
+  section.selection-hero.container
+    .selection-hero__wrapper.wrapper
+      .selection-hero__info
+        h1.selection-hero__heading Сон и развитие ребенка
+        p.selection-hero__age 0-3 месяца
+        p.selection-hero__desc Поздравляем, у вас малыш!<br>У него еще нет циркадных ритмов, поэтому он спит хаотично, ест по ночам 2-5 раз, часто плачет, общаясь с вами.<br>Этот период повышенной нервозности и колик проходит спокойнее, если укладывать ребёнка спать по его возрастным биологическим потребностям.
+        .selection-hero__actions
+          +button-secondary('link', 'Решение проблем со сном', '', {link: '#'})
+          a(href="#").selection-hero__link Материалы для самостоятельного изучения
+      img(src="img/inhtml/age-1.svg", alt="").selection-hero__image

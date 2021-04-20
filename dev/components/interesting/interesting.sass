@@ -1,0 +1,73 @@
+.interesting
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: calc(100% + 30px)
+    margin-left: -15px
+  &__item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: 370px
+    margin: 0 15px 40px
+    text-decoration: none
+  &__title
+    margin-bottom: 15px
+    line-height: 1.05
+    font:
+      size: 20px
+      weight: 700
+  &__desc
+    opacity: 0.5
+    line-height: 1.17
+    font-size: 12px
+  &__icon
+    width: 70px
+    height: 70px
+    margin-right: 30px
+    border-radius: 12px
+    &[data-icon="leaps"]
+      background:
+        image: url('../img/interesting/leaps.svg')
+        position: center
+        repeat: no-repeat
+        color: #FFD5D5
+    &[data-icon="month"]
+      background:
+        image: url('../img/interesting/month.svg')
+        position: center
+        repeat: no-repeat
+        color: #6AD7EF
+    &[data-icon="memo"]
+      background:
+        image: url('../img/interesting/memo.svg')
+        position: center
+        repeat: no-repeat
+        color: #EAE686
+    &[data-icon="tables"]
+      background:
+        image: url('../img/interesting/tables.svg')
+        position: center
+        repeat: no-repeat
+        color: #D1FF97
+    &[data-icon="safety"]
+      background:
+        image: url('../img/interesting/safety.svg')
+        position: center
+        repeat: no-repeat
+        color: #A885C5
+
+@media only screen and (max-width: $mobile)
+  .interesting
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin-left: 0
+    &__item
+      margin: 0 0 20px
+    &__title
+      br
+        display: none

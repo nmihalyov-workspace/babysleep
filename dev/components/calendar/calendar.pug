@@ -1,0 +1,288 @@
+include ../_ui/input/input
+include ../_ui/button/button
+
+mixin calendar
+  section.calendar.container
+    .wrapper
+      p.calendar__heading Введите дату рождения ребенка, чтобы получить раскладку по кризисным неделям для своего малыша
+      form.calendar__form
+        +input('text', 'day', 'День', 'calendar__form-input', true)
+        +input('text', 'month', 'Месяц', 'calendar__form-input', true)
+        +input('text', 'year', 'Год', 'calendar__form-input', true)
+        +button-primary('submit', 'Показать раскладку', '')
+      form.calendar__form.calendar__form--mobile
+        +input('text', 'dateOfBirth', 'ДД.ММ.ГГГГ', 'calendar__form-input', true, '16.07.2020')
+        +button-primary('submit', 'Показать раскладку', '')
+      a(href="#").calendar__link Малыш родился не в срок?
+      .calendar__table
+        -for(let i = 1; i <= 78; i++)
+          if (i === 1)
+            .calendar__table-cell
+              p.calendar__table-week 1 неделя
+              p.calendar__table-date 16.7.2020
+          else if ([4, 7, 11, 18, 25, 34, 37, 40, 41, 43, 44, 46, 63, 74].includes(i))
+            .calendar__table-cell(data-week="medium")
+              p.calendar__table-week= i
+              p.calendar__table-date 16.7.2020
+          else if ([5, 8, 9, 12, 19, 20, 26, 27, 35, 36, 42, 47, 55, 56, 64, 75].includes(i))
+            .calendar__table-cell(data-week="hard", data-popup=i)
+              p.calendar__table-week= i
+              p.calendar__table-date 16.7.2020
+          else
+            .calendar__table-cell
+              p.calendar__table-week= i
+              p.calendar__table-date 16.7.2020
+        .calendar__table-popup(data-popup="5", style="top: -20px; left: 690px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 5 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="8", style="top: 45px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 8 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="9", style="top: 45px; left: 300px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 9 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="12", style="top: 45px; left: 785px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 12 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="19", style="top: 175px; left: 5px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 19 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="20", style="top: 175px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 20 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="26", style="top: 240px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 26 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="27", style="top: 240px; left: 300px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 27 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="35", style="top: 305px; left: 690px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 35 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="36", style="top: 305px; left: 785px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 36 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="42", style="top: 370px; left: 785px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 42 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="47", style="top: 435px; left: 690px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 47 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="55", style="top: 565px; left: 5px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 55 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="56", style="top: 565px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 56 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="64", style="top: 630px; left: 495px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 64 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="75", style="top: 760px; left: 300px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 75 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+      .calendar__links
+        a(href="#").calendar__link Отправить календарь на почту
+        a(href="#").calendar__link Поделиться
+      .calendar__legend
+        .calendar__legend-item
+          .calendar__legend-item-icon(data-legend="hard")
+          p.calendar__legend-item-desc Примерно на этой неделе ожидается непростое время
+        .calendar__legend-item
+          .calendar__legend-item-icon(data-legend="easy")
+          p.calendar__legend-item-desc Сейчас относительно спокойное время
+        .calendar__legend-item
+          .calendar__legend-item-icon(data-legend="medium")
+          p.calendar__legend-item-desc Возможно непростое время
+
+mixin calendar-example
+  section.calendar.calendar--example.container
+    .wrapper
+      p.calendar__heading Введите дату рождения ребенка, чтобы получить раскладку по кризисным неделям для своего малыша
+      form.calendar__form
+        +input('text', 'day', 'День', 'calendar__form-input', true)
+        +input('text', 'month', 'Месяц', 'calendar__form-input', true)
+        +input('text', 'year', 'Год', 'calendar__form-input', true)
+        +button-primary('submit', 'Показать раскладку', '')
+      form.calendar__form.calendar__form--mobile
+        +input('text', 'dateOfBirth', 'ДД.ММ.ГГГГ', 'calendar__form-input', true)
+        +button-primary('submit', 'Показать раскладку', '')
+      a(href="#").calendar__link Малыш родился не в срок?
+      .calendar__table
+        -for(let i = 1; i <= 78; i++)
+          if (i === 1)
+            .calendar__table-cell
+              p.calendar__table-week 1 неделя
+              p.calendar__table-date 16.7.2020
+          else if ([4, 7, 11, 18, 25, 34, 37, 40, 41, 43, 44, 46, 63, 74].includes(i))
+            .calendar__table-cell(data-week="medium")
+              p.calendar__table-week= i
+              p.calendar__table-date 16.7.2020
+          else if ([5, 8, 9, 12, 19, 20, 26, 27, 35, 36, 42, 47, 55, 56, 64, 75].includes(i))
+            .calendar__table-cell(data-week="hard", data-popup=i)
+              p.calendar__table-week= i
+              p.calendar__table-date 16.7.2020
+          else if i === 13
+            .calendar__table-cell.calendar__table-cell--example
+              p.calendar__table-week ...
+              p.calendar__table-date дд.мм.гггг
+          else
+            .calendar__table-cell
+              p.calendar__table-week= i
+              p.calendar__table-date 16.7.2020
+        .calendar__table-popup(data-popup="5", style="top: -20px; left: 690px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 5 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="8", style="top: 45px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 8 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="9", style="top: 45px; left: 300px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 9 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="12", style="top: 45px; left: 785px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 12 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="19", style="top: 175px; left: 5px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 19 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="20", style="top: 175px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 20 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="26", style="top: 240px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 26 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="27", style="top: 240px; left: 300px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 27 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="35", style="top: 305px; left: 690px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 35 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="36", style="top: 305px; left: 785px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 36 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="42", style="top: 370px; left: 785px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 42 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="47", style="top: 435px; left: 690px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 47 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="55", style="top: 565px; left: 5px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 55 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="56", style="top: 565px; left: 105px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 56 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="64", style="top: 630px; left: 495px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 64 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+        .calendar__table-popup(data-popup="75", style="top: 760px; left: 300px;")
+          .calendar__table-popup-close
+          p.calendar__table-popup-week 75 неделя
+          p.calendar__table-popup-heading Седьмой скачок развития ребенка в 10 мес: последовательность
+          p.calendar__table-popup-desc Наверное, вы уже привыкли к тому, что малыш постоянно все разбрасывает, а едва вы построите башенку, он ее тут же разрушает.<br><br>Около 10,5 месяцев начинается долгожданное время самостоятельного конструирования. Новый скачок развития произойдет на десятом месяце жизни малыша и может продлиться от 3 до 7 недель.
+          a(href="#").calendar__table-popup-link Подробнее
+      .calendar__links
+        a(href="#").calendar__link Отправить календарь на почту
+        a(href="#").calendar__link Поделиться
+      .calendar__legend
+        .calendar__legend-item
+          .calendar__legend-item-icon(data-legend="hard")
+          p.calendar__legend-item-desc Примерно на этой неделе ожидается непростое время
+        .calendar__legend-item
+          .calendar__legend-item-icon(data-legend="easy")
+          p.calendar__legend-item-desc Сейчас относительно спокойное время
+        .calendar__legend-item
+          .calendar__legend-item-icon(data-legend="medium")
+          p.calendar__legend-item-desc Возможно непростое время

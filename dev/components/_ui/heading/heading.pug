@@ -1,0 +1,5 @@
+mixin heading(title, link)
+  .heading
+    p.heading__title!= title
+    if (link)
+      a.heading__link(href="#")!= link

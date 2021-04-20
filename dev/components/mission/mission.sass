@@ -1,0 +1,106 @@
+.mission
+  padding: 65px 0 75px
+  &__heading
+    margin-bottom: 5px
+    font:
+      size: 42px
+      weight: 700
+  &__subheading
+    margin-bottom: 30px
+    line-height: 1.44
+  &__desc
+    width: 870px
+    margin-bottom: 35px
+    line-height: 1.44
+  &__banner
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 70px
+    padding: 55px 95px 55px 100px
+    border-radius: 12px
+    background-color: $blue
+    &-title
+      color: #fff
+      font:
+        size: 30px
+        weight: 700
+    &-desc
+      width: 675px
+      color: #fff
+      line-height: 1.25
+      font:
+        size: 20px
+        weight: 300
+  &__codex
+    &-heading
+      margin-bottom: 30px
+      font:
+        size: 30px
+        weight: 700
+    &-grid
+      display: flex
+      flex-flow: row wrap
+      justify-content: flex-start
+      align-items: flex-start
+      width: calc(100% + 30px)
+      margin-left: -15px
+    &-item
+      width: 370px
+      margin: 0 15px 30px
+    &-num
+      margin-bottom: 5px
+      line-height: 1.44
+      color: $blue
+    &-title
+      margin-bottom: 10px
+      line-height: 1.25
+      font:
+        size: 20px
+        weight: 700
+    &-desc
+      line-height: 1.44
+    &-about
+      width: 770px
+      margin-bottom: 55px
+      line-height: 1.44
+      color: #989898
+  &__image
+    width: 100%
+    height: auto
+    margin-bottom: 10px
+    border-radius: 16px
+
+@media only screen and (max-width: $mobile)
+  .mission
+    padding: 40px 0 75px
+    &__heading
+      font-size: 32px
+    &__subheading
+      margin-bottom: 50px
+    &__desc
+      width: 100%
+    &__banner
+      flex-flow: column nowrap
+      align-items: flex-start
+      margin-bottom: 65px
+      padding: 30px 20px
+      &-title
+        margin-bottom: 25px
+      &-desc
+        width: 100%
+    &__codex
+      &-grid
+        flex-flow: column nowrap
+        width: 100%
+        margin: 0
+      &-item
+        width: 100%
+        margin: 0 0 30px
+      &-about
+        width: 100%
+    &__image
+      border-radius: 12px
+    &__disclaimer
+      text-align: center

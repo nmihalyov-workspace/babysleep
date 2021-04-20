@@ -1,0 +1,213 @@
+include ../_ui/button/button
+
+mixin about-team
+  section.about-team.container
+    .wrapper
+      h1.about-team__heading Команда консультантов BabySleep
+      .about-team__hero
+        .about-team__hero-main
+          .about-team__hero-main-info
+            .about-team__hero-main-image(style="background-image: url('img/elena.png');")
+              .about-team__hero-main-counter 900+
+            a(href="#").about-team__hero-main-name.about-team__hero-main-name--mobile Елена Мурадова
+          .about-team__hero-main-about
+            a(href="#").about-team__hero-main-name Елена Мурадова
+            p.about-team__hero-main-desc Первый консультант в России и СНГ, руководитель проекта, член международной ассоциации, основатель проекта, директор центра подготовки консультантов по сну, мама троих детей
+            +button-primary('link', 'Записаться на консультацию', '', {link: '#'})
+            p.about-team__hero-main-loc 
+              span Возможна личная встреча в Москве
+        .about-team__hero-desc Я рада приветствовать вас на сайте Центра детского сна и развития «BabySleep»!<br><br>Меня зовут Елена Мурадова, я являюсь сертифицированным консультантом по детскому сну, семейным консультантом по сну (диплом IMI Maternity & Child Sleep Consultant, США). С 2011 года работаю с поведенческими инсомниями у малышей первого года жизни, детей от 1 года до 6 лет, а также делюсь своими знаниями с будущими мамами на семинарах «Как улучшить сон ребенка». Являюсь членом Международной ассоциации профессиональных консультантов по сну (APSC)...
+        a(href="#").about-team__hero-more Читать далее
+        .about-team__hero-choose
+          p.about-team__hero-choose-heading Как выбрать своего консультанта
+          p.about-team__hero-choose-desc Стаж более 6 лет практики в области десткого сна, более 300 семей в индивидуальном сопровождении. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep по специальности «Консультант по детскому сну». Является автором статей...<br><br>Стаж более 6 лет практики в области десткого сна, более 300 семей в индивидуальном сопровождении. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep по специальности «Консультант по детскому сну». Является автором статей...
+      .about-team__grid.about-team__grid--big
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-1.jpg", alt="").about-team__item-pic-img
+              .about-team__item-fav
+              .about-team__item-plus
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Татьяна Чхиквишвили
+              p.about-team__item-pos Руководитель отдела онлайн-программ<br>Главный методист<br>Старший консультант по детскому сну
+          p.about-team__item-desc Стаж более 6 лет практики в области десткого сна, более 300 семей в индивидуальном сопровождении. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep по специальности «Консультант по детскому сну». Является автором статей...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Челябинске
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-2.jpg", alt="").about-team__item-pic-img
+              .about-team__item-fav
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Анна Бахарева
+              p.about-team__item-pos Руководитель обучения консультантов<br>Топ-консультант
+          p.about-team__item-desc Стаж более 6 лет практики в области десткого сна, более 300 семей в индивидуальном сопровождении. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep по специальности «Консультант по детскому сну». Является автором статей...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Москве
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-1.jpg", alt="").about-team__item-pic-img
+              .about-team__item-fav
+            .about-team__item-about
+              a(href="#").about-team__item-name Полина Маркелова
+              p.about-team__item-pos Руководитель отдела консультирования<br>Топ-консультант
+          p.about-team__item-desc Стаж более 6 лет практики в области десткого сна, более 300 семей в индивидуальном сопровождении. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep по специальности «Консультант по детскому сну». Является автором статей...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Челябинске
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-2.jpg", alt="").about-team__item-pic-img
+              .about-team__item-fav
+            .about-team__item-about
+              a(href="#").about-team__item-name Анна Бахарева
+              p.about-team__item-pos Старший консультант по сну взрослых и детей, врач-невролог, сомнолог<br>Методист Центра подготовки консультантов BabySleepCOnsult
+          p.about-team__item-desc Стаж более 6 лет практики в области десткого сна, более 300 семей в индивидуальном сопровождении. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep по специальности «Консультант по детскому сну». Является автором статей...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Москве
+      .about-team__grid
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-1.jpg", alt="").about-team__item-pic-img
+              p.about-team__item-num 100+
+            .about-team__item-about
+              a(href="#").about-team__item-name Анна Сухих
+              p.about-team__item-pos Психолог
+          p.about-team__item-desc Стаж 6 лет и более 100 семей в индивидуальном сопровождении. Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Челябинске
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-2.jpg", alt="").about-team__item-pic-img
+            .about-team__item-about
+              a(href="#").about-team__item-name Полина Маркелова
+              p.about-team__item-pos Руководитель
+          p.about-team__item-desc Стаж 8 лет и более 400 семей в индивидуальном сопровождении. Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-3.jpg", alt="").about-team__item-pic-img
+              p.about-team__item-num 100+
+            .about-team__item-about
+              a(href="#").about-team__item-name Екатерина Бондарева
+              p.about-team__item-pos Сомнолог
+          p.about-team__item-desc Стаж 6 лет и более 100 семей в индивидуальном сопровождении. Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Самаре
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-3.jpg", alt="").about-team__item-pic-img
+              .about-team__item-psy
+            .about-team__item-about
+              a(href="#").about-team__item-name Екатерина Бондарева
+              p.about-team__item-pos Сомнолог
+          p.about-team__item-desc Стаж 6 лет и более 100 семей в индивидуальном сопровождении. Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Самаре
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-1.jpg", alt="").about-team__item-pic-img
+              .about-team__item-plus
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Анна Сухих
+              p.about-team__item-pos Психолог
+          p.about-team__item-desc Стаж 6 лет и более 100 семей в индивидуальном сопровождении. Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-3.jpg", alt="").about-team__item-pic-img
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Екатерина Бондарева
+              p.about-team__item-pos Сомнолог
+          p.about-team__item-desc Екатерина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Самаре
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-1.jpg", alt="").about-team__item-pic-img
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Анна Сухих
+              p.about-team__item-pos Психолог
+          p.about-team__item-desc Стаж 6 лет и более 100 семей в индивидуальном сопровождении. Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-2.jpg", alt="").about-team__item-pic-img
+            .about-team__item-about
+              a(href="#").about-team__item-name Полина Маркелова
+              p.about-team__item-pos Руководитель
+          p.about-team__item-desc Стаж 8 лет и более 400 семей в индивидуальном сопровождении. Полина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Москве
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-3.jpg", alt="").about-team__item-pic-img
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Екатерина Бондарева
+              p.about-team__item-pos Сомнолог
+          p.about-team__item-desc Екатерина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Самаре
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-3.jpg", alt="").about-team__item-pic-img
+              p.about-team__item-num 300+
+            .about-team__item-about
+              a(href="#").about-team__item-name Екатерина Бондарева
+              p.about-team__item-pos Сомнолог
+          p.about-team__item-desc Екатерина присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения в Центре детского сна и развития BabySleep...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})
+          p.about-team__item-loc 
+            span Возможна личная встреча в Самаре
+        .about-team__item
+          .about-team__item-head
+            .about-team__item-pic
+              img(src="img/inhtml/specialist-1.jpg", alt="").about-team__item-pic-img
+            .about-team__item-about
+              a(href="#").about-team__item-name Анна Сухих
+              p.about-team__item-pos Психолог
+          p.about-team__item-desc Стаж 6 лет и более 100 семей в индивидуальном сопровождении. Анна присоединилась к команде консультантов BabySleep в мае 2014 года. Имеет высшее образование, прошла полный курс обучения...
+          a(href="#").about-team__item-link Читать далее
+          +button-primary('link', 'Записаться на консультацию', 'about-team__item-btn', {link: '#'})

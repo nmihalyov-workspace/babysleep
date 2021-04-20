@@ -1,0 +1,22 @@
+.heading
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: flex-end
+  margin-bottom: 25px
+  &__title
+    width: 670px
+    line-height: 1.1875
+    font:
+      size: 32px
+      weight: 700
+  &__link
+    color: $green
+    text-decoration: none
+
+@media only screen and (max-width: $mobile)
+  .heading
+    &__title
+      width: auto
+      line-height: 1.167
+      font-size: 24px

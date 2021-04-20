@@ -1,0 +1,13 @@
+mixin encyclopedia-inner-hero(type)
+  section.encyclopedia-inner-hero.container
+    .wrapper
+      if (type === 'icon')
+        .encyclopedia-inner-hero__item
+          .encyclopedia-inner-hero__icon(data-icon="month")
+          .encyclopedia-inner-hero__info
+            h1.encyclopedia-inner-hero__title Особенности сна по месяцам
+            p.encyclopedia-inner-hero__desc 12 статей
+        p.encyclopedia-inner-hero__desc-mobile 12 статей
+      else if (type === 'hash')
+        h1.encyclopedia-inner-hero__title #сонночью
+        p.encyclopedia-inner-hero__articles 34 статьи

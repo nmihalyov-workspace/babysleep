@@ -1,0 +1,19 @@
+include ../_ui/button/button
+
+mixin calendar-help
+  section.calendar-help.container
+    .calendar-help__wrapper.wrapper
+      .calendar-help__info
+        p.calendar-help__heading Уже 9 лет BabySleep занимается тем, что помогает родителям организовать здоровый и спокойный сон своих детей
+        .calendar-help__author.calendar-help__author--mobile
+          img(src="img/elena.png", alt="").calendar-help__author-image
+          div
+            a(href="#").calendar-help__author-name Елена Мурадова
+            p.calendar-help__author-desc Основатель BabySleep, первый консультант по сну в России и&nbsp;СНГ
+        p.calendar-help__desc Мы работаем по мягким методикам, способствуя  укреплению привязонности матери и ребенка. Все материалы нашей энциклопедии созданы для самостоятельной работы, но если вам не подходит общее решение и вы не высыпаетесь уже более 3-х недель, не терпите! Обратитесь к консультанту по сну!
+        +button-primary('link', 'Подробнее о консультациях', '', {link: '#'})
+      .calendar-help__about
+        img(src="img/inhtml/calendar-help.png", alt="").calendar-help__about-img
+        .calendar-help__author
+          a(href="#").calendar-help__author-name Елена Мурадова
+          p.calendar-help__author-desc Основатель BabySleep, первый консультант по сну в России и&nbsp;СНГ

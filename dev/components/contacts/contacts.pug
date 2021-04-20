@@ -1,0 +1,58 @@
+include ../_ui/button/button
+include ../_ui/input/input
+
+mixin contacts
+	section.contacts
+		.container
+			.wrapper
+				h1.contacts__heading Контакты
+				.contacts__grid
+					.contacts__item
+						p.contacts__item-value +7 495 222 02 44
+						p.contacts__item-desc ПН - ПТ с 10:00 до 19:00
+						p.contacts__item-mail ask@baby-sleep.ru
+						+button-primary('link', 'Записаться на консультацию', '', {link: '#'})
+					.contacts__item
+						p.contacts__item-value ask@baby-sleep.ru
+						p.contacts__item-desc по всем вопросам
+				.contacts__socials
+					p.contacts__socials-heading Мы в социальных сетях
+					.contacts__socials-grid
+						a.contacts__socials-item(href="#", data-icon="inst")
+						a.contacts__socials-item(href="#", data-icon="vk")
+						a.contacts__socials-item(href="#", data-icon="telegram")
+		.container.block
+			.wrapper
+				.contacts__social
+					p.contacts__social-heading Написать в WhatsApp
+					.contacts__social-grid
+						.contacts__social-item
+							p.contacts__social-label По вопросам консультации
+							+button-quinary('link', 'Написать консультанту', '', {link: '#'})
+						.contacts__social-item
+							p.contacts__social-label По другим вопросам
+							+button-quinary('link', 'Написать консультанту', '', {link: '#'})
+		.container
+			.wrapper
+				.contacts__feedback
+					p.contacts__feedback-heading Обратная связь
+					.quotation__info
+						.quotation__mark
+						.quotation__author
+							a.quotation__link(href="#") Елена Мурадова
+							p.quotation__desc Основатель BabySleep, первый консультант по сну в России и СНГ
+					p.contacts__feedback-desc Мы будем рады получить ваши отзывы и комментарии о нашем сайте и работе наших консультантов.<br><br>Если вы не нашли ответ на свой вопрос на нашем сайте, заполните, пожалуйста, форму обратной связи:
+					form.contacts__feedback-form(action="")
+						.contacts__feedback-row
+							+input('text', 'name', 'Имя', 'consults-types__card-inner-input', true)
+							+input('email', 'email', 'Email', 'consults-types__card-inner-input', true)
+						textarea(name="comment", placeholder="Введите сообщение...", required).encyclopedia-comments__form-textarea
+						.contacts__feedback-row
+							+button-primary('submit', 'Отправить сообщение')
+							p.contacts__feedback-disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>
+		.contacts__author
+			.contacts__author-inner
+				img(src="img/inhtml/contacts.png", alt="").contacts__author-image
+				p.contacts__author-info
+					span Елена Мурадова <br>
+					|Основатель BabySleep, первый консультант по сну в России и СНГ

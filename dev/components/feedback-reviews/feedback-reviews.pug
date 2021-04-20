@@ -1,0 +1,116 @@
+-const tabs = ['Все отзывы (405)', 'Видеоотзывы (5)', 'Истории<br>родителей (12)', 'О работе центра (2)', 'Обучение (5)', 'Вебинар (2)'];
+include ../_ui/pagination/pagination
+
+mixin feedback-reviews
+  section.feedback-reviews.container
+    .wrapper
+      .feedback-reviews__actions
+        .feedback-reviews__tabs
+          -for(let i = 0; i < tabs.length; i++)
+            a(href="#", class=`${i === 0 ? 'feedback-reviews__tab--active' : ''}`).feedback-reviews__tab!= tabs[i]
+        .feedback-reviews__select
+          select(name="consultant", data-placeholder="Выберите консультанта").js-select
+            option(value="1") Все консультанты
+            option(value="2") Елена Мурадова (8)
+            option(value="3") Анна Сухих (12)
+            option(value="4") Екатерина Бондарева (5)
+      .feedback-reviews__grid
+        .feedback-reviews__item
+          .feedback-reviews__review
+            .feedback-reviews__review-author
+              .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-3.jpg');")
+              .feedback-reviews__review-author-info
+                p.feedback-reviews__review-author-name Екатерина Мухина, Ставрополь
+                p.feedback-reviews__review-author-about мама Матвея и Авроры
+                .feedback-reviews__review-author-socials
+                  a(href="#", data-social="vk").feedback-reviews__review-author-social
+                  a(href="#", data-social="fb").feedback-reviews__review-author-social
+                  a(href="#", data-social="instagram").feedback-reviews__review-author-social
+            p.feedback-reviews__review-theme о работе центра
+            p.feedback-reviews__review-text Ситуация со сном на столько выбивала из равновесия, что мое моральное состояние приближалось к депрессии, поэтому решили обратиться к консультанту. Понравилось отношение ко мне, как к человеку. Понравилась эмпатия и сочувствие.<br><br>Самое важное для меня - это индивидуальное отношение. Наш консультант Анастасия Пугачева была очень расположена ко мне, подстраивалась под изменения, поддерживала, искала решения и пыталась понять что у нас происходит. Я не знаю как работают другие консультанты, в нашем случае я не знаю что можно сделать лучше... Сейчас я вижу ситуацию, понимаю что происходит. У меня есть инструменты и понимание как и когда их применять.<br><br>Мамочки, если вы не понимаете что происходит с вашим ребенком, почему он/она плачет, не спит, мало спит однозначно вам стоит воспользоваться услугами консультанта! Не пожалейте денег, самостоятельно невозможно посмотреть на ситуацию со стороны! Это как самолечение)) Всем хорошего сна!"
+            p.feedback-reviews__review-date 23 июня 2019
+            .feedback-reviews__review-links
+              a(href="#").feedback-reviews__review-link Анастасия Пугачева
+              a(href="#").feedback-reviews__review-link Записаться к Анастасии на консультацию
+          .feedback-reviews__aside
+        .feedback-reviews__item
+          .feedback-reviews__review
+            .feedback-reviews__review-author
+              .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-2.jpg');")
+              .feedback-reviews__review-author-info
+                p.feedback-reviews__review-author-name Светлана Стебелева, Москва
+                p.feedback-reviews__review-author-about мама Петра
+                .feedback-reviews__review-author-socials
+                  a(href="#", data-social="vk").feedback-reviews__review-author-social
+            .feedback-reviews__aside-item.feedback-reviews__aside-item--mobile
+              p.feedback-reviews__aside-head 92% положительных отзывов
+              a(href="#").feedback-reviews__aside-link Индивидуальные консультации
+            p.feedback-reviews__review-theme обучение
+            p.feedback-reviews__review-text У моего малыша былая сильная ассоциация на засыпание на груди. Спать в кроватке и даже в коляске сын оказывался, потому что там не было необходимой ему маминой груди. Всё бы ничего, но я живу и работаю заграницей, где короткий декретный отпуск, и мне нужно скоро выходить на работу, а ребенка на полдня мы будем отдавать в ясли, где, разумеется, ни мамы, ни ее грудного молока для засыпания не будет. До обращения в центр baby-sleep.ru я много сама изучала вопрос детского сна и пыталась несколько раз разделить грудь и сон - всё неуспешно. Когда малышу исполнилось 6 месяцев, я решила обратиться в центр, тк времени до выхода малыша в ясли оставалось уже совсем немного, а спать сам он всё ещё не умел.<br><br>Сразу приятно удивила очень оперативная обратная связь со стороны администратора и предложенного консультанта. Ответили мне на следующий день после отправления заявки и уже через пару дней мы договорились о звонке с консультантом. Консультант Анна Сухих оказалась просто замечательная! У нее у самой трое детей (что сразу внушает доверие, т.к. она сама проходила через обучение СЗ) и достаточно большой опыт работы с семьями. Анна почти сразу подобрала мне подходящую (как подтвердилось позже) методику, исходя из моей ситуации, страны проживания и взглядов на воспитание и сон малыша, при этом ничего мне не навязывая.<br><br>Понравилось, что Анна порекомендовала пропустить подготовительную работу, увидев что я ориентируюсь в вопросах сна и ритм дня и ритуал у нас налажен - таким образом я сэкономила кучу времени. Анна очень всё толково и кратко объясняла, "без воды" и очень понравилось ее оперативное сопровождение - отвечала консультант почти сразу через whatsapp после моих сообщений, а если не могла сразу ответить - так и писала и выходила на связь в обещанное время. Самое ценное лично для меня было именно это ощущение поддержки и разумного, мягкого и тактичного контроля за своими действиями. Сразу стало понятно, что раньше не хватало системности и настойчивости в своих действиях. Очень придавали сил и уверенности в своих действиях комментарии консультанта, что я действительно делаю правильно и что является вариацией нормы, а какие действия следует скорректировать (например, в моем случае корректировали ВБ).<br><br>Кстати могу добавить, что ни разу за время работы с центром у меня не было ощущение, что из меня пытаются вытянуть деньги - наоборот, даже на первом бесплатном звонке уже была полезная информация, и в целом действительно я чувствовала заинтересованность в улучшении сна моего ребенка. Мне в целом всё понравилось, единственное улучшение, которое могу предложить: для тех мам, кто уже ориентируется в вопросах сна, можно было бы перед созвоном с консультантом предложить теорию в записи, чтобы не тратить время на это на звонке, а перейти к вопросам и конкретным рекомендациям.<br><br>По результатом работы с консультантом, нам удалось разделить грудь и сон малыша и переселить ребенка в свою кроватку. Совсем самостоятельному засыпанию обучить сына не удалось (помешал скачок роста который начался через неделю после начала методики), но тем не менее для меня это уже большой прорыв, т.к. появилось ощущение уверенности в своей способности наладить сон и обучить СЗ ребенка, появилась уверенность в своем ребенке, что он на самом деле достаточно хорошо реагирует на изменения и смену условий засыпания, а значит и в яслях скорее всего сон со временем наладится и мы сможем избежать переутомления.<br><br>По своему опыту, консультации могу порекомендовать тем мамам, которые активно пытаются, но по какой-то причине не могут самостоятельно наладить сон ребенка. Но тут надо иметь ввиду, что консультанты не маги и не волшебники, обучение СЗ - это достаточно тяжелая работа, вся работа лежит прежде всего на родителе, а центр и консультанты просто оказывают информационную и моральную поддержку и призывают к системности своих действий, что уже очень много!
+            p.feedback-reviews__review-date 21 мая 2019
+            .feedback-reviews__review-links
+              a(href="#").feedback-reviews__review-link Анна Сухих
+              a(href="#").feedback-reviews__review-link Записаться к Анне на консультацию
+              a(href="#").feedback-reviews__review-link Школа сна
+              a(href="#").feedback-reviews__review-link СПИ-руководство
+          .feedback-reviews__aside
+            .feedback-reviews__aside-item
+              p.feedback-reviews__aside-head 92% положительных отзывов
+              a(href="#").feedback-reviews__aside-link Индивидуальные консультации
+        .feedback-reviews__item
+          .feedback-reviews__review
+            .feedback-reviews__review-author
+              .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-1.jpg');")
+              .feedback-reviews__review-author-info
+                p.feedback-reviews__review-author-name Ксения Анохина, Челябинск
+                p.feedback-reviews__review-author-about мама Марка
+                .feedback-reviews__review-author-socials
+                  a(href="#", data-social="fb").feedback-reviews__review-author-social
+                  a(href="#", data-social="instagram").feedback-reviews__review-author-social
+            .feedback-reviews__aside-item.feedback-reviews__aside-item--mobile
+              p.feedback-reviews__aside-head 85% положительных отзывов
+              a(href="#").feedback-reviews__aside-link Школа сна
+            p.feedback-reviews__review-theme вебинары
+            p.feedback-reviews__review-text Очень понравилось работать с Анной. Она никогда не давила, отвечала на все вопросы, я всегда понимала, как двигаться дальше, чего ожидать. Понравилось, что перед внедрением методики СЗ мы проделали большую подготовительную работу, поэтому к началу методики были готовы и я, и моя дочь.
+            p.feedback-reviews__review-date 12 мая 2019
+            .feedback-reviews__review-links
+              a(href="#").feedback-reviews__review-link Анна Сухих
+              a(href="#").feedback-reviews__review-link Записаться к Анне на консультацию
+          .feedback-reviews__aside
+            .feedback-reviews__aside-item
+              p.feedback-reviews__aside-head 85% положительных отзывов
+              a(href="#").feedback-reviews__aside-link Школа сна
+        .feedback-reviews__item
+          .feedback-reviews__review.feedback-reviews__review--video
+            .feedback-reviews__review-content
+              .feedback-reviews__review-author
+                .feedback-reviews__review-author-image.feedback-reviews__review-author-image--audio(style="background-image: url('img/inhtml/avatar-1.jpg');")
+                .feedback-reviews__review-author-info
+                  p.feedback-reviews__review-author-name Ольга Блинова, Миасс
+                  p.feedback-reviews__review-author-about мама Юли
+                  .feedback-reviews__review-author-socials
+                    a(href="#", data-social="fb").feedback-reviews__review-author-social
+                    a(href="#", data-social="instagram").feedback-reviews__review-author-social
+              p.feedback-reviews__review-theme о работе центра
+              p.feedback-reviews__review-text Вы такие молодцы! Спасибо за труд!
+              p.feedback-reviews__review-date 23 июня 2019
+            a(href="#", style="background-image: url('img/inhtml/reviews-1.jpg');").feedback-reviews__review-video
+          .feedback-reviews__aside
+        .feedback-reviews__item
+          .feedback-reviews__review
+            .feedback-reviews__review-author
+              .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-2.jpg');")
+              .feedback-reviews__review-author-info
+                p.feedback-reviews__review-author-name Алёна Чернова, Адлер
+                p.feedback-reviews__review-author-about мама Марины и Славы
+                .feedback-reviews__review-author-socials
+                  a(href="#", data-social="vk").feedback-reviews__review-author-social
+            p.feedback-reviews__review-theme вебинары
+            p.feedback-reviews__review-text Обратилась за консультацией, когда по семейным обстоятельствам нужна была срочно помощь в организации сна дочки. До этого момента С 4 до 10 мес спали все сны на груди, а я все читала информацию и отзывы на вашем сайте и думала неужели можно научить спать ребёнка отдельно в кроватке, считала наш случай безнадежным. Честно говоря не ожидала такого быстрого результата, нам подошла быстрая методика. Начали с ночных снов, в первую ночь укладывание заняло 1 час, последующие ночи до 20 мин, пробуждения присутствуют, но зато дочка спит отдельно в кроватке , это для нас большое достижение, с рождения ни одного раза там не спала. К дневным снам перешли через 5 дней, ребенок привык за 2 дня. Огромное спасибо нашему консультанту Анне Ростовой, информацию доносила чётко, понятно и быстро! Мамочки, кто ещё сомневается, обращайтесь - это реально работает!)
+            p.feedback-reviews__review-date 12 мая 2019
+            .feedback-reviews__review-links
+              a(href="#").feedback-reviews__review-link Анна Ростова
+              a(href="#").feedback-reviews__review-link Записаться к Анне на консультацию
+              a(href="#").feedback-reviews__review-link Школа сна
+          .feedback-reviews__aside
+      +pagination

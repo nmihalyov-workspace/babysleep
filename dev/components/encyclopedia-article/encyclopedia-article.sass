@@ -1,0 +1,577 @@
+.encyclopedia-article
+  padding-top: 65px
+  margin-bottom: 110px
+  &__heading
+    width: 770px
+    margin-bottom: 20px
+    line-height: 1.1
+    font:
+      size: 42px
+      weight: 700
+  &__block
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+    margin-bottom: 60px
+    &.m-0
+      margin-bottom: 0
+    &-main
+      width: 770px
+      a
+        color: $green
+    &-sub
+      width: 270px
+      &-link
+        // position: sticky
+        top: 10px
+        line-height: 1.25
+        font-size: 20px
+  &__about
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 15px
+    line-height: 1.17
+    font-size: 12px
+    &-date
+      opacity: 0.4
+    &-chars
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+    &-views
+      position: relative
+      opacity: 0.4
+      margin-right: 15px
+      padding-left: 20px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 2px
+        left: 0
+        width: 14px
+        height: 10px
+        background:
+          image: url('../img/icons/views.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-comments
+      position: relative
+      opacity: 0.4
+      margin-right: 15px
+      padding-left: 20px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 1px
+        left: 0
+        width: 14px
+        height: 13px
+        background:
+          image: url('../img/icons/comments.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-likes
+      position: relative
+      opacity: 0.4
+      padding-left: 20px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 1px
+        left: 0
+        width: 14px
+        height: 13px
+        background:
+          image: url('../img/icons/likes.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+  &__image
+    position: relative
+    overflow: hidden
+    width: 100%
+    height: 432px
+    margin-bottom: 15px
+    border-radius: 12px
+    &-pic
+      width: 100%
+      height: 100%
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+    &-like
+      z-index: 2
+      position: absolute
+      top: 20px
+      right: 20px
+      width: 26px
+      height: 22px
+      cursor: pointer
+      background:
+        image: url('../img/icons/like.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+      &--active
+        background-image: url('../img/icons/like-filled.svg')
+    &-type
+      z-index: 2
+      position: absolute
+      bottom: 20px
+      right: 20px
+      width: 55px
+      height: 55px
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__links
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__link
+    opacity: 0.5
+    font-size: 12px
+    &:not(:last-child)
+      margin-right: 15px
+  &__author
+    // position: sticky
+    top: 10px
+    .encyclopedia-article__block-sub-link
+      position: static
+      &--mobile
+        display: none
+    &-pos
+      margin-bottom: 15px
+    &-image
+      width: 170px
+      height: 170px
+      margin-bottom: 25px
+      border-radius: 50%
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+    &-desc
+      margin: 10px 0 20px
+    &-subdesc
+      opacity: 0.4
+      line-height: 1.33
+  &__title
+    margin-bottom: 15px
+    line-height: 1.27
+    font:
+      size: 30px
+      weight: 700
+  &__subtitle
+    margin-bottom: 20px
+    line-height: 1.33
+    font:
+      size: 15px
+      weight: 600
+  &__line
+    width: 770px
+    height: 1px
+    margin-bottom: 45px
+    background-color: transparentize($black, .9)
+  &__paragraph
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    &-text
+      width: 470px
+    &-image
+      display: block
+      border-radius: 12px
+      width: 270px
+      height: auto
+  &__banner
+    overflow: hidden
+    height: 225px
+    margin-bottom: 45px
+    border-radius: 12px
+    background:
+      size: cover
+      position: center
+      repeat: no-repeat
+    &-content
+      height: 100%
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 32.34%, rgba(0, 0, 0, 0.4) 79.61%)
+      &-inner
+        width: 370px
+        margin-left: auto
+        padding: 20px 20px 0 0
+        color: #fff
+    &-heading
+      margin-bottom: 15px
+      line-height: 1.1875
+      font:
+        size: 32px
+        weight: 700
+    &-desc
+      margin-bottom: 40px
+    &-btn
+      color: $green
+  &__paragraph
+    &:not(:last-child)
+      margin-bottom: 45px
+  &__highlight
+    padding: 45px 50px
+    border-radius: 0px 12px 12px 0px
+    border-left: 5px solid $blue
+    background-color: transparentize($blue, 0.9)
+    color: $blue
+  &__quote
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: stretch
+    margin-bottom: 40px
+    &-info
+      flex-shrink: 0
+      width: 170px
+    &-type
+      margin-bottom: 15px
+      color: $blue
+      line-height: 2
+      text-transform: uppercase
+      font:
+        size: 10px
+        weight: 700
+    &-author
+      &-link
+        margin-bottom: 5px
+        font:
+          size: 16px
+          weight: 700
+      &-pos
+        line-height: 1.5
+        font-size: 12px
+    &-image
+      width: 100px
+      height: 100px
+      margin-bottom: 10px
+      border-radius: 50%
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-text
+      padding: 20px 30px
+      border-radius: 12px
+      background-color: transparentize($black, 0.95)
+  &__card
+    margin-bottom: 40px
+    padding: 20px 30px
+    border-radius: 12px
+    background-color: transparentize($black, 0.95)
+    &-image
+      margin-bottom: 10px
+    &-heading
+      margin-bottom: 12px
+      color: $blue
+      text-transform: uppercase
+      font:
+        size: 10px
+        weight: 700
+    &-title
+      margin-bottom: 20px
+      font-weight: 700
+    &-actions
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-top: 20px
+      &-author
+        &-link
+          margin-bottom: 5px
+          font:
+            size: 16px
+            weight: 700
+        &-desc
+          width: 265px
+          font-size: 12px
+  &__video
+    position: relative
+    height: 430px
+    margin-bottom: 15px
+    border-radius: 16px
+    cursor: pointer
+    background:
+      position: center
+      size: cover
+      repeat: no-repeat
+    &:after
+      position: absolute
+      content: ''
+      display: block
+      top: calc(50% - 85px)
+      left: calc(50% - 85px)
+      width: 170px
+      height: 170px
+      background:
+        image: url('../img/icons/play.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__video-disclaimer
+    margin-bottom: 35px
+    text-align: center
+  &__poll
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 170px
+    margin-bottom: 45px
+    border-radius: 12px
+    background-color: rgba(0, 0, 0, 0.1)
+  &__tags
+    margin-bottom: 45px
+  &__tag
+    margin-right: 5px
+    color: $green
+    text-decoration: none
+    white-space: nowrap
+    font-weight: 300
+  &__socials
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding-top: 35px
+    border-top: 1px solid transparentize($black, 0.9)
+    &-share
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      &-text
+        margin-right: 20px
+        color: transparentize($black, 0.6)
+        text-decoration: none
+    &-item
+      display: block
+      width: 38px
+      height: 38px
+      margin-right: 10px
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-social="fb"]
+        background-image: url('../img/icons/fb.svg')
+      &[data-social="vk"]
+        background-image: url('../img/icons/vk-share.svg')
+      &[data-social="ok"]
+        background-image: url('../img/icons/ok.svg')
+      &[data-social="twitter"]
+        background-image: url('../img/icons/twitter.svg')
+    &-link
+      position: relative
+      padding-right: 60px
+      color: transparentize($black, 0.6)
+      text-decoration: none
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: calc(50% - 19px)
+        right: 0
+        width: 38px
+        height: 38px
+        background:
+          image: url('../img/icons/link.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+
+@media only screen and (min-width: $mobile + 1)
+  .encyclopedia-article__block-sub-link
+    background-image: none !important
+
+@media only screen and (max-width: $mobile)
+  .encyclopedia-article
+    margin-bottom: 50px
+    padding-top: 40px
+    &__heading
+      width: 100%
+      margin-bottom: 30px
+      font-size: 32px
+    &__block
+      flex-flow: column nowrap
+      &-main
+        width: 100%
+      &-sub
+        width: 100%
+        &-link
+          display: flex
+          flex-flow: row nowrap
+          justify-content: flex-start
+          align-items: center
+          height: 80px
+          margin-top: 40px
+          padding-left: 95px
+          background:
+            size: auto 80px
+            position: left center
+            repeat: no-repeat
+    &__line
+      width: 100%
+      margin-bottom: 20px
+    &__paragraph
+      flex-flow: column-reverse nworap
+      &-image
+        width: 100%
+        margin-bottom: 20px
+      &-text
+        width: 100%
+    &__image
+      height: 210px
+    &__links
+      flex-flow: column-reverse nowrap
+      align-items: flex-start
+      div
+        margin-bottom: 15px
+    &__link
+      margin-left: 0
+      margin-right: 15px
+    &__author
+      z-index: 2
+      position: relative
+      width: calc(100% + 30px)
+      margin: 20px 0 0 -15px
+      padding: 20px 15px
+      background-color: $biege
+      border-radius: 16px
+      .encyclopedia-article__block-sub-link
+        display: none
+        &--mobile
+          display: block
+          height: auto
+          margin: 0
+          padding: 0
+      &-about
+        display: flex
+        flex-flow: row-reverse nowrap
+        justify-content: flex-end
+        align-items: center
+        div
+          display: flex
+          flex-flow: column nowrap
+          justify-content: center
+          align-items: flex-start
+      &-image
+        flex-shrink: 0
+        width: 66px
+        height: 66px
+        margin: 0 25px 0 0
+      &-pos
+        margin-bottom: 0
+    &__banner
+      height: 345px
+      background-position: 20% 50%
+      &-content
+        background-image: linear-gradient(231.2deg, rgba(0, 0, 0, 0) 15.59%, rgba(0, 0, 0, 0.4) 90.19%)
+        &-inner
+          display: flex
+          flex-flow: column nowrap
+          justify-content: flex-end
+          width: 100%
+          height: 100%
+          padding: 20px 15px
+      &-heading
+        margin-bottom: 10px
+      &-desc
+        margin-bottom: 20px
+      &-btn
+        max-width: 100%
+    &__quote
+      flex-flow: column nowrap
+      &-info
+        width: 100%
+        margin-bottom: 20px
+      &-author
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: center
+      &-image
+        flex-shrink: 0
+        width: 75px
+        height: 75px
+        margin-bottom: 0
+        margin-right: 15px
+      &-text
+        width: calc(100% + 30px)
+        margin-left: -15px
+        padding: 20px 15px
+    &__card
+      width: calc(100% + 30px)
+      margin-left: -15px
+      padding: 20px 15px
+      &-actions
+        flex-flow: column nowrap
+        &-author
+          display: flex
+          flex-flow: row nowrap
+          justify-content: flex-start
+          align-items: center
+          &-image
+            width: 75px
+            height: 75px
+            margin-right: 15px
+            border-radius: 50%
+            background:
+              position: center
+              size: cover
+              repeat: no-repeat
+      .button
+        max-width: 100%
+        margin-top: 20px
+    &__highlight
+      padding: 40px 15px 40px 20px
+    &__video
+      height: 194px
+      margin-bottom: 10px
+      border-radius: 8px
+      &:after
+        top: calc(50% - 42px)
+        left: calc(50% - 42px)
+        width: 84px
+        height: 84px
+    &__socials
+      padding-top: 30px
+      flex-flow: column nowrap
+      &-share
+        display: flex
+        justify-content: space-between
+        width: 100%
+      &-item
+        margin: 0
+      &-link
+        display: flex
+        flex-flow: row nowrap
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 50px
+        margin-top: 35px
+        padding: 0
+        border: 1px solid #ADADAD
+        border-radius: 8px
+        &:after
+          display: none

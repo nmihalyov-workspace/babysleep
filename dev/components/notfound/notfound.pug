@@ -1,0 +1,21 @@
+include ../_ui/card/card
+
+mixin notfound
+  section.notfound
+    .container
+      .wrapper
+        p.notfound__heading Не удалось найти эту страницу.
+        p.notfound__suggest Возможно, вы искали наши продукты?
+    .container.block
+      .wrapper
+        .reviews__subscribe
+          .grid-card
+            +card('card-1.jpg', 'Самостоятельно', 'Вебинары по возрасту', 'Научим быстрее успокаивать, перекладывать в кроватку без слез, создадим базу для бесшовного прохождения регресса сна', ['0–6 мес', '6–12 мес', '1–3 года', 'ГВ и сон'], null, '1990 ₽')
+            +card('card-2.jpg', 'Быстрое решение', 'Экспресс-консультации', 'Предложим стратегию-решение по конкретно вашей ситуации', null, null, 'от 3500 ₽')
+            +card('card-3.jpg', 'Индивидуальное решение', 'Решение под ключ — 1 месяц работы над сном с консультантом', '4 недели работы один на один с экспертом по решению любых проблем со сном', null, 'от 12 000 ₽', 'от 10 000 ₽')
+          p.reviews__subscribe-heading Подписывайтесь!
+          p.reviews__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+          .reviews__subscribe-socials
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")

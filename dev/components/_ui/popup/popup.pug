@@ -1,0 +1,88 @@
+include ../button/button
+include ../input/input
+include ../checkbox/checkbox
+
+mixin popup(type, id)
+  .popup.js-popup.js-close-popup(data-popup=id || type)
+    .popup__backdrop
+    .popup__container
+      .popup__wrapper
+        .popup__window
+          if type !== 'search'
+            .popup__close.js-close-popup
+          if type === 'search'
+            .popup__search
+              form.popup__search-form(action="")
+                +input('text', 'search', 'Введите запрос', 'popup__search-input', true)
+                button.popup__search-btn(type="submit")
+          if type === 'auth'
+            .popup__auth
+              p.popup__auth-heading Войдите на сайт, чтобы оставить комментарий
+              .popup__auth-tabs
+                a(href="#", data-tab="1").popup__auth-tabs-item.popup__auth-tabs-item--current Авторизация
+                a(href="#", data-tab="2").popup__auth-tabs-item Регистрация
+              .popup__auth-content.popup__auth-content--current(data-tab="1")
+                form(action="").popup__auth-form
+                  +input('text', 'login', 'Логин', 'popup__auth-input', true)
+                  .popup__auth-password
+                    +input('password', 'password', 'Пароль', 'popup__auth-input', true)
+                    a.popup__auth-password-link(href="#") Забыли пароль?
+                  +button-primary('submit', 'Войти', 'popup__auth-btn')
+              .popup__auth-content(data-tab="2")
+                form(action="").popup__auth-form
+                  +input('text', 'login', 'Логин', 'popup__auth-input', true)
+                  +input('email', 'email', 'E-mail', 'popup__auth-input', true)
+                  +input('password', 'password', 'Пароль', 'popup__auth-input', true)
+                  +input('password', 'passwordRepeat', 'Повторите пароль', 'popup__auth-input', true)
+                  +button-primary('submit', 'Зарегистрироваться', 'popup__auth-btn')
+              p.popup__auth-alt или через соц. сети
+              .popup__auth-socials
+                a.popup__auth-socials-item(href="#", data-social="fb")
+                a.popup__auth-socials-item(href="#", data-social="vk")
+                a.popup__auth-socials-item(href="#", data-social="ok")
+                a.popup__auth-socials-item(href="#", data-social="twiiter")
+          if type === 'age'
+            .popup__age
+              p.popup__age-heading Выберите, чтобы увидеть все материалы по возрасту вашего ребенка
+              .difficulties__age-grid
+                a(href="#").difficulties__age-item
+                  img(src="img/inhtml/age-1.svg", alt="").difficulties__age-image
+                a(href="#").difficulties__age-item
+                  img(src="img/inhtml/age-2.svg", alt="").difficulties__age-image
+                a(href="#").difficulties__age-item
+                  img(src="img/inhtml/age-3.svg", alt="").difficulties__age-image
+                a(href="#").difficulties__age-item
+                  img(src="img/inhtml/age-4.svg", alt="").difficulties__age-image
+                a(href="#").difficulties__age-item
+                  img(src="img/inhtml/age-5.svg", alt="").difficulties__age-image
+                a(href="#").difficulties__age-item
+                  img(src="img/inhtml/age-6.svg", alt="").difficulties__age-image
+          if type === 'guide'
+            .popup__request
+              p.popup__request-heading Заявка успешно принята
+              p.popup__request-desc Руководство «Почему мой ребенок плохо спит», отправлено на почту <br><b>rp@arbuz.moscow</b>
+              +button-quoternary('link', 'Смотреть в Telegram', 'popup__request-telegram', {link: '#'})
+              a.popup__request-close.js-close-popup(href="javascript:void(0)") Спасибо
+          if type === 'request'
+            .popup__request
+              p.popup__request-heading Заявка успешно принята
+              if id === 'request-1'
+                p.popup__request-desc Чек-лист «Безопасный сон в 0-3 месяца», отправлен на почту <br><b>rp@arbuz.moscow</b>
+              if id === 'request-2'
+                p.popup__request-desc Подборка статей для ребёнка вашего возраста отправлена на почту <br><b>rp@arbuz.moscow</b>
+              if id === 'request-3'
+                p.popup__request-desc Наш консультант свяжется с вами в ближайшее время
+              +button-quoternary('link', 'Спасибо', 'popup__request-close js-close-popup', {link: 'javascript:void(0)'})
+          if type === 'checklist'
+            form.popup__checklist(action="")
+              p.popup__checklist-subheading Бесплатный чек-лист
+              p.popup__checklist-heading «Безопасный сон в 0-3 месяца»
+              p.popup__checklist-subheading Заполните данные, и мы пришлём руководство на почту
+              +input('text', 'name', 'Имя', '', true)
+              +input('email', 'email', 'Email', '', true)
+              +input('text', 'dateOfBirth', 'Дата рождения ребёнка', '', true)
+              +checkbox('articles', 'popup__checklist-checkbox', 'false', 'true', 'получать раз в месяц подборку статей <br>по возрасту малыша')
+              .popup__checklist-actions
+                +button-primary('submit', 'Получить чек-лист', 'popup__checklist-btn')
+                p.popup__checklist-disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <br><a href="#">Политикой конфиденциальности</a>
+                img.popup__checklist-image(src="img/book.png", alt="")

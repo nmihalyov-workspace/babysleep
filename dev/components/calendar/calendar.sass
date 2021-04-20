@@ -1,0 +1,218 @@
+.calendar
+  &__heading
+    width: 770px
+    margin-bottom: 30px
+    font:
+      size: 20px
+      weight: 700
+  &__form
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    width: 870px
+    margin-bottom: 15px
+    &--mobile
+      display: none
+    &-input
+      width: 170px
+      border-color: transparentize($black, 0.85)
+      color: $black
+      &::placeholder
+        color: $black
+      &::-webkit-input-placeholder
+        color: $black
+      &::-moz-placeholder
+        color: $black
+      &:-ms-input-placeholder
+        color: $black
+      &:-moz-placeholder
+        color: $black
+  &__links
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    .calendar__link
+      &:not(:first-child)
+        margin-left: 45px
+  &__link
+    color: $green
+  &__table
+    position: relative
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    margin: 65px 0 35px
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    &-popup
+      position: absolute
+      display: none
+      width: 375px
+      padding: 15px 20px
+      border-radius: 12px
+      background-color: #fff
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25)
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        bottom: 10px
+        right: 20px
+        width: 30px
+        height: 30px
+        background:
+          image: url('../img/icons/lightning.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+      &-close
+        position: absolute
+        top: 16px
+        right: 14px
+        width: 28px
+        height: 28px
+        cursor: pointer
+        background:
+          image: url('../img/icons/close.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+      &-week
+        display: inline-flex
+        margin-bottom: 15px
+        padding: 3px 10px
+        border-radius: 6px
+        background-color: $blue
+        color: #fff
+        font-size: 15px
+      &-heading
+        max-width: 290px
+        margin-bottom: 10px
+        font:
+          size: 16px
+          weight: 700
+      &-desc
+        margin-bottom: 10px
+      &-link
+        color: $green
+    &-cell
+      width: 16.6666666667%
+      height: 65px
+      margin-bottom: -1px
+      padding-top: 10px
+      border-bottom: 1px solid #e5e5e5
+      text-align: center
+      &:not(:nth-child(6n))
+        border-right: 1px solid #e5e5e5
+      &--example
+        display: none
+      &[data-week="hard"]
+        position: relative
+        cursor: pointer
+        background-color: transparentize($blue, 0.75)
+        &:after
+          position: absolute
+          content: ''
+          display: block
+          top: 10px
+          right: 10px
+          width: 30px
+          height: 30px
+          background:
+            image: url('../img/icons/lightning.svg')
+            size: 30px
+            position: center
+            repeat: no-repeat
+        .calendar__table-week
+          text-decoration: underline
+      &[data-week="medium"]
+        background-color: transparentize($green, 0.9)
+    &-week
+      margin-bottom: 5px
+      line-height: 1.1
+      font-size: 20px
+    &-date
+      opacity: 0.5
+  &__legend
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    margin-top: 45px
+    &-item
+      width: 270px
+      margin-right: 30px
+      &-icon
+        width: 40px
+        height: 40px
+        margin-bottom: 15px
+        border-radius: 50%
+        border: 1px solid rgba(0, 0, 0, 0.05)
+        &[data-legend="hard"]
+          background:
+            color: transparentize($blue, 0.75)
+            image: url('../img/icons/lightning.svg')
+            size: 30px
+            position: center
+            repeat: no-repeat
+        &[data-legend="medium"]
+          background-color: transparentize($green, 0.9)
+      &-desc
+        line-height: 1.4
+
+@media only screen and (max-width: $mobile)
+  .calendar
+    &--example
+      .calendar__table-cell
+        &:nth-child(n + 14)
+          display: none
+        &:nth-child(78)
+          display: block
+        &--example
+          display: block
+    &__heading
+      width: 100%
+    &__form
+      display: none
+      &--mobile
+        display: block
+        width: 100%
+        margin-bottom: 20px
+      &-input
+        width: 100%
+        margin-bottom: 25px
+      .button
+        max-width: 100%
+    &__links
+      display: none
+    &__link
+      display: block
+      text-align: center
+    &__table
+      width: calc(100% + 30px)
+      margin: 30px 0 70px -15px
+      &-popup
+        left: 0 !important
+        width: 100%
+      &-cell
+        width: 50%
+        border-right: none !important
+        &:not(:nth-child(2n))
+          border-right: 1px solid #e5e5e5 !important
+    &__legend
+      flex-flow: column nowrap
+      margin: 0
+      &-item
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: center
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+          margin-bottom: 20px
+        &-icon
+          flex-shrink: 0
+          margin: 0 20px 0 0

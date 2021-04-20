@@ -1,0 +1,93 @@
+.calendar-aware
+  padding: 65px 0 70px
+  &__block
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 60px
+    border-radius: 12px
+    background-color: $biege
+    &-desc
+      padding-left: 50px
+    &-heading
+      margin-bottom: 10px
+      line-height: 1.18
+      font:
+        size: 32px
+        weight: 700
+    &-link
+      margin: 0 30px 0 auto
+      color: $green
+    &-image
+      width: 370px
+      height: 210px
+      border-radius: 12px
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+  &__table
+    &-inner
+      width: 840px
+      margin-left: -20px
+    &-head,
+    &-row
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: stretch
+      padding: 0 20px
+    &-head
+      opacity: 0.5
+    &-row
+      &:hover
+        background-color: transparentize($black, 0.95)
+      &:not(:last-child)
+        .calendar-aware__table-cell
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+      .calendar-aware__table-cell
+        padding-top: 15px
+        padding-bottom: 15px
+    &-cell
+      width: 400px
+
+@media only screen and (max-width: $mobile)
+  .calendar-aware
+    padding: 60px 0
+    &__block
+      flex-flow: column nowrap
+      align-items: flex-start
+      margin-bottom: 40px
+      &-desc
+        padding: 20px 15px 0
+      &-heading
+        margin-bottom: 15px
+        font-size: 30px
+      &-text
+        width: 155px
+        margin-bottom: 20px
+      &-link
+        margin: 0 0 25px 15px
+      &-image
+        width: 100%
+        height: 195px
+    &__table
+      position: relative
+      white-space: nowrap
+      overflow: auto
+      width: 100vw
+      margin: 0 calc(-50vw + 50%) 0 calc(-50vw + 50%)
+      padding: 0 calc(50vw - 50%) 20px calc(50vw - 50%)
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+      &-inner
+        display: inline-block
+        width: 710px
+      &-cell
+        &:first-child
+          width: 270px
+        &:last-child
+          width: 400px

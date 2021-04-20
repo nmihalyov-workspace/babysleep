@@ -1,0 +1,263 @@
+.about-team
+  padding: 65px 0 20px
+  &__heading
+    margin-bottom: 50px
+    font:
+      size: 42px
+      weight: 700
+  &__hero
+    &-main
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      width: 870px
+      margin-bottom: 25px
+      &-image
+        flex-shrink: 0
+        position: relative
+        width: 270px
+        height: 270px
+        margin-right: 35px
+        border-radius: 50%
+        background:
+          size: cover
+          position: center
+          repeat: no-repeat
+      &-counter
+        position: absolute
+        bottom: 0
+        left: 0
+        display: flex
+        flex-flow: row nowrap
+        justify-content: center
+        align-items: center
+        width: 70px
+        height: 70px
+        border: 2px solid #fff
+        border-radius: 50%
+        background-color: $blue
+        color: #fff
+        font:
+          size: 16px
+          weight: 700
+      &-name
+        font:
+          size: 30px
+          weight: 700
+        &--mobile
+          display: none
+      &-desc
+        margin-top: 10px
+        margin-bottom: 20px
+        line-height: 1.44
+      &-loc
+        position: relative
+        margin-top: 15px
+        padding-left: 20px
+        &:before
+          position: absolute
+          content: ''
+          display: block
+          top: 2px
+          left: 0
+          width: 11px
+          height: 15px
+          background:
+            image: url('../img/icons/pin.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+        span
+          opacity: 0.5
+    &-desc
+      width: 870px
+      margin-bottom: 10px
+      line-height: 1.44
+    &-more
+      color: $green
+      text-decoration: none
+    &-choose
+      margin: 75px 0
+      padding: 20px 75px 45px 20px
+      border-radius: 12px
+      background-color: transparentize($blue, 0.9)
+      &-heading
+        margin-bottom: 20px
+        font:
+          size: 20px
+          weight: 700
+      &-desc
+        line-height: 1.44
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: calc(100% + 30px)
+    &--big
+      margin-bottom: 40px
+      .about-team__item
+        width: 570px
+  &__item
+    width: 370px
+    margin: 0 15px 60px
+    &-head
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 15px
+    &-pic
+      position: relative
+      flex-shrink: 0
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: flex-end
+      width: 72px
+      height: 72px
+      margin-right: 30px
+      &-img
+        z-index: 1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 50%
+    &-psy,
+    &-plus,
+    &-fav,
+    &-num
+      z-index: 2
+      position: relative
+      width: 30px
+      height: 30px
+      margin: 0 -5px -10px
+      border-radius: 50%
+      border: 2px solid #fff
+    &-psy,
+    &-plus
+      background:
+        color: #E6F9FB
+        position: center
+        repeat: no-repeat
+    &-fav
+      background:
+        image: url('../img/icons/star.svg')
+        color: $green
+        position: center
+        repeat: no-repeat
+    &-psy
+      background-image: url('../img/icons/psy.svg')
+    &-plus
+      background-image: url('../img/icons/plus.svg')
+    &-plus
+    &-num
+      background-color: $blue
+      color: #fff
+      text-align: center
+      line-height: 28px
+      font:
+        size: 8px
+        weight: 700
+    &-name
+      margin-bottom: 5px
+    &-pos
+      font-size: 11px
+    &-desc
+      margin-bottom: 15px
+      line-height: 1.4
+      span
+        font-weight: 700
+    &-link
+      color: $green
+      text-decoration: none
+      font-size: 12px
+    &-btn
+      margin-top: 20px
+      height: 30px
+      box-shadow: none
+      border: 1px solid $green
+      background-color: #fff
+      color: $green
+      transition: all .3s ease
+      font-size: 12px
+      &:hover
+        color: #fff
+    &-loc
+      position: relative
+      margin-top: 15px
+      padding-left: 20px
+      font-size: 11px
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        top: -1px
+        left: 0
+        width: 11px
+        height: 15px
+        background:
+          image: url('../img/icons/pin.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+      span
+        opacity: 0.5
+
+@media only screen and (max-width: $mobile)
+  .about-team
+    padding: 40px 0 0
+    &__heading
+      font-size: 32px
+    &__hero
+      &-main
+        flex-flow: column nowrap
+        width: 100%
+        margin-bottom: 20px
+        &-info
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          align-self: flex-start
+          align-items: center
+          max-width: 300px
+          width: 100%
+        &-about
+          .button
+            max-width: 100%
+        &-image
+          width: 140px
+          height: 140px
+          margin: 0
+        &-counter
+          width: 42px
+          height: 42px
+          font-size: 9px
+        &-name
+          display: none
+          &--mobile
+            display: block
+            width: 135px
+            font-size: 26px
+      &-desc
+        width: 100%
+      &-choose
+        margin: 50px 0
+        padding: 25px 20px
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin: 0
+      &--big
+        margin-bottom: 50px
+        border-bottom: 1px solid transparentize($black, 0.9)
+        .about-team__item
+          width: 100%
+    &__item
+      width: 100%
+      margin: 0 0 50px 0
+      &-btn
+        max-width: 100%

@@ -1,0 +1,13 @@
+include ../_ui/heading/heading
+include ../_ui/card/card
+include ../_ui/button/button
+
+mixin selection-solutions
+  section.selection-solutions.block.container
+    .wrapper
+      +heading('Решение для спокойного сна ребенка в&nbsp;0-3 месяца')
+      .grid-card
+        +card('card-1.jpg', 'Самостоятельно', 'Вебинар «Сон без слез». 0–3 мес', 'Научим быстрее успокаивать, перекладывать в кроватку без слез, создадим базу для бесшовного прохождения регресса сна', null, null, '1990 ₽')
+        +card('card-2.jpg', 'Экспресс-консультации', 'Экспресс-консультации', 'Предложим стратегию-решение по конкретно вашей ситуации', null, null, 'от 3500 ₽')
+      +heading('Нужна помощь в подборе продукта?')
+      +button-primary('link', 'Связаться с консультантом в&nbsp;WhatsApp', '', {link: '#'})
