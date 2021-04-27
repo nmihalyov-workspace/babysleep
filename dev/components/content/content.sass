@@ -1,0 +1,49 @@
+.content
+  padding: 65px 0 80px
+  & .wrapper > *:not(h1)
+    max-width: 768px
+  h1
+    margin-bottom: 65px
+    line-height: 1.09
+    font:
+      size: 42px
+      weight: 600
+  h2
+    margin-top: 60px
+    margin-bottom: 20px
+    line-height: 1.16
+    font:
+      size: 16px
+      weight: 600
+  p
+    margin-bottom: 15px
+    line-height: 1.4
+    font-size: 15px
+  ul
+    padding-left: 19px
+    margin: 0 0 38px
+    li
+      text-indent: 0
+      line-height: 1.4
+      font-size: 15px
+      &:before
+        top: 9px
+        left: -19px
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: $green
+        background-image: none
+
+@media only screen and (max-width: $mobile)
+  .content
+    padding: 40px 0 70px
+    h1
+      margin-bottom: 40px
+      font-size: 32px
+    h2
+      margin-top: 45px
+      margin-bottom: 15px
+    ul
+      li
+        padding-left: 0
