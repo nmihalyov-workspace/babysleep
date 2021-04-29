@@ -86,3 +86,47 @@ mixin popup(type, id)
                 +button-primary('submit', 'Получить чек-лист', 'popup__checklist-btn')
                 p.popup__checklist-disclaimer Нажимая на кнопку, вы соглашаетесь с нашей <br><a href="#">Политикой конфиденциальности</a>
                 img.popup__checklist-image(src="img/book.png", alt="")
+          if type === 'prices'
+            .popup__prices
+              .popup__prices-head
+                img.popup__prices-logo(src="img/logo.svg", alt="babysleep")
+                p.popup__prices-more Больше чем сон
+                p.popup__prices-web baby-sleep.ru
+              .popup__prices-table
+                .popup__prices-table-wrapper
+                  .popup__prices-table-head
+                    p.popup__prices-table-cell Консультация
+                    p.popup__prices-table-cell Экспресс<br><span>1 час</span>
+                    p.popup__prices-table-cell С сопровождением<br><span>1 месяц онлайн</span>
+                    p.popup__prices-table-cell С сопровождением + выезд на дом**<br><span>1 месяц онлайн + выезд</span>
+                  .popup__prices-table-row
+                    p.popup__prices-table-cell Консультант*
+                    p.popup__prices-table-cell 3500
+                    p.popup__prices-table-cell 10 900
+                    p.popup__prices-table-cell 16 900
+                  .popup__prices-table-row
+                    p.popup__prices-table-cell Старший консультант*
+                    p.popup__prices-table-cell 4500
+                    p.popup__prices-table-cell 14 900
+                    p.popup__prices-table-cell 20 900
+                  .popup__prices-table-row
+                    p.popup__prices-table-cell Топ-консультант*
+                    p.popup__prices-table-cell 5500
+                    p.popup__prices-table-cell 19 900
+                    p.popup__prices-table-cell 25 900
+                  .popup__prices-table-row
+                    p.popup__prices-table-cell Врач-сомнолог
+                    p.popup__prices-table-cell 5000
+                    p.popup__prices-table-cell по запросу
+                    p.popup__prices-table-cell по запросу
+                  .popup__prices-table-row
+                    p.popup__prices-table-cell Руководитель отдела
+                    p.popup__prices-table-cell 7000
+                    p.popup__prices-table-cell 24 900
+                    p.popup__prices-table-cell 29 900
+                  .popup__prices-table-row
+                    p.popup__prices-table-cell Елена Мурадова
+                    p.popup__prices-table-cell 10 000
+                    p.popup__prices-table-cell по запросу
+                    p.popup__prices-table-cell по запросу
+              p.popup__prices-disclaimer *Цена зависит от практического опыта консультанта в индивидуальном консультировании с сопровождением. Консультант наладил сон более 30 семей, Старший консультант — более 100 семей, Топ — более 300 семей.<br><br>**Москва; в других городах стоимость консультаций с выездом на дом уточните у администратора.

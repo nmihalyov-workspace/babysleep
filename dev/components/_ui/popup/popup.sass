@@ -265,6 +265,57 @@
         size: contain
         position: center
         repeat: no-repeat
+  &__prices
+    max-width: 860px
+    padding: 30px 35px 30px
+    &-head
+      display: flex
+      align-items: center
+      margin-bottom: 10px
+    &-more
+      margin-left: 20px
+      padding: 10px 0 10px 20px
+      color: $blue
+      border-left: 1px solid $blue
+      font-size: 12px
+    &-web
+      margin-left: auto
+      color: $green
+      font-size: 12px
+    &-table
+      margin-bottom: 15px
+      &-head,
+      &-row
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: stretch
+      &-head
+        .popup__prices-table-cell
+          span
+            color: $blue
+            line-height: 1.25
+            font-size: 12px
+      &-row
+        &:nth-child(even)
+          .popup__prices-table-cell
+            background-color: $biege
+      &-cell
+        padding: 13px 0 16px 20px
+        &:first-child
+          width: 218px
+          border-radius: 8px 0 0 8px
+        &:nth-child(2)
+          width: 102px
+        &:nth-child(3)
+          width: 174px
+        &:last-child
+          width: 306px
+          border-radius: 0 8px 8px 0
+    &-disclaimer
+      opacity: 0.5
+      line-height: 1.5
+      font-size: 12px
 
 @media only screen and (max-width: $mobile)
   .popup
