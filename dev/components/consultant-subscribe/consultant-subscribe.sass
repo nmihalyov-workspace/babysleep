@@ -1,0 +1,57 @@
+.consultant-subscribe
+  .subheading
+    display: none
+  .grid-card
+    margin-top: -150px
+  &__heading
+    margin-bottom: 115px
+    line-height: 1.15
+    font:
+      size: 32px
+      weight: 700
+  &__articles
+    display: flex
+    justify-content: space-between
+    margin-top: 45px
+    margin-bottom: 75px
+    padding-top: 60px
+    border-top: 1px solid transparentize($black, 0.85)
+    border-bottom: 1px solid transparentize($black, 0.85)
+
+@media only screen and (max-width: $mobile)
+  .consultant-subscribe
+    .subheading
+      display: flex
+      margin-top: 30px
+      padding-top: 35px
+      border-top: 1px solid transparentize($black, 0.9)
+    .grid-card
+      margin-top: 70px
+    &__heading
+      z-index: 3
+      position: relative
+      margin-bottom: -80px
+      font-size: 20px
+    &__articles
+      position: relative
+      display: block
+      white-space: nowrap
+      overflow: auto
+      width: 100vw
+      margin: 0 calc(-50vw + 50%)
+      padding: 0 calc(50vw - 50%)
+      border: none
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+      .about__item
+        width: 100%
+        display: inline-block
+        white-space: normal
+        vertical-align: top
+        &:not(:last-child)
+          margin-right: 15px
+    .reviews__subscribe-heading
+      padding-top: 40px
+      border-top: 1px solid transparentize($black, 0.9)

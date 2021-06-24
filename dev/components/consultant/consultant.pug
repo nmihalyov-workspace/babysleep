@@ -1,0 +1,170 @@
+include ../_ui/button/button
+include ../_ui/article-card/article-card
+include ../_ui/pagination/pagination
+
+mixin consultant
+  section.consultant.container
+    .wrapper
+      a.consultant__back(href="about-team.html") ← вернуться ко всем консультантам
+      .consultant__block
+        .consultant__aside
+          .consultant__image(style="background-image: url('img/elena.png');")
+          .consultant__about--mobile
+            p.consultant__name Елена Мурадова
+            p.consultant__desc Первый консультант в России и СНГ, руководитель проекта, член международной ассоциации, основатель проекта, директор центра подготовки консультантов по сну, мама троих детей
+          +button-primary('link', 'Записаться на консультацию', 'consultant__enroll', {link: '#'})
+          a.consultant__video(href="#") Видео Елены
+        .consultant__main
+          .consultant__about
+            p.consultant__name Елена Мурадова
+            p.consultant__desc Первый консультант в России и СНГ, руководитель проекта, член международной ассоциации, основатель проекта, директор центра подготовки консультантов по сну, мама троих детей
+          .consultant__tabs
+            a(href="#", data-content="1").consultant__tabs-item.consultant__tabs-item--active О Елене
+            a(href="#", data-content="2").consultant__tabs-item Статьи
+            a(href="#", data-content="3").consultant__tabs-item Отзывы
+          .consultant__content(data-content="1")
+            .consultant__text
+              p.consultant__subheading Профессиональный опыт
+              p.consultant__paragraph Консультант по грудному вскармливанию. Сооснователь жж-сообщества baby-secret.net, где Татьяна на протяжении нескольких лет освещает весь спектр вопросов, имеющих отношение к воспитанию детей. Модератор жж-сообщества «Заботливая Альфа», посвященного теории развития на основе привязанности. Соавтор «Руководства по основам здорового сна 10-36». Автор статей на сайтах baby-sleep.ru, letidor.ru TheSolution, Fly-mama, студент Neufeld Institute (Канада).
+            p.consultant__subheading Сертификаты и достижения
+            .consultant__certificates.slider.js-consultant-certificates
+              .consultant__certificates-slide
+                .consultant__certificates-image
+                  img.consultant__certificates-image-pic(src="img/inhtml/certificate-1.png", alt="")
+                p.consultant__certificates-desc Сертификат консультанта по детскому сну
+                a.consultant__certificates-link(href="#") Смотреть
+              .consultant__certificates-slide
+                .consultant__certificates-image
+                  img.consultant__certificates-image-pic(src="img/inhtml/certificate-2.png", alt="")
+                p.consultant__certificates-desc Сертификат консультанта по детскому сну
+                a.consultant__certificates-link(href="#") Смотреть
+              .consultant__certificates-slide
+                .consultant__certificates-image
+                  img.consultant__certificates-image-pic(src="img/inhtml/certificate-1.png", alt="")
+                p.consultant__certificates-desc Сертификат консультанта по детскому сну
+                a.consultant__certificates-link(href="#") Смотреть
+              .consultant__certificates-slide
+                .consultant__certificates-image
+                  img.consultant__certificates-image-pic(src="img/inhtml/certificate-1.png", alt="")
+                p.consultant__certificates-desc Сертификат консультанта по детскому сну
+                a.consultant__certificates-link(href="#") Смотреть
+              .consultant__certificates-slide
+                .consultant__certificates-image
+                  img.consultant__certificates-image-pic(src="img/inhtml/certificate-1.png", alt="")
+                p.consultant__certificates-desc Сертификат консультанта по детскому сну
+                a.consultant__certificates-link(href="#") Смотреть
+            p.consultant__subheading В работе для меня важно
+            p.consultant__paragraph Консультант по грудному вскармливанию. Сооснователь жж-сообщества baby-secret.net, где Татьяна на протяжении нескольких лет освещает весь спектр вопросов, имеющих отношение к воспитанию детей. Модератор жж-сообщества «Заботливая Альфа», посвященного теории развития на основе привязанности. Соавтор «Руководства по основам здорового сна 10-36». Автор статей на сайтах baby-sleep.ru, letidor.ru TheSolution, Fly-mama, студент Neufeld Institute (Канада).
+            p.consultant__subheading О себе
+            p.consultant__paragraph Прошла путь от перфекционизма «идеальной» мамы до осознания, что дети, родители, ситуации, потребности и возможности в разных семьях могут быть очень разными.<br><br>Таня дети фотоЗаинтересовалась вопросом организации детского сна еще во время первой беременности. Благодаря этому мне удалось достаточно эффективно решать возникающие проблемы со сном своего ребенка.Когда родился мой второй ребенок, он оказался совсем другим - во всем, включая сон. Очень быстро я поняла – то, что отлично работало с первым ребенком, совершенно не подходит второму. Проблемы были совершенно другие, и способ их решения был другой. Это был очень полезный для меня опыт – и начало моего пути к работе консультанта по детскому сну.<br><br>Я считаю, что в вопросах сна очень важны реальные ожидания родителей, их спокойствие и уверенность в том, что хороший сон – это чрезвычайно важно для любого ребенка. Понимаю, что многое зависит и от особенностей ребенка – его возраста, темперамента, склонности к самоуспокоению, чувствительности, возбудимости, особенностей нервной системы.
+            .consultant__slider.slider.js-consultant-slider
+              .consultant__slider-slide
+                a.consultant__slider-image.consultant__slider-image--video(style="background-image: url('img/inhtml/mission.jpg');", href="https://www.youtube.com/watch?v=dQw4w9WgXcQ", target="_blank", rel="noopener noreferrer")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+              .consultant__slider-slide
+                .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                .consultant__slider-desc Встреча с командой bs
+            p.consultant__slider-counter
+          .consultant__content(data-content="2")
+            .consultant__articles
+              +article-card('article-1.jpg', 'Безопасность сна', 'Безопасность детского сна: пояснения к рекомендациям американской академии педиатрии', 'Ежегодно в США более 3,5 тысяч детей неожиданно умирают во сне. Часто это связано с синдромом внезапной детской смерти (СВДС) или случайной смертью от удушья...', '19.06.20', '2647', '37', '112', ['0-3', '3-6', '6-9'])
+              +article-card('article-2.jpg', 'Детский сон: база знаний', 'Проблемы со сном у детей', 'Вы постепенно привыкаете к тому, что вы теперь родители. Учитесь понимать сигналы ребенка и приспосабливаться к изменениям в вашей жизни. Конечно, немного устаете — и сон...', '19.06.20', '2647', '37', '112', ['0-3', '3-6', '6-9', '9-18', '1,5-3 года', '3-7 лет'])
+              +article-card('article-3.jpg', 'Нормы сна и бодрствования для детей', 'Что значит «ребенок плохо спит»?', 'Новое исследование Института здоровья и благосостояния Финляндии и Университета Турку показывает, что у младенцев часто бывают проблемы со сном, которые обычно проходят...', '19.06.20', '2647', '37', '112', ['3-7 лет'])
+              +article-card('article-3.jpg', 'Нормы сна и бодрствования для детей', 'Что значит «ребенок плохо спит»?', 'Новое исследование Института здоровья и благосостояния Финляндии и Университета Турку показывает, что у младенцев часто бывают проблемы со сном, которые обычно проходят...', '19.06.20', '2647', '37', '112', ['3-7 лет'])
+              +article-card('article-1.jpg', 'Безопасность сна', 'Безопасность детского сна: пояснения к рекомендациям американской академии педиатрии', 'Ежегодно в США более 3,5 тысяч детей неожиданно умирают во сне. Часто это связано с синдромом внезапной детской смерти (СВДС) или случайной смертью от удушья...', '19.06.20', '2647', '37', '112', ['0-3', '3-6', '6-9'])
+              +button-primary('link', 'Показать еще статьи', 'consultant__articles-more', {link: '#'})
+              +pagination
+          .consultant__content(data-content="3")
+            .consultant__reviews
+              .feedback-reviews__review
+                .feedback-reviews__review-author
+                  .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/avatar-1.jpg');")
+                  .feedback-reviews__review-author-info
+                    p.feedback-reviews__review-author-name Ольга Блинова, Миасс
+                    p.feedback-reviews__review-author-about мама Юли
+                    .feedback-reviews__review-author-socials
+                      a(href="#", data-social="fb").feedback-reviews__review-author-social
+                      a(href="#", data-social="instagram").feedback-reviews__review-author-social
+                p.feedback-reviews__review-theme о работе центра
+                p.feedback-reviews__review-text Вы такие молодцы! Спасибо за труд!
+                p.feedback-reviews__review-date 23 июня 2019
+              .feedback-reviews__review
+                .feedback-reviews__review-author
+                  .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-2.jpg');")
+                  .feedback-reviews__review-author-info
+                    p.feedback-reviews__review-author-name Алёна Чернова, Адлер
+                    p.feedback-reviews__review-author-about мама Марины и Славы
+                    .feedback-reviews__review-author-socials
+                      a(href="#", data-social="vk").feedback-reviews__review-author-social
+                p.feedback-reviews__review-theme вебинары
+                p.feedback-reviews__review-text Обратилась за консультацией, когда по семейным обстоятельствам нужна была срочно помощь в организации сна дочки. До этого момента С 4 до 10 мес спали все сны на груди, а я все читала информацию и отзывы на вашем сайте и думала неужели можно научить спать ребёнка отдельно в кроватке, считала наш случай безнадежным. Честно говоря не ожидала такого быстрого результата, нам подошла быстрая методика. Начали с ночных снов, в первую ночь укладывание заняло 1 час, последующие ночи до 20 мин, пробуждения присутствуют, но зато дочка спит отдельно в кроватке , это для нас большое достижение, с рождения ни одного раза там не спала. К дневным снам перешли через 5 дней, ребенок привык за 2 дня. Огромное спасибо нашему консультанту Анне Ростовой, информацию доносила чётко, понятно и быстро! Мамочки, кто ещё сомневается, обращайтесь - это реально работает!)
+                p.feedback-reviews__review-date 12 мая 2019
+                .feedback-reviews__review-links
+                  a(href="#").feedback-reviews__review-link Елена Мурадова
+              .feedback-reviews__review
+                .feedback-reviews__review-author
+                  .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-1.jpg');")
+                  .feedback-reviews__review-author-info
+                    p.feedback-reviews__review-author-name Ксения Анохина, Челябинск
+                    p.feedback-reviews__review-author-about мама Марка
+                    .feedback-reviews__review-author-socials
+                      a(href="#", data-social="fb").feedback-reviews__review-author-social
+                      a(href="#", data-social="instagram").feedback-reviews__review-author-social
+                .feedback-reviews__aside-item.feedback-reviews__aside-item--mobile
+                  p.feedback-reviews__aside-head 85% положительных отзывов
+                  a(href="#").feedback-reviews__aside-link Школа сна
+                p.feedback-reviews__review-theme вебинары
+                p.feedback-reviews__review-text Очень понравилось работать с Анной. Она никогда не давила, отвечала на все вопросы, я всегда понимала, как двигаться дальше, чего ожидать. Понравилось, что перед внедрением методики СЗ мы проделали большую подготовительную работу, поэтому к началу методики были готовы и я, и моя дочь.
+                p.feedback-reviews__review-date 12 мая 2019
+                .feedback-reviews__review-links
+                  a(href="#").feedback-reviews__review-link Елена Мурадова
+              .feedback-reviews__review
+                .feedback-reviews__review-author
+                  .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/avatar-1.jpg');")
+                  .feedback-reviews__review-author-info
+                    p.feedback-reviews__review-author-name Ольга Блинова, Миасс
+                    p.feedback-reviews__review-author-about мама Юли
+                    .feedback-reviews__review-author-socials
+                      a(href="#", data-social="fb").feedback-reviews__review-author-social
+                      a(href="#", data-social="instagram").feedback-reviews__review-author-social
+                p.feedback-reviews__review-theme о работе центра
+                p.feedback-reviews__review-text Вы такие молодцы! Спасибо за труд!
+                p.feedback-reviews__review-date 23 июня 2019
+              .feedback-reviews__review
+                .feedback-reviews__review-author
+                  .feedback-reviews__review-author-image(style="background-image: url('img/inhtml/specialist-2.jpg');")
+                  .feedback-reviews__review-author-info
+                    p.feedback-reviews__review-author-name Алёна Чернова, Адлер
+                    p.feedback-reviews__review-author-about мама Марины и Славы
+                    .feedback-reviews__review-author-socials
+                      a(href="#", data-social="vk").feedback-reviews__review-author-social
+                p.feedback-reviews__review-theme вебинары
+                p.feedback-reviews__review-text Обратилась за консультацией, когда по семейным обстоятельствам нужна была срочно помощь в организации сна дочки. До этого момента С 4 до 10 мес спали все сны на груди, а я все читала информацию и отзывы на вашем сайте и думала неужели можно научить спать ребёнка отдельно в кроватке, считала наш случай безнадежным. Честно говоря не ожидала такого быстрого результата, нам подошла быстрая методика. Начали с ночных снов, в первую ночь укладывание заняло 1 час, последующие ночи до 20 мин, пробуждения присутствуют, но зато дочка спит отдельно в кроватке , это для нас большое достижение, с рождения ни одного раза там не спала. К дневным снам перешли через 5 дней, ребенок привык за 2 дня. Огромное спасибо нашему консультанту Анне Ростовой, информацию доносила чётко, понятно и быстро! Мамочки, кто ещё сомневается, обращайтесь - это реально работает!)
+                p.feedback-reviews__review-date 12 мая 2019
+                .feedback-reviews__review-links
+                  a(href="#").feedback-reviews__review-link Елена Мурадова
+            +pagination

@@ -1,0 +1,269 @@
+.consultant
+  padding-top: 35px
+  padding-bottom: 75px
+  &__back
+    color: $green
+    text-decoration: none
+    line-height: 1.4
+    font-size: 15px
+  &__block
+    display: flex
+    justify-content: space-between
+    padding-top: 35px
+  &__aside
+    width: 270px
+  &__image
+    width: 170px
+    height: 170px
+    margin-bottom: 20px
+    border-radius: 50%
+    background:
+      size: cover
+      position: center
+      repeat: no-repeat
+  &__enroll
+    margin-bottom: 15px
+  &__video
+    position: relative
+    display: inline-block
+    padding: 20px 0 20px 65px
+    color: $green
+    text-decoration: none
+    font-size: 15px
+    &:before
+      content: ''
+      position: absolute
+      width: 50px
+      height: 50px
+      left: 0
+      top: 0
+      background:
+        image: url('../img/icons/play-green.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__main
+    width: 770px
+  &__about
+    &--mobile
+      display: none
+  &__name
+    margin-bottom: 10px
+    line-height: 1.17
+    font:
+      size: 30px
+      weight: 700
+  &__desc
+    margin-bottom: 35px
+    width: 670px
+    line-height: 1.4
+    font-size: 15px
+  &__tabs
+    display: flex
+    flex-flow: row nowrap
+    align-items: stretch
+    margin-bottom: 30px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    &-item
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: flex-end
+      padding: 18px 0
+      text-align: center
+      text-decoration: none
+      transition: opacity .3s ease
+      &:hover
+        opacity: 0.8
+      &:not(:last-child)
+        margin-right: 30px
+      &--active
+        position: relative
+        pointer-events: none
+        color: $green
+        font-weight: 600
+        &:after
+          position: absolute
+          content: ''
+          display: block
+          left: 0
+          bottom: -1px
+          width: 100%
+          height: 2px
+          background-color: $green
+  &__content
+    &:not([data-content="1"])
+      display: none
+  &__text
+    margin: 0 -30px 50px
+    padding: 55px 30px
+    border-radius: 12px
+    background-color: transparentize($blue, .9)
+  &__subheading
+    margin-bottom: 20px
+    line-height: 1.15
+    font:
+      size: 20px
+      weight: 700
+  &__paragraph
+    line-height: 1.33
+    font-size: 15px
+    &:not(:last-child)
+      margin-bottom: 50px
+  &__certificates
+    margin-bottom: 50px
+    &-arrow
+      top: 100px
+    .slick-track
+      display: flex !important
+    .slick-list
+      margin: 0 -15px
+    .slick-slide
+      display: flex !important
+      align-items: stretch
+      height: auto !important
+      margin: 0 15px
+      div
+        outline: 0
+    &-image
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 170px
+      height: 232px
+      padding: 10px
+      margin-bottom: 15px
+      border: 1px solid $blue
+      &-pic
+        max-width: 100%
+        max-height: 100%
+        width: auto
+        height: auto
+    &-desc
+      line-height: 1.4
+      font-size: 12px
+    &-link
+      color: $green
+      text-decoration: none
+      line-height: 1.4
+      font-size: 12px
+  &__slider
+    &-arrow
+      top: 200px
+    &-image
+      display: block
+      width: 100%
+      height: 435px
+      margin-bottom: 15px
+      border-radius: 12px
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+      &--video
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          top: calc(50% - 75px)
+          left: calc(50% - 75px)
+          width: 150px
+          height: 150px
+          background:
+            image: url('../img/icons/play.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+    &-counter
+      margin-top: -19px
+      text-align: right
+  &__articles
+    display: flex
+    flex-flow: row wrap
+    width: calc(100% + 30px)
+    margin-left: -15px
+    .article-card
+      margin: 0 15px 45px
+    .pagination
+      display: none
+    &-more
+      display: none
+  &__reviews
+    .feedback-reviews__review:not(:last-child)
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+@media only screen and (max-width: $mobile)
+  .consultant
+    padding-bottom: 85px
+    &__block
+      display: block
+    &__aside
+      width: 100%
+    &__main
+      width: 100%
+    &__about
+      display: none
+      &--mobile
+        display: block
+    &__desc
+      width: 100%
+      margin-bottom: 25px
+    &__enroll
+      width: 100%
+    &__text
+      margin-left: -10px
+      margin-right: -10px
+      margin-bottom: 40px
+      padding: 30px 15px 35px
+    &__certificates
+      margin-bottom: 40px
+      .slick-list
+        overflow: visible
+        margin: 0 -5px
+      .slick-slide
+        display: flex !important
+        align-items: stretch
+        height: auto !important
+        margin: 0 5px
+        div
+          outline: 0
+      &-image
+        width: 100%
+        height: 220px
+        margin-bottom: 15px
+    &__slider
+      &-image
+        height: 185px
+        &--video:before
+          top: calc(50% - 40px)
+          left: calc(50% - 40px)
+          width: 80px
+          height: 80px
+      &-desc
+        font-size: 12px
+      &-counter
+        margin-top: 10px
+        text-align: center
+        font-size: 12px
+    &__articles
+      display: block
+      width: 100%
+      margin: 0
+      .article-card
+        width: 100%
+        margin: 0 0 30px
+        &__description
+          display: none
+      .pagination
+        display: flex
+      &-more
+        display: flex
+        max-width: 100%
+        margin-bottom: 30px
+        background-color: transparentize($green, .8)
+        box-shadow: none
+        color: $green
+    &__reviews
+      .feedback-reviews__review
+        width: 100%
+        padding-top: 30px
