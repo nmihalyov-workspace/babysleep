@@ -1,0 +1,24 @@
+.history-subscribe
+  margin-bottom: 80px
+  padding-bottom: 100px
+  border-bottom: 1px solid transparentize($black, .85)
+  &__heading
+    margin-bottom: 20px
+    line-height: 1.15
+    text-align: center
+    font:
+      size: 32px
+      weight: 700
+  &__button
+    display: flex
+    justify-content: center
+
+@media only screen and (max-width: $mobile)
+  .history-subscribe
+    margin-bottom: 35px
+    padding-bottom: 50px
+    &__heading
+      font-size: 22px
+    &__button
+      .button
+        max-width: 100%

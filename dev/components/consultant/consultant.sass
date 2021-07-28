@@ -245,6 +245,23 @@
         margin-top: 10px
         text-align: center
         font-size: 12px
+      &-arrow
+        top: 223px
+        width: 20px
+        height: 20px
+        border: none
+        background:
+          image: url('../img/icons/arrow.svg')
+          color: transparent !important
+          position: center
+          repeat: no-repeat
+        &:before
+          display: none
+        &.slider__arrow--prev
+          left: 0
+        &.slider__arrow--next
+          right: 0
+          transform: rotate(180deg)
     &__articles
       display: block
       width: 100%

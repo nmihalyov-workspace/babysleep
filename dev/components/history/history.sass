@@ -1,0 +1,121 @@
+.history
+  padding-top: 60px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__subheading
+    margin-top: 50px
+    margin-bottom: 5px
+    font-size: 30px
+  &__timeline
+    position: relative
+    margin-top: 20px
+    padding-bottom: 25px
+    &:before
+      position: absolute
+      content: ''
+      left: -22px
+      top: 15px
+      bottom: 0
+      width: 0
+      border-left: 2px dotted $green
+    &-item
+      position: relative
+      margin-bottom: 50px
+      &:not(:last-child)
+        &:before
+          position: absolute
+          content: ''
+          top: 15px
+          left: -27px
+          width: 12px
+          height: 12px
+          border-radius: 50%
+          background-color: $green
+    &-row
+      display: flex
+      justify-content: space-between
+      &--middle
+        align-items: center
+    &-cell
+      &:first-child
+        max-width: 770px
+      &:last-child
+        max-width: 270px
+    &-heading
+      margin-bottom: 15px
+      font:
+        size: 30px
+        weight: 700
+    &-subheading
+      margin-bottom: 10px
+      font:
+        size: 16px
+        weight: 700
+    &-desc
+      line-height: 1.4
+    &-block
+      margin-top: 25px
+      padding: 35px 20px
+      border-radius: 12px
+      background-color: transparentize($blue, .9)
+      &:not(:last-child)
+        margin-bottom: 35px
+    &-aside
+      text-decoration: underline
+      font-size: 20px
+    &-slider
+      margin-top: 25px
+      .slider__arrow
+        z-index: 2
+        border: none
+        background-color: transparentize($black, 0.3)
+        &:before
+          top: calc(50% - 6px)
+          width: 7px
+          height: 13px
+          background-image: url('../img/icons/caret-white.svg')
+        &--prev
+          left: 20px
+          &:before
+            left: calc(50% - 4px)
+        &--next
+          right: 20px
+
+@media only screen and (max-width: $mobile)
+  .history
+    padding-top: 40px
+    &__head
+      .heading
+        margin-bottom: 0
+      .button
+        display: none
+    &__subheading
+      margin-top: 30px
+      font-size: 24px
+    &__timeline
+      &:before
+        display: none
+      &-item
+        margin-bottom: 40px
+        &:before
+          display: none
+      &-row
+        display: block
+      &-cell
+        &:last-child
+          display: none
+      &-heading
+        text-align: center
+        font-size: 24px
+        &--last
+          text-align: left
+      &-block
+        width: calc(100% + 30px)
+        margin-left: -15px
+        padding: 30px 15px
+        &:not(:last-child)
+          margin-bottom: 30px
+      &-subheading
+        font-size: 18px

@@ -21,6 +21,8 @@ mixin button-tertiary(type, text, className, options)
 mixin button-quoternary(type, text, className, options)
   if type === 'link'
     a.button.button--quoternary(class=`${className || ''}`, href=options.link)= text
+  if type === 'submit'
+    button.button.button--quoternary(type="submit", class=`${className || ''}`)= text
 
 mixin button-quinary(type, text, className, options)
   if type === 'link'

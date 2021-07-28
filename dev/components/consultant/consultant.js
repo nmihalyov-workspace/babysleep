@@ -32,11 +32,5 @@ $consultantSlider.on('init reInit afterChange', (event, slick, currentSlide) => 
 $consultantSlider.slick({
   infinite: false,
   prevArrow: '<div class="consultant__slider-arrow slider__arrow slider__arrow--prev"></div>',
-  nextArrow: '<div class="consultant__slider-arrow slider__arrow slider__arrow--next"></div>',
-  responsive: [{
-    breakpoint: 1199,
-    settings: {
-      arrows: false,
-    }
-  }]
+  nextArrow: '<div class="consultant__slider-arrow slider__arrow slider__arrow--next"></div>'
 });
