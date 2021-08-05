@@ -1,0 +1,23 @@
+mixin press-block(type)
+  a.press-block(href="press-inner.html")
+    .press-block__info
+      if type === 'esquire'
+        .press-block__image(style="background-image: url('img/inhtml/press-block-1.jpg')")
+      if type === 'vc'
+        .press-block__image(style="background-image: url('img/inhtml/press-block-2.jpg')")
+      if type === 'mail'
+        .press-block__image(style="background-image: url('img/inhtml/press-block-3.jpg')")
+      if type === 'rbk'
+        .press-block__image(style="background-image: url('img/inhtml/press-block-4.jpg')")
+      div
+        if type === 'esquire'
+          p.press-block__heading Статья в журнале Esquire
+        if type === 'vc'
+          p.press-block__heading Статья на vc.ru
+        if type === 'mail'
+          p.press-block__heading Статья на mail.ru / дети
+        if type === 'rbk'
+          p.press-block__heading Cтатья на РБК
+        p.press-block__date 21 августа 2020
+    .press-block__logo
+      img.press-block__logo-image(src=`img/inhtml/${type}.svg`, alt="")

@@ -1,0 +1,128 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+include ../_ui/pagination/pagination
+include ../_ui/card/card
+include ../_ui/subheading/subheading
+include ../_ui/press-block/press-block
+-const tabs = ['Хронология', 'Видео', 'Онлайн СМИ', 'Журналы и газеты', 'Книги', 'Конференции'];
+
+mixin press
+  section.press
+    .container
+      .wrapper
+        .press__head
+          +heading('Пресса о нас')
+          .encyclopedia-recommendations__partners.js-partners-slider
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/doc.svg", alt="")
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/mail.svg", alt="")
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/moscow24.svg", alt="")
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/mediametrics.svg", alt="")
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/kindadvices.svg", alt="")
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/rbk.svg", alt="")
+            .encyclopedia-recommendations__partners-slide
+              img.encyclopedia-recommendations__partners-item(src="img/partners/mediametrics.svg", alt="")
+          p.encyclopedia-recommendations__disclaimer *СМИ и партнеры
+          .press__author.press__author--mobile
+            .press__author-image(style="background-image: url('img/elena.png')")
+            p.press__author-text <a href="#">Елена Мурадова</a>, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев...
+            a(href="#").press__author-link Показать больше
+            +button-primary('link', 'Связаться с нами', 'press__author-btn', {link: '#'})
+          .press__tabs
+            -for(let i = 0; i < tabs.length; i++)
+              a(href="#", data-content=i+1, class=`${i === 0 ? 'press__tabs-item--active' : ''}`).press__tabs-item!= tabs[i]
+        .press__container
+          main.press__main
+            .press__content(data-content="1")
+              .press__slider
+                .consultant__slider.slider.js-consultant-slider
+                  .consultant__slider-slide
+                    .consultant__slider-image(style="background-image: url('img/inhtml/history.jpg');")
+                    .consultant__slider-desc Встреча с командой bs
+                    .consultant__slider-logo
+                      img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                  .consultant__slider-slide
+                    .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                    .consultant__slider-desc Встреча с командой bs
+                    .consultant__slider-logo
+                      img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                  .consultant__slider-slide
+                    .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                    .consultant__slider-desc Встреча с командой bs
+                    .consultant__slider-logo
+                      img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                  .consultant__slider-slide
+                    .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                    .consultant__slider-desc Встреча с командой bs
+                    .consultant__slider-logo
+                      img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                p.consultant__slider-counter
+              .press__months
+                .press__month
+                  p.press__month-heading Апрель 2021
+                  p.press__month-text <a href="#">Елена Мурадова</a>, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, <a href="#">социального предпринимательства и построения</a> <a href="#" class="press__month-link">название СМИ</a> удаленных команд.
+                .press__month
+                  p.press__month-heading Февраль 2021
+                  p.press__month-text Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.<br><br>Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.
+                .press__month
+                  p.press__month-heading Декабрь 2020
+                  p.press__month-text Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.<br><br>Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.
+                .press__month
+                  p.press__month-heading Сентябрь 2020
+                  p.press__month-text Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.<br><br>Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.<br><br>Елена Мурадова, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.
+              button.encyclopedia-articles__more Показать ещё
+              +pagination
+            .press__content(data-content="4")
+              .press__blocks
+                +press-block('esquire')
+                +press-block('vc')
+                +press-block('mail')
+                +press-block('rbk')
+                +press-block('esquire')
+                +press-block('vc')
+                +press-block('mail')
+                +press-block('rbk')
+              button.encyclopedia-articles__more Показать ещё
+              +pagination
+          aside.press__aside
+            .press__author
+              .press__author-image(style="background-image: url('img/elena.png')")
+              p.press__author-text <a href="#">Елена Мурадова</a>, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.
+              +button-primary('link', 'Связаться с нами', 'press__author-btn', {link: '#'})
+  section.consultant-subscribe
+    .container
+      .wrapper
+        p.consultant-subscribe__heading.press__reviews-heading.consultant-subscribe__heading--small Наши продукты
+    .reviews.block.container.press__reviews
+      .wrapper
+        .reviews__subscribe
+          .grid-card
+            +card('card-1.jpg', 'Самостоятельно', 'Вебинары по возрасту', 'Научим быстрее успокаивать, перекладывать в кроватку без слез, создадим базу для бесшовного прохождения регресса сна', ['0–6 мес', '6–12 мес', '1–3 года', 'ГВ и сон'], null, '1990 ₽')
+            +card('card-2.jpg', 'Быстрое решение', 'Экспресс-консультации', 'Предложим стратегию-решение по конкретно вашей ситуации', null, null, 'от 3500 ₽')
+            +card('card-3.jpg', 'Индивидуальное решение', 'Решение под ключ — 1 месяц работы над сном с консультантом', '4 недели работы один на один с экспертом по решению любых проблем со сном', null, 'от 12 000 ₽', 'от 10 000 ₽')
+        +subheading('Другие разделы', 'Смотреть все')
+        .consultant-subscribe__articles
+          a(href="#").about__item
+            .about__item-image(style="background-image: url('img/inhtml/about-2.jpg');")
+            p.about__item-heading Мягкий метод BabySleep
+            p.about__item-desc улучшение сна бережно, психологически комфортно, до результата
+          a(href="#").about__item
+            .about__item-image(style="background-image: url('img/inhtml/about-3.jpg');")
+            p.about__item-heading Команда консультантов BabySleep
+            p.about__item-desc самая большая и опытная на рынке в индивидуальном консультировании
+          a(href="#").about__item
+            .about__item-image(style="background-image: url('img/inhtml/about-4.jpg');")
+            p.about__item-heading Почему Baby Sleep
+            p.about__item-desc 9 лет практического опыта, база 300+ исследований, с душой и самоотдачей
+        .reviews__subscribe
+          p.reviews__subscribe-heading Подписывайтесь!
+          p.reviews__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+          .reviews__subscribe-socials
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")

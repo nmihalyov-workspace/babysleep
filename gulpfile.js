@@ -197,6 +197,7 @@ gulp.task('browser-sync', () => {
 		server: {
 			baseDir: `${build}`                     // корневая папка для запускаемого проекта
 		},
+    online: true,
 		notify: false                             // отключаем стандартные уведомления browsersync
 	});
 });

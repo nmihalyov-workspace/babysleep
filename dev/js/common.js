@@ -25,6 +25,7 @@ window.onload = () => {
   @@include('../components/month-age/month-age.js')
   @@include('../components/profile/profile.js')
   @@include('../components/consultant/consultant.js')
+  @@include('../components/press/press.js')
 
   if ($(window).innerWidth() > 1199) {
 

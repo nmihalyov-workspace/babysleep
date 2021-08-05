@@ -31,6 +31,7 @@ $consultantSlider.on('init reInit afterChange', (event, slick, currentSlide) => 
 });
 $consultantSlider.slick({
   infinite: false,
+  loop: true,
   prevArrow: '<div class="consultant__slider-arrow slider__arrow slider__arrow--prev"></div>',
   nextArrow: '<div class="consultant__slider-arrow slider__arrow slider__arrow--next"></div>'
 });

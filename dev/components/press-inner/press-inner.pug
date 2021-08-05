@@ -1,0 +1,97 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+include ../_ui/card/card
+include ../_ui/subheading/subheading
+include ../_ui/press-block/press-block
+-const tabs = ['Хронология', 'Видео', 'Онлайн СМИ', 'Журналы и газеты', 'Книги', 'Конференции'];
+
+mixin press-inner
+  section.press
+    .container
+      .wrapper
+        .press-inner
+          +heading('Журнал «Беременность & Роды.ru»')
+          .press-inner__content
+            .press__container
+              main.press__main
+                .press-inner__actions
+                  p.press-inner__actions-date 19.06.20
+                  a.press-inner__actions-link(href="#") Журналы
+                .press__slider
+                  .consultant__slider.slider.js-consultant-slider
+                    .consultant__slider-slide
+                      .consultant__slider-image(style="background-image: url('img/inhtml/history.jpg');")
+                      .consultant__slider-desc Фото из студии радиостанции у микрофона
+                      .consultant__slider-logo
+                        img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                    .consultant__slider-slide
+                      .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                      .consultant__slider-desc Фото из студии радиостанции у микрофона
+                      .consultant__slider-logo
+                        img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                    .consultant__slider-slide
+                      .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                      .consultant__slider-desc Фото из студии радиостанции у микрофона
+                      .consultant__slider-logo
+                        img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                    .consultant__slider-slide
+                      .consultant__slider-image(style="background-image: url('img/inhtml/mission.jpg');")
+                      .consultant__slider-desc Фото из студии радиостанции у микрофона
+                      .consultant__slider-logo
+                        img.consultant__slider-logo-img(src="img/inhtml/esquire.svg", alt="")
+                  p.consultant__slider-counter
+                  p.press-inner__text В журнале «Беременность&Роды.ru» за июль 2016 года Елена Мурадова в рубрике «Образ жизни» рассказывает о плюсах раннего укладывания, красивых картинках в Инстаграме, материнстве (таком простом и сложном одновременно), и, конечно же, о своем главном проекте – Центре детского сна и развития «BabySleep».
+                  .encyclopedia-article__socials
+                    .encyclopedia-article__socials-share
+                      .encyclopedia-article__socials-share-text Поделиться
+                      a(href="#", data-social="fb").encyclopedia-article__socials-item
+                      a(href="#", data-social="vk").encyclopedia-article__socials-item
+                      a(href="#", data-social="ok").encyclopedia-article__socials-item
+                      a(href="#", data-social="twitter").encyclopedia-article__socials-item
+                    a(href="#").encyclopedia-article__socials-link Скопировать ссылку
+                  .press__author.press__author--mobile
+                    .press__author-image(style="background-image: url('img/elena.png')")
+                    p.press__author-text <a href="#">Елена Мурадова</a>, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.
+                    +button-primary('link', 'Связаться с нами', 'press__author-btn', {link: '#'})
+                  +heading('Другие упоминания в журналах', 'Все упоминания')
+                  .press__blocks
+                    +press-block('esquire')
+                    +press-block('vc')
+                    +press-block('mail')
+            aside.press__aside
+              .press__author
+                .press__author-image(style="background-image: url('img/elena.png')")
+                p.press__author-text <a href="#">Елена Мурадова</a>, основатель и руководитель BabySleep, открыта для интервью, съемок, подкастов, экспертных комментариев в СМИ в области детского и семейного сна, совмещения материнства и самореализации, бизнеса в декрете, социального предпринимательства и построения удаленных команд.
+                +button-primary('link', 'Связаться с нами', 'press__author-btn', {link: '#'})
+  section.consultant-subscribe
+    .container
+      .wrapper
+        p.consultant-subscribe__heading.press__reviews-heading.consultant-subscribe__heading--small Наши продукты
+    .reviews.block.container.press__reviews
+      .wrapper
+        .reviews__subscribe
+          .grid-card
+            +card('card-1.jpg', 'Самостоятельно', 'Вебинары по возрасту', 'Научим быстрее успокаивать, перекладывать в кроватку без слез, создадим базу для бесшовного прохождения регресса сна', ['0–6 мес', '6–12 мес', '1–3 года', 'ГВ и сон'], null, '1990 ₽')
+            +card('card-2.jpg', 'Быстрое решение', 'Экспресс-консультации', 'Предложим стратегию-решение по конкретно вашей ситуации', null, null, 'от 3500 ₽')
+            +card('card-3.jpg', 'Индивидуальное решение', 'Решение под ключ — 1 месяц работы над сном с консультантом', '4 недели работы один на один с экспертом по решению любых проблем со сном', null, 'от 12 000 ₽', 'от 10 000 ₽')
+        +subheading('Другие разделы', 'Смотреть все')
+        .consultant-subscribe__articles
+          a(href="#").about__item
+            .about__item-image(style="background-image: url('img/inhtml/about-2.jpg');")
+            p.about__item-heading Мягкий метод BabySleep
+            p.about__item-desc улучшение сна бережно, психологически комфортно, до результата
+          a(href="#").about__item
+            .about__item-image(style="background-image: url('img/inhtml/about-3.jpg');")
+            p.about__item-heading Команда консультантов BabySleep
+            p.about__item-desc самая большая и опытная на рынке в индивидуальном консультировании
+          a(href="#").about__item
+            .about__item-image(style="background-image: url('img/inhtml/about-4.jpg');")
+            p.about__item-heading Почему Baby Sleep
+            p.about__item-desc 9 лет практического опыта, база 300+ исследований, с душой и самоотдачей
+        .reviews__subscribe
+          p.reviews__subscribe-heading Подписывайтесь!
+          p.reviews__subscribe-text Бесплатные консультации и советы в наших соц. сетях
+          .reviews__subscribe-socials
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="inst")
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="vk")
+            a.reviews__subscribe-social(href="#", target="_blank", rel="nofollow noopener", data-social="telegram")
